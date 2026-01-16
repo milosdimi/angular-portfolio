@@ -1,8 +1,7 @@
-<section class="hero" (mousemove)="onMove($event)">
+<section class="hero">
     <div class="container hero__inner">
-        <p class="hero__kicker">Frontend Developer</p>
-        <h1 class="hero__title">Milos Dimitrijevic</h1>
-
+        <p class="hero__kicker neon-kicker">Frontend Developer</p>
+        <h1 class="hero__title neon-title">Milos Dimitrijevic</h1>
         <div class="hero__actions">
             <a class="btn" href="#projects">Check my work</a>
             <a class="btn" href="#contact">Contact me</a>
@@ -11,7 +10,9 @@
 
     <!-- left scroll hint -->
     <div class="hero__left">
-        <div class="scrollHint" aria-hidden="true">↓</div>
+        <div class="scrollHint" aria-hidden="true">
+            <img src="assets/icons/pfeil.svg" alt="" aria-hidden="true" />
+        </div>
         <div class="line"></div>
     </div>
 
@@ -19,8 +20,17 @@
     <div class="hero__right">
         <div class="email">dm&#64;dimit.cc</div>
         <div class="icons">
-            <a class="icon" href="#" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GH</a>
-            <a class="icon" href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">IN</a>
+            <a class="social" href="https://github.com/DEINNAME" target="_blank" rel="noopener noreferrer"
+                aria-label="GitHub">
+                <img class="social__icon social__icon--base" src="assets/icons/Github.svg" alt="" aria-hidden="true">
+                <img class="social__icon social__icon--hover" src="assets/icons/Github-1.svg" alt="" aria-hidden="true">
+            </a>
+            <a class="social" href="https://github.com/DEINNAME" target="_blank" rel="noopener noreferrer"
+                aria-label="GitHub">
+                <img class="social__icon social__icon--base" src="assets/icons/linkedin.svg" alt="" aria-hidden="true">
+                <img class="social__icon social__icon--hover" src="assets/icons/linkedin_white.svg" alt=""
+                    aria-hidden="true">
+            </a>
         </div>
         <div class="line"></div>
     </div>

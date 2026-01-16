@@ -1,19 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
-  onMove(e: MouseEvent) {
-    const el = e.currentTarget as HTMLElement;
-    const rect = el.getBoundingClientRect();
+
+  @HostListener('window:mousemove', ['$event'])
+  onWindowMove(e: MouseEvent) {
+    const hero = document.querySelector('.hero') as HTMLElement;
+    if (!hero) return;
+
+    const rect = hero.getBoundingClientRect();
+
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    el.style.setProperty('--mx', `${x}px`);
-    el.style.setProperty('--my', `${y}px`);
+
+    hero.style.setProperty('--mx', `${x}px`);
+    hero.style.setProperty('--my', `${y}px`);
   }
 }
