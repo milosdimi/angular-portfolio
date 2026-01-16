@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/* Layout Container */
+.container {
+  width: min(1440px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+/* Sections */
+.section {
+  padding: 80px 0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: min(1440px, calc(100% - 24px));
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+}
