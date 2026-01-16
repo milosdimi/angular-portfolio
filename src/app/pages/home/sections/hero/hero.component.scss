@@ -4,11 +4,83 @@
   display: grid;
   place-items: center;
   overflow: hidden;
-
   --mx: 50%;
   --my: 35%;
 }
 
+// Neue Hilfsklasse für Screenreader
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Button-Marquee leicht verbessert (smoother + besserer Abstand)
+.btn--marquee {
+  .btn__text-inner,
+  .btn__text-duplicate {
+    padding: 0 48px; // Mehr Raum für flüssigen Loop bei längeren Texten
+  }
+
+  &:hover {
+    background: rgba(61, 207, 182, 0.15);
+    border-color: rgba(61, 207, 182, 0.7);
+    box-shadow: 0 0 24px rgba(61, 207, 182, 0.25);
+  }
+}
+
+// Email klickbar stylen
+.email {
+  @extend .email; // behält alten Stil
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: rgba(61, 207, 182, 0.9);
+    text-shadow: 0 0 8px rgba(61, 207, 182, 0.4);
+  }
+}
+
+// Social Icons etwas mehr Glow auf Hover
+.social:hover {
+  border-color: rgba(61, 207, 182, 0.6);
+  box-shadow: 0 0 12px rgba(61, 207, 182, 0.2);
+}
+
+// Marquee-Ribbon: Leichter Parallax-Feeling durch unterschiedliche Geschwindigkeiten
+.marquee__row {
+  animation-duration: 28s; // etwas langsamer, eleganter
+}
+
+.marquee__row--reverse {
+  animation-duration: 34s;
+}
+
+// Responsives Fine-Tuning
+@media (max-width: 900px) {
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  .marquee {
+    left: -5%;
+    right: -5%;
+    transform: rotate(-3deg); // weniger stark geneigt auf Mobile
+  }
+}
 /* Mouse glow layer */
 .hero::before {
   content: "";
@@ -165,10 +237,11 @@
 }
 
 .hero__left {
-  left: 26px;
+  left: 52px;
+  justify-items: center;
 }
 .hero__right {
-  right: 26px;
+  right: 52px;
   justify-items: center;
 }
 
@@ -220,39 +293,40 @@
 }
 
 /* Scroll hint */
-.scrollHint {
-  width: 34px;
-  height: 34px;
-  border-radius: 999px;
-  border: 1px solid rgba(120, 215, 195, 0.35);
-  display: grid;
-  place-items: center;
-  animation: scrollBounce 1.4s ease-in-out infinite;
-}
+
 
 .scrollHint img {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 40px;
   display: block;
+  animation: arrowBounce 2s ease-in-out infinite; // Pfeil bouncet separat für mehr Leben
 }
 
 @keyframes scrollBounce {
-  0% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(10px);
+    transform: translateY(12px);
   }
+}
+
+@keyframes arrowBounce {
+  0%,
   100% {
     transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
   }
 }
 
 /* Rail line (cleaner height) */
 .line {
   width: 1px;
-  height: 110px;
-  background: rgba(255, 255, 255, 0.18);
+  height: 400px;
+  background: rgb(61, 207, 182);
 }
 
 /* Marquee */
@@ -260,7 +334,7 @@
   position: absolute;
   left: -10%;
   right: -10%;
-  bottom: 36px;
+  bottom: 80px;
   transform: rotate(-6deg);
   background: rgba(255, 255, 255, 0.08);
   border-top: 1px solid rgba(255, 255, 255, 0.12);
