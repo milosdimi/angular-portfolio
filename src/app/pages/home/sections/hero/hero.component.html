@@ -1,34 +1,75 @@
 <section class="hero" (mousemove)="onMove($event)">
-  <div class="container hero__inner">
-    <p class="hero__kicker">Frontend Developer</p>
-    <h1 class="hero__title">Milos Dimitrijevic</h1>
+    <div class="container hero__inner">
+        <p class="hero__kicker">Frontend Developer</p>
+        <h1 class="hero__title">Milos Dimitrijevic</h1>
 
-    <div class="hero__actions">
-      <a class="btn" href="#projects">Check my work</a>
-      <a class="btn" href="#contact">Contact me</a>
+        <div class="hero__actions">
+            <a class="btn" href="#projects">Check my work</a>
+            <a class="btn" href="#contact">Contact me</a>
+        </div>
     </div>
-  </div>
 
-  <!-- left scroll hint -->
-  <div class="hero__left">
-    <div class="scrollHint" aria-hidden="true">↓</div>
-    <div class="line"></div>
-  </div>
-
-  <!-- right socials + email -->
-  <div class="hero__right">
-    <div class="email">dm&#64;dimit.cc</div>
-    <div class="icons">
-      <a class="icon" href="#" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GH</a>
-      <a class="icon" href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">IN</a>
+    <!-- left scroll hint -->
+    <div class="hero__left">
+        <div class="scrollHint" aria-hidden="true">↓</div>
+        <div class="line"></div>
     </div>
-    <div class="line"></div>
-  </div>
 
-  <!-- bottom ribbon -->
-  <div class="hero__ribbon">
-    <div class="hero__ribbonInner">
-      Based in Kufstein • Open to work • Available for remote work
+    <!-- right socials + email -->
+    <div class="hero__right">
+        <div class="email">dm&#64;dimit.cc</div>
+        <div class="icons">
+            <a class="icon" href="#" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GH</a>
+            <a class="icon" href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">IN</a>
+        </div>
+        <div class="line"></div>
     </div>
-  </div>
+
+    <!-- bottom ribbon -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+            <div class="marquee__row">
+                <span>Available for remote work</span>
+                <span class="dot">•</span>
+                <span>Frontend Developer</span>
+                <span class="dot">•</span>
+                <span>Based in Kufstein</span>
+                <span class="dot">•</span>
+                <span>Open to work</span>
+                <span class="dot">•</span>
+
+                <!-- duplicate for seamless loop -->
+                <span>Available for remote work</span>
+                <span class="dot">•</span>
+                <span>Frontend Developer</span>
+                <span class="dot">•</span>
+                <span>Based in Kufstein</span>
+                <span class="dot">•</span>
+                <span>Open to work</span>
+                <span class="dot">•</span>
+            </div>
+
+            <div class="marquee__row marquee__row--reverse">
+                <span>Available for remote work</span>
+                <span class="dot">•</span>
+                <span>Frontend Developer</span>
+                <span class="dot">•</span>
+                <span>Based in Kufstein</span>
+                <span class="dot">•</span>
+                <span>Open to work</span>
+                <span class="dot">•</span>
+
+                <!-- duplicate for seamless loop -->
+                <span>Available for remote work</span>
+                <span class="dot">•</span>
+                <span>Frontend Developer</span>
+                <span class="dot">•</span>
+                <span>Based in Kufstein</span>
+                <span class="dot">•</span>
+                <span>Open to work</span>
+                <span class="dot">•</span>
+            </div>
+        </div>
+    </div>
+
 </section>
