@@ -1,6 +1,34 @@
-<section class="section" style="min-height: 100vh; display: grid; align-items: center;">
-    <div class="container">
-        <h1>Hi, ich bin Milos</h1>
-        <p>Frontend Developer (Angular) – Clean UI, starke UX, sauberes TypeScript.</p>
+<section class="hero" (mousemove)="onMove($event)">
+  <div class="container hero__inner">
+    <p class="hero__kicker">Frontend Developer</p>
+    <h1 class="hero__title">Milos Dimitrijevic</h1>
+
+    <div class="hero__actions">
+      <a class="btn" href="#projects">Check my work</a>
+      <a class="btn" href="#contact">Contact me</a>
     </div>
+  </div>
+
+  <!-- left scroll hint -->
+  <div class="hero__left">
+    <div class="scrollHint" aria-hidden="true">↓</div>
+    <div class="line"></div>
+  </div>
+
+  <!-- right socials + email -->
+  <div class="hero__right">
+    <div class="email">dm&#64;dimit.cc</div>
+    <div class="icons">
+      <a class="icon" href="#" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GH</a>
+      <a class="icon" href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">IN</a>
+    </div>
+    <div class="line"></div>
+  </div>
+
+  <!-- bottom ribbon -->
+  <div class="hero__ribbon">
+    <div class="hero__ribbonInner">
+      Based in Kufstein • Open to work • Available for remote work
+    </div>
+  </div>
 </section>

@@ -1,3 +1,23 @@
-<nav style="padding: 16px;">
-    <a routerLink="/">Home</a>
-</nav>
+<header class="header">
+  <div class="container header__inner">
+    <div class="header__left">
+      <!-- Language Toggle -->
+      <div class="lang">
+        <button class="lang__btn isActive" type="button">EN</button>
+        <button class="lang__btn" type="button">DE</button>
+      </div>
+
+      <!-- Nav -->
+      <nav class="nav">
+        <a class="nav__link" href="#about">About me</a>
+        <a class="nav__link" href="#skills">Skills</a>
+        <a class="nav__link" href="#projects">Projects</a>
+      </nav>
+    </div>
+
+    <!-- Logo -->
+    <a class="logo" routerLink="/" aria-label="Home">
+      <img src="assets/logo/dimitlogo_transparent_gold.png" alt="DIMIT Logo">
+    </a>
+  </div>
+</header>

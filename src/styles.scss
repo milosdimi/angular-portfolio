@@ -1,36 +1,39 @@
-/* Base */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+
+code,
+.mono {
+  font-family: "Fira Code", ui-monospace, monospace;
 }
 
-html,
-body {
-  height: 100%;
+:root {
+  --bg-0: #1c1c1c;
+  --bg-1: #08463b;
+
+  --text: rgba(255, 255, 255, 0.9);
+  --muted: rgba(255, 255, 255, 0.7);
+
+  --accent: #78d7c3; 
+  --border: rgba(255, 255, 255, 0.22);
+
+  --t-fast: 120ms;
+  --container: 1440px;
+  --gutter-desktop: 48px;
+  --gutter-mobile: 24px;
 }
 
 body {
   margin: 0;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--bg-0) 23%, var(--bg-1) 100%);
+  font-family: "Karla", system-ui, sans-serif;
 }
 
-/* Layout Container */
 .container {
-  width: min(1440px, calc(100% - 48px));
+  width: min(var(--container), calc(100% - var(--gutter-desktop)));
   margin-inline: auto;
-}
-
-/* Sections */
-.section {
-  padding: 80px 0;
 }
 
 @media (max-width: 600px) {
   .container {
-    width: min(1440px, calc(100% - 24px));
-  }
-
-  .section {
-    padding: 56px 0;
+    width: min(var(--container), calc(100% - var(--gutter-mobile)));
   }
 }
