@@ -8,7 +8,5 @@ export const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'impressum', component: ImprintComponent, title: 'Impressum' },
   { path: 'datenschutz', component: PrivacyComponent, title: 'Datenschutz' },
-
-  // redirect unknown routes to home
   { path: '**', redirectTo: '' },
 ];

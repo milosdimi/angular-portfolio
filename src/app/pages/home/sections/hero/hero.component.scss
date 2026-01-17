@@ -4,7 +4,7 @@
   display: grid;
   place-items: center;
   overflow: hidden;
-
+  background: linear-gradient(38deg, var(--bg-0) 42%, var(--bg-1) 100%);
   --mx: 50%;
   --my: 35%;
 }
@@ -109,7 +109,7 @@
 
 .btn {
   height: 46px;
-  padding: 0 32px;
+
   border-radius: 999px;
   border: 1px solid var(--border);
   display: inline-flex;
@@ -141,7 +141,7 @@
 
   .btn__text-inner,
   .btn__text-duplicate {
-    padding: 0 48px;
+    padding: 0 28px;
     font-weight: 500;
     letter-spacing: 0.02em;
   }
@@ -158,7 +158,7 @@
     box-shadow: 0 0 20px rgba(61, 207, 182, 0.2);
 
     .btn__text {
-      animation: marqueeSlide 4s linear infinite;
+      animation: marqueeSlide 3s linear infinite;
     }
   }
 }
@@ -181,16 +181,16 @@
   gap: 14px;
   align-items: center;
   z-index: 1;
-  width: 56px; 
+  width: 56px;
 }
 
 .hero__left {
-  left: 52px;
+  left: 64px;
   justify-items: center;
 }
 
 .hero__right {
-  right: 52px;
+  right: 64px;
   justify-items: center;
 }
 
@@ -214,23 +214,15 @@
 /* Social buttons (two-svg hover swap) */
 .icons {
   display: grid;
-  gap: 10px;
+  gap: 24px;
 }
 
 .social {
   position: relative;
   width: 42px;
   height: 42px;
-  border-radius: 10px;
-  border: 1px solid rgba(120, 215, 195, 0.35);
   display: grid;
   place-items: center;
-
-  transition:
-    transform var(--t-fast),
-    background var(--t-fast),
-    border-color var(--t-fast),
-    box-shadow var(--t-fast);
 }
 
 .social:hover {
@@ -242,8 +234,8 @@
 
 .social__icon {
   position: absolute;
-  width: 24px;
-  height: 24px;
+  width: 48px;
+  height: 48px;
   transition: opacity var(--t-fast);
 }
 

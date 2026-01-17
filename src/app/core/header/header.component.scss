@@ -7,12 +7,34 @@
   padding: 18px 0;
   background: transparent;
 
-  /* optional: wenn du später willst, dass Header bei Scroll etwas Glas-Effekt bekommt */
-  /* backdrop-filter: blur(8px); */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.62) 0%,
+      rgba(0, 0, 0, 0.62) 20%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.08);
+  }
 }
 
 .header__inner {
-  position: relative;
+  position: relative; 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,7 +72,9 @@
   letter-spacing: 0.02em;
 
   cursor: pointer;
-  transition: background var(--t-fast, 120ms), color var(--t-fast, 120ms),
+  transition:
+    background var(--t-fast, 120ms),
+    color var(--t-fast, 120ms),
     transform var(--t-fast, 120ms);
 }
 
@@ -116,7 +140,9 @@
   width: auto;
   display: block;
   opacity: 0.98;
-  transition: transform var(--t-fast, 120ms), filter var(--t-fast, 120ms);
+  transition:
+    transform var(--t-fast, 120ms),
+    filter var(--t-fast, 120ms);
 }
 
 .logo:hover img {
