@@ -24,7 +24,7 @@
 
   <!-- Left: Scroll hint -->
   <div class="hero__left" aria-hidden="true">
-    <div class="scrollHint" aria-hidden="true">
+    <div class="scrollHint" [class.is-hidden]="!showScrollHint" aria-hidden="true">
       <img src="assets/icons/pfeil.svg" alt="" />
       <img src="assets/icons/pfeil_down.svg" alt="" />
     </div>
