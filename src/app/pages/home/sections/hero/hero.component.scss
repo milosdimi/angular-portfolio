@@ -335,23 +335,31 @@
 }
 
 .marquee__row {
+  display: flex;
+  width: fit-content; 
+  will-change: transform;
+  animation: marqueeLeft 40s linear infinite;
+}
+
+.marquee__row--reverse {
+  animation: marqueeRight 48s linear infinite;
+  opacity: 0.9;
+}
+
+.marquee__run {
   display: inline-flex;
   align-items: center;
   gap: 28px;
+  padding-right: 28px;
   white-space: nowrap;
-  will-change: transform;
+
   color: var(--accent);
   font-size: 20px;
   letter-spacing: 0.04em;
 
-  animation: marqueeLeft 26s linear infinite;
-  animation-duration: 28s;
-}
-
-.marquee__row--reverse {
-  animation: marqueeRight 32s linear infinite;
-  animation-duration: 34s;
-  opacity: 0.9;
+  flex: 0 0 auto;
+  min-width: 100vw; 
+  justify-content: center; 
 }
 
 .dot {
