@@ -1,7 +1,79 @@
-<section class="section">
-  <div class="container">
-    <h2>Skills</h2>
-    <p>Platzhalter…</p>
+<section class="skills" id="skills" #skillsSection>
+  <div class="container skills__inner">
+
+    <!-- LEFT: Card -->
+    <div class="skills__content" [class.is-visible]="inView">
+      <div class="skills__card">
+        <span class="skills__kicker">{{ copy.kicker }}</span>
+        <h2 class="skills__title">{{ copy.title }}</h2>
+
+        <p class="skills__text">{{ copy.p1 }}</p>
+        <p class="skills__text">{{ copy.p2 }}</p>
+
+        <div class="skills__cta">
+          <p class="skills__cta-title">
+            {{ copy.ctaTitle }} <span class="skills__cta-accent">skill</span>?
+          </p>
+          <p class="skills__cta-text">{{ copy.ctaText }}</p>
+        </div>
+
+        <a class="skills__btn" href="#contact">{{ copy.button }}</a>
+      </div>
+    </div>
+
+    <!-- RIGHT: Icon grid -->
+    <div class="skills__grid" [class.is-visible]="inView">
+
+      <div class="skills__row">
+        @for (skill of row1; track skill.name) {
+        <div class="skill">
+          <img src="assets/icons/{{ skill.icon }}" alt="" aria-hidden="true" />
+          <span class="skill__label">{{ skill.name }}</span>
+        </div>
+        }
+      </div>
+
+      <div class="skills__row">
+        @for (skill of row2; track skill.name) {
+        <div class="skill">
+          <img src="assets/icons/{{ skill.icon }}" alt="" aria-hidden="true" />
+          <span class="skill__label">{{ skill.name }}</span>
+        </div>
+        }
+      </div>
+
+      <div class="skills__row">
+        @for (skill of row3; track skill.name) {
+        <div class="skill">
+          <img src="assets/icons/{{ skill.icon }}" alt="" aria-hidden="true" />
+          <span class="skill__label">{{ skill.name }}</span>
+        </div>
+        }
+
+        <!-- Growth mindset (special hover) -->
+        <div class="skill skill--growth" (mouseenter)="showGrowthHint = true" (mouseleave)="showGrowthHint = false">
+          <img src="assets/icons/gm.svg" alt="" aria-hidden="true" />
+          <span class="skill__label">Growth<br />mindset</span>
+
+          <div class="growth-hint" [class.is-visible]="showGrowthHint">
+            <p class="growth-hint__text">I have a special interest in learning</p>
+
+            <div class="growth-hint__icons">
+              <div class="growth-icon">
+                <img src="assets/icons/React.svg" alt="" aria-hidden="true" />
+                <span>React</span>
+              </div>
+              <div class="growth-icon">
+                <img src="assets/icons/Capa_1.svg" alt="" aria-hidden="true" />
+                <span>Vue</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </section>
-
