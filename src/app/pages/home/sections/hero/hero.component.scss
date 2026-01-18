@@ -395,8 +395,14 @@
   .hero__actions {
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 40%;
     max-width: 320px;
+  }
+
+  .hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .btn {
@@ -408,6 +414,7 @@
     left: -5%;
     right: -5%;
     transform: rotate(-3deg);
+    bottom: 60px;
   }
 
   .hero__left,
