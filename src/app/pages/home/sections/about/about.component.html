@@ -1,7 +1,44 @@
-<section class="section">
-  <div class="container">
-    <h2>About</h2>
-    <p>Platzhalter…</p>
+<section class="about" id="about">
+  <div class="container about__inner">
+
+    <!-- Left: Image -->
+    <div class="about__image">
+      <img src="assets/img/profilbildschaten.png" alt="Profilbild Milos Dimitrijevic" />
+    </div>
+
+    <!-- Right: Content -->
+    <div class="about__content">
+      <div class="about__card">
+        <span class="about__kicker">Who I Am</span>
+        <h2 class="about__title">Über mich</h2>
+
+        <p class="about__text">
+          Ich bin ein leidenschaftlicher Frontend- und Webentwickler mit Fokus auf
+          moderne, performante und nutzerfreundliche Webanwendungen.
+        </p>
+
+        <p class="about__text">
+          Neben HTML, CSS und JavaScript arbeite ich intensiv mit Angular,
+          um skalierbare Web-Apps umzusetzen – von der Idee bis zum Deployment.
+        </p>
+
+        <ul class="about__facts">
+          <li>
+            <img src="assets/icons/location_on.svg" alt="" aria-hidden="true" />
+            <span>{{ about.location }}</span>
+          </li>
+          <li>
+            <img src="assets/icons/cognition.svg" alt="" aria-hidden="true" />
+            <span>{{ about.mindset }}</span>
+          </li>
+          <li>
+            <img src="assets/icons/new_releases.svg" alt="" aria-hidden="true" />
+            <span>{{ about.approach }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
   </div>
 </section>
-
