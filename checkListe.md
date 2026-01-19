@@ -148,3 +148,107 @@
 - [ ] Horizontale Designs scrollen nicht “kaputt” mit Mausrad
 - [ ] To-Top Pfeil unter Contacts ist verlinkt
 - [ ] Impressum & Datenschutz sind responsive
+
+<!--TODO-->
+
+# Angular Portfolio
+
+## ✅ Git & Repository
+- [ ] Klare, aussagekräftige Commit-Messages verwenden
+- [ ] .gitignore korrekt konfiguriert
+- [ ] Repository regelmäßig committen und pushen
+
+## ✅ Allgemeine Funktionen
+- [ ] Alle Features funktionieren fehlerfrei
+- [ ] Cross-Browser Testing (Chrome, Firefox, Safari, Edge)
+- [ ] Keine Konsolenfehler oder -logs
+
+## ✅ User Experience
+- [ ] Intuitive Feedback bei Interaktionen (hover etc.)
+- [ ] UI-Elemente entsprechen Figma-Design
+- [ ] Transitions: 75ms-125ms auf anklickbaren Elementen
+- [ ] Buttons: `cursor: pointer`
+- [ ] Inputs/Buttons ohne Standard-Border
+- [ ] Dezente Animationen beim Laden/Scrollen
+- [ ] Nur sinnvolle Animationen (max. 125ms)
+
+## ✅ Technische Anforderungen
+- [ ] Max. 400 Zeilen Code pro Datei
+- [ ] Aussagekräftige Dateinamen
+- [ ] Konsistente Namenskonvention
+- [ ] Pro Sektion eine Komponente
+- [ ] Routerlink für Impressum
+- [ ] Impressum/Datenschutz mit gleichem Header/Footer
+- [ ] Externe Links öffnen in neuem Tab
+
+## ✅ Responsiveness
+- [ ] Funktion ab 320px Auflösung
+- [ ] Mobile & Desktop optimiert
+- [ ] Kein missbräuchliches `overflow:hidden`
+- [ ] Above the Fold: immer 100vh
+- [ ] Content auf max. 1920px/1440px begrenzt
+- [ ] Mobile Geräte funktionsfähig
+
+## ✅ TypeScript / Clean Code
+- [ ] Funktionen: eine Aufgabe pro Funktion
+- [ ] Funktionen: max. 14 Zeilen (HTML ausgenommen)
+- [ ] Deutliche Funktionsnamen
+- [ ] camelCase für Dateinamen, Variablen, Funktionen
+- [ ] Kleinschreibung am Anfang von Funktionen/Variablen
+- [ ] 1-2 Leerzeilen zwischen Funktionen
+- [ ] Extra Ordner für Bilder (img/)
+
+## ✅ Design
+- [ ] Gleichmäßige Margins
+- [ ] Keine unnötigen Abstände/Lücken
+- [ ] Sticky Header wenn benötigt
+- [ ] Konsistente Farben und Abstände
+
+## ✅ Fotos
+- [ ] Fotos nicht verzerrt (`object-fit: cover/contain`)
+- [ ] Fotos komprimiert (max. 500kb)
+- [ ] Professionelle Pose, neutraler Hintergrund
+- [ ] Keine doppelten Fotos
+
+## ✅ Texte
+- [ ] Kein Lorem Ipsum
+- [ ] Keine Serif-Schriftarten
+- [ ] Englische Texte mit Grammarly/ähnlichem geprüft
+- [ ] Deutsche Texte mit LanguageTool geprüft
+- [ ] Korrekte Rechtschreibung (z.B. "JavaScript")
+- [ ] Sprachumschaltung DE/EN implementiert
+
+## ✅ Projektsektion
+- [ ] Projekte verlinkt (eigene Subdomain)
+- [ ] Projekte funktionieren bugfrei
+- [ ] Vorschaubilder stimmig
+- [ ] Projekte ausprobierbar
+
+## ✅ Social Media
+- [ ] LinkedIn und GitHub verlinkt (mit https://)
+- [ ] Keine Facebook/Instagram Links
+
+## ✅ URL & Domain
+- [ ] Eigene Domain (z.B. https://vorname-nachname.de)
+- [ ] SSL-Zertifikat eingerichtet
+- [ ] SSL-Verbindung erzwungen
+- [ ] Custom Favicon (nicht Angular-Standard)
+- [ ] Angepasster Seitentitel
+
+## ✅ Kontaktformular Validation
+- [ ] Validation onBlur (nach Verlassen des Feldes)
+- [ ] Validierungsmeldungen verursachen kein Layout-Shifting
+- [ ] Senden-Button erst aktiv bei erfüllter Validation
+- [ ] Datenschutz-Haken implementiert
+- [ ] Autovervollständigung beeinträchtigt Design nicht
+- [ ] Feedback nach Email-Versand
+
+## ❌ Häufige Fehler vermeiden
+- [ ] Above the Fold hat 100vh
+- [ ] Bild wird nicht von Grafikelementen überlagert
+- [ ] Form Validation komplett implementiert
+- [ ] Header überdeckt keine Headlines nach Menü-Klick
+- [ ] Bilder komprimiert
+- [ ] Horizontale Designs mit Mausrad scrollbar
+- [ ] To-Top Pfeil unter Contacts verlinkt
+- [ ] Impressum und Datenschutz responsive

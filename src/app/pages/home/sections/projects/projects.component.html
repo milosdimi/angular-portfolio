@@ -1,5 +1,91 @@
-<section id="projects" class="section">
+<section id="projects" class="projects-section">
   <div class="container">
-    <h2>Projects</h2>
+
+    <!-- Section Header -->
+    <div class="section-header">
+      <span class="section-label">Portfolio</span>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-description">
+        Explore a selection of my work here - Interact with projects to see my skills in action.
+      </p>
+    </div>
+
+    <!-- Detail View -->
+    <div *ngIf="showDetailView && selectedProject" class="project-detail-view">
+      <button class="close-btn" (click)="closeDetailView()" aria-label="Close detail view">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <div class="detail-content">
+        <div class="detail-header">
+          <span class="project-number">{{ getProjectNumber(selectedProject.id) }}</span>
+          <h3 class="detail-title">{{ selectedProject.title }}</h3>
+        </div>
+
+        <p class="detail-question">What is this project about?</p>
+        <p class="detail-description">{{ selectedProject.detailedDescription }}</p>
+
+        <div class="technologies-list">
+          <span *ngFor="let tech of selectedProject.technologies" class="tech-badge">
+            {{ tech }}
+          </span>
+        </div>
+
+        <div class="detail-links">
+          <a [href]="selectedProject.githubUrl" target="_blank" rel="noopener noreferrer"
+            class="detail-link github-link">
+            GitHub
+          </a>
+          <a [href]="selectedProject.liveUrl" target="_blank" rel="noopener noreferrer" class="detail-link live-link">
+            Live Test
+          </a>
+        </div>
+
+        <div class="next-project" (click)="nextProject()">
+          <span>Next project</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid View -->
+    <div *ngIf="!showDetailView" class="projects-grid-view">
+      <div class="projects-grid">
+        <div *ngFor="let project of projects" class="project-card" (click)="selectProject(project)"
+          [class.hovered]="selectedProject?.id === project.id" tabindex="0" (keyup.enter)="selectProject(project)">
+          <div class="project-content">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">{{ project.description }}</p>
+
+            <div class="technologies">
+              <span *ngFor="let tech of project.technologies; let last = last">
+                {{ tech }}{{ !last ? ' | ' : '' }}
+              </span>
+            </div>
+          </div>
+
+          <div class="project-hover-indicator">
+            <span class="project-id">{{ getProjectNumber(project.id) }}</span>
+            <div class="hover-emoji">🎉</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GitHub CTA -->
+    <div *ngIf="!showDetailView" class="github-cta">
+      <p>Want to see more projects?</p>
+      <a href="https://github.com/milosdimi" target="_blank" rel="noopener noreferrer">
+        Visit my GitHub
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </a>
+    </div>
+
   </div>
 </section>
