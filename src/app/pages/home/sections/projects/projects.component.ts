@@ -27,9 +27,9 @@ export class ProjectsComponent {
       title: 'Join',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
-      liveUrl: 'https://join.milosdimi.de',
+      liveUrl: 'https://join.dimit.cc/',
       githubUrl: 'https://github.com/milosdimi/join',
-      imageUrl: 'assets/img/projects/join.png',
+      imageUrl: 'assets/projects/join-kanban.png',
     },
     {
       id: 2,
