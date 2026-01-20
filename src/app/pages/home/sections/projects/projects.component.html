@@ -1,91 +1,86 @@
 <section id="projects" class="projects-section">
   <div class="container">
 
-    <!-- Section Header -->
     <div class="section-header">
-      <span class="section-label">Portfolio</span>
+      <span class="section-label mono">Portfolio</span>
       <h2 class="section-title">Featured Projects</h2>
       <p class="section-description">
         Explore a selection of my work here - Interact with projects to see my skills in action.
       </p>
     </div>
 
-    <!-- Detail View -->
-    <div *ngIf="showDetailView && selectedProject" class="project-detail-view">
-      <button class="close-btn" (click)="closeDetailView()" aria-label="Close detail view">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-        </svg>
-      </button>
+    <div class="projects-layout">
+      <!-- Left: list -->
+      <div class="projects-list" role="list">
+        <button *ngFor="let project of projects; trackBy: trackById" class="project-item" type="button" role="listitem"
+          (mouseenter)="setHover(project.id)" (mouseleave)="setHover(null)" (focus)="setHover(project.id)"
+          (blur)="setHover(null)" (click)="openProject(project)" [class.active]="selectedProject?.id === project.id">
+          <div class="project-main">
+            <h3 class="project-title">
+              {{ project.title }}
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </h3>
 
-      <div class="detail-content">
-        <div class="detail-header">
-          <span class="project-number">{{ getProjectNumber(selectedProject.id) }}</span>
-          <h3 class="detail-title">{{ selectedProject.title }}</h3>
-        </div>
-
-        <p class="detail-question">What is this project about?</p>
-        <p class="detail-description">{{ selectedProject.detailedDescription }}</p>
-
-        <div class="technologies-list">
-          <span *ngFor="let tech of selectedProject.technologies" class="tech-badge">
-            {{ tech }}
-          </span>
-        </div>
-
-        <div class="detail-links">
-          <a [href]="selectedProject.githubUrl" target="_blank" rel="noopener noreferrer"
-            class="detail-link github-link">
-            GitHub
-          </a>
-          <a [href]="selectedProject.liveUrl" target="_blank" rel="noopener noreferrer" class="detail-link live-link">
-            Live Test
-          </a>
-        </div>
-
-        <div class="next-project" (click)="nextProject()">
-          <span>Next project</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <!-- Grid View -->
-    <div *ngIf="!showDetailView" class="projects-grid-view">
-      <div class="projects-grid">
-        <div *ngFor="let project of projects" class="project-card" (click)="selectProject(project)"
-          [class.hovered]="selectedProject?.id === project.id" tabindex="0" (keyup.enter)="selectProject(project)">
-          <div class="project-content">
-            <h3 class="project-title">{{ project.title }}</h3>
-            <p class="project-description">{{ project.description }}</p>
-
-            <div class="technologies">
+            <div class="technologies mono">
               <span *ngFor="let tech of project.technologies; let last = last">
                 {{ tech }}{{ !last ? ' | ' : '' }}
               </span>
             </div>
           </div>
+        </button>
+      </div>
 
-          <div class="project-hover-indicator">
-            <span class="project-id">{{ getProjectNumber(project.id) }}</span>
-            <div class="hover-emoji">🎉</div>
-          </div>
+      <!-- Right: hover preview -->
+      <div class="preview" aria-hidden="true">
+        <div class="preview__frame" [class.is-visible]="previewProject">
+          <img *ngIf="previewProject" class="preview__img" [src]="previewProject.imageUrl"
+            [alt]="previewProject.title" />
+          <div class="preview__hatch"></div>
         </div>
       </div>
     </div>
 
-    <!-- GitHub CTA -->
-    <div *ngIf="!showDetailView" class="github-cta">
-      <p>Want to see more projects?</p>
-      <a href="https://github.com/milosdimi" target="_blank" rel="noopener noreferrer">
-        Visit my GitHub
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-        </svg>
+    <div class="github-cta">
+      <a href="https://github.com/milosdimi" target="_blank" rel="noopener noreferrer" class="mono">
+        Want to see more projects? <span class="cta-arrow">↗</span>
       </a>
     </div>
+  </div>
 
+  <!-- Modal -->
+  <div class="modal" *ngIf="selectedProject" (click)="closeProject()">
+    <div class="modal__card" (click)="$event.stopPropagation()" role="dialog" aria-modal="true">
+      <button class="modal__close" type="button" (click)="closeProject()" aria-label="Close">×</button>
+
+      <div class="modal__grid">
+        <div class="modal__left">
+          <div class="modal__number mono">{{ getProjectNumber(selectedProject!.id) }}</div>
+          <h3 class="modal__title">{{ selectedProject!.title }}</h3>
+
+          <p class="modal__question mono">What is this project about?</p>
+          <p class="modal__desc">{{ selectedProject!.description }}</p>
+
+          <div class="modal__tech mono">
+            <span *ngFor="let tech of selectedProject!.technologies">{{ tech }}</span>
+          </div>
+
+          <div class="modal__actions">
+            <a class="btn" [href]="selectedProject!.githubUrl" target="_blank" rel="noopener noreferrer">
+              GitHub ↗
+            </a>
+            <a class="btn" [href]="selectedProject!.liveUrl" target="_blank" rel="noopener noreferrer">
+              Live Test ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="modal__right">
+          <img class="modal__img" [src]="selectedProject!.imageUrl" [alt]="selectedProject!.title" />
+          <button class="modal__next mono" type="button" (click)="nextProject()">
+            Next project <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
