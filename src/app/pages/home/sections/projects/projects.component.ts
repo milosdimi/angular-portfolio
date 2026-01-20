@@ -8,8 +8,6 @@ export interface Project {
   technologies: string[];
   liveUrl: string;
   githubUrl: string;
-
-  // neu: preview / modal image
   imageUrl: string;
 }
 
@@ -42,12 +40,12 @@ export class ProjectsComponent {
     },
     {
       id: 3,
-      title: 'DA Bubble',
-      description: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface and real-time messaging.',
-      technologies: ['Angular', 'Firebase', 'TypeScript'],
-      liveUrl: 'https://da-bubble.milosdimi.de',
-      githubUrl: 'https://github.com/milosdimi/da-bubble',
-      imageUrl: 'assets/img/projects/da-bubble.png',
+      title: 'Pokedex',
+      description: 'Interactive Pokédex application built with the public Pokémon API. Browse, search and explore Pokémon with dynamic data loading, clean UI and responsive design.',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      liveUrl: 'https://dex.dimit.cc/',
+      githubUrl: 'https://github.com/milosdimi/pokedex',
+      imageUrl: 'assets/projects/pokedex.png',
     },
   ];
 
