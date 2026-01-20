@@ -33,6 +33,10 @@ h2 {
   width: min(var(--container), calc(100% - var(--gutter-desktop)));
   margin-inline: auto;
 }
+.no-scroll {
+  overflow: hidden;
+}
+
 
 @media (max-width: 600px) {
   .container {

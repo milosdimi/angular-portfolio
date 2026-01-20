@@ -60,18 +60,23 @@
           <p class="modal__question mono">What is this project about?</p>
           <p class="modal__desc">{{ selectedProject!.description }}</p>
 
-          <div class="modal__tech mono">
-            <span *ngFor="let tech of selectedProject!.technologies">{{ tech }}</span>
+          <div class="modal__tech">
+            <div class="tech" *ngFor="let tech of selectedProject!.technologies">
+              <img *ngIf="getTechIcon(tech) as icon" [src]="icon" [alt]="tech" />
+              <span class="mono">{{ tech }}</span>
+            </div>
           </div>
 
           <div class="modal__actions">
-            <a class="btn" [href]="selectedProject!.githubUrl" target="_blank" rel="noopener noreferrer">
-              GitHub ↗
+            <a class="btn btn--outline" [href]="selectedProject!.githubUrl" target="_blank">
+              GitHub <span class="btn__arrow">↗</span>
             </a>
-            <a class="btn" [href]="selectedProject!.liveUrl" target="_blank" rel="noopener noreferrer">
-              Live Test ↗
+
+            <a class="btn btn--outline btn--accent" [href]="selectedProject!.liveUrl" target="_blank">
+              Live Test <span class="btn__arrow">↗</span>
             </a>
           </div>
+
         </div>
 
         <div class="modal__right">

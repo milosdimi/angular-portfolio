@@ -23,7 +23,8 @@ export class ProjectsComponent {
     {
       id: 1,
       title: 'Join',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      description:
+        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       liveUrl: 'https://join.dimit.cc/',
       githubUrl: 'https://github.com/milosdimi/join',
@@ -32,7 +33,8 @@ export class ProjectsComponent {
     {
       id: 2,
       title: 'El Pollo Loco',
-      description: 'Jump, run and throw game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa.',
+      description:
+        'Jump, run and throw game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       liveUrl: 'https://pollo.dimit.cc/',
       githubUrl: 'https://github.com/milosdimi/el_pollo_final',
@@ -41,7 +43,8 @@ export class ProjectsComponent {
     {
       id: 3,
       title: 'Pokedex',
-      description: 'Interactive Pokédex application built with the public Pokémon API. Browse, search and explore Pokémon with dynamic data loading, clean UI and responsive design.',
+      description:
+        'Interactive Pokédex application built with the public Pokémon API. Browse, search and explore Pokémon with dynamic data loading, clean UI and responsive design.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       liveUrl: 'https://dex.dimit.cc/',
       githubUrl: 'https://github.com/milosdimi/pokedex',
@@ -51,6 +54,17 @@ export class ProjectsComponent {
 
   hoveredProjectId: number | null = null;
   selectedProject: Project | null = null;
+  techIconMap: Record<string, string> = {
+    HTML: 'html.svg',
+    CSS: 'css.svg',
+    JavaScript: 'js.svg',
+    TypeScript: 'ts.svg',
+    Angular: 'angular.svg',
+    Firebase: 'fb.svg',
+    Git: 'git.svg',
+    'REST-API': 'api.svg',
+    Scrum: 'scrum.svg',
+  };
 
   trackById(_: number, p: Project) {
     return p.id;
@@ -62,16 +76,20 @@ export class ProjectsComponent {
 
   openProject(project: Project) {
     this.selectedProject = project;
+    document.body.classList.add('no-scroll');
   }
 
   closeProject() {
     this.selectedProject = null;
+    document.body.classList.remove('no-scroll');
   }
 
   nextProject() {
     if (!this.selectedProject) return;
 
-    const idx = this.projects.findIndex(p => p.id === this.selectedProject!.id);
+    const idx = this.projects.findIndex(
+      (p) => p.id === this.selectedProject!.id,
+    );
     const next = this.projects[(idx + 1) % this.projects.length];
     this.selectedProject = next;
   }
@@ -80,14 +98,21 @@ export class ProjectsComponent {
     return id.toString().padStart(2, '0');
   }
 
+  getTechIcon(tech: string): string | null {
+    const icon = this.techIconMap[tech];
+    return icon ? `assets/icons/${icon}` : null;
+  }
+
   get previewProject(): Project | null {
     if (this.selectedProject) return this.selectedProject;
     if (this.hoveredProjectId == null) return null;
-    return this.projects.find(p => p.id === this.hoveredProjectId) ?? null;
+    return this.projects.find((p) => p.id === this.hoveredProjectId) ?? null;
   }
 
   @HostListener('window:keydown.escape')
   onEsc() {
-    this.closeProject();
+    if (this.selectedProject) {
+      this.closeProject();
+    }
   }
 }
