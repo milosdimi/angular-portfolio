@@ -1,0 +1,61 @@
+<section class="refs section" id="references">
+  <div class="container">
+    <h2 class="refs__title mono">What my colleagues say about me</h2>
+
+    <div class="refs__stage">
+      <!-- left preview -->
+      <article class="card card--side card--left" role="button" tabindex="0" (click)="prev()" (keyup.enter)="prev()"
+        (keyup.space)="prev()" aria-label="Previous reference">
+        <p class="card__text">{{ references[leftIndex].text }}</p>
+        <div class="card__footer">
+          <span class="card__line"></span>
+          <span class="card__author mono">
+            {{ references[leftIndex].author }} - {{ references[leftIndex].role }}
+          </span>
+        </div>
+      </article>
+
+      <!-- active -->
+      <article class="card card--active">
+        <div class="card__quote" aria-hidden="true">“</div>
+
+        <p class="card__text">{{ references[activeIndex].text }}</p>
+
+        <div class="card__footer">
+          <span class="card__line"></span>
+          <span class="card__author mono">
+            {{ references[activeIndex].author }} - {{ references[activeIndex].role }}
+          </span>
+        </div>
+      </article>
+
+      <!-- right preview -->
+      <article class="card card--side card--right" role="button" tabindex="0" (click)="next()" (keyup.enter)="next()"
+        (keyup.space)="next()" aria-label="Next reference">
+        <p class="card__text">{{ references[rightIndex].text }}</p>
+        <div class="card__footer">
+          <span class="card__line"></span>
+          <span class="card__author mono">
+            {{ references[rightIndex].author }} - {{ references[rightIndex].role }}
+          </span>
+        </div>
+      </article>
+    </div>
+
+    <div class="refs__nav">
+      <button class="navBtn" type="button" (click)="prev()" aria-label="Previous">
+        <span aria-hidden="true">←</span>
+      </button>
+
+      <div class="dots" role="tablist" aria-label="References">
+        <button *ngFor="let _ of references; let i = index" type="button" class="dot"
+          [class.is-active]="i === activeIndex" (click)="goTo(i)"
+          [attr.aria-label]="'Go to reference ' + (i + 1)"></button>
+      </div>
+
+      <button class="navBtn" type="button" (click)="next()" aria-label="Next">
+        <span aria-hidden="true">→</span>
+      </button>
+    </div>
+  </div>
+</section>

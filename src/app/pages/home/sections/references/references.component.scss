@@ -1,0 +1,190 @@
+.refs {
+  padding: 120px 0 90px;
+}
+
+.refs__title {
+  text-align: center;
+  margin: 0 0 48px;
+  color: var(--accent);
+  font-size: clamp(20px, 2.2vw, 30px);
+  letter-spacing: 0.02em;
+}
+
+.refs__stage {
+  display: grid;
+  grid-template-columns: 1fr 1.45fr 1fr;
+  gap: 28px;
+  align-items: center;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+/* Card base */
+.card {
+  position: relative;
+  border-radius: 22px;
+  border: 1px solid rgba(120, 215, 195, 0.55);
+  background: rgba(120, 215, 195, 0.22);
+  padding: 26px 26px 22px;
+  min-height: 210px;
+  overflow: hidden;
+
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.08) inset,
+    0 18px 60px rgba(0, 0, 0, 0.35);
+
+  /* NEW */
+  display: flex;
+  flex-direction: column;
+}
+
+.card__text {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.55;
+  font-size: 15px;
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  /* NEW: push footer to bottom */
+  margin-top: auto;
+
+  /* optional: fixed breathing space above footer */
+  padding-top: 20px;
+}
+
+.card__line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.card__author {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* Active card: bigger + quote mark */
+.card--active {
+  padding: 34px 34px 26px;
+  min-height: 200px;
+
+  @media (max-width: 1000px) {
+    order: -1; /* active first on mobile */
+  }
+}
+
+.card__quote {
+  position: absolute;
+  left: 22px;
+  top: 10px;
+  font-size: 92px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.95);
+  opacity: 0.95;
+  transform: translateY(-8px);
+}
+
+/* Side cards: faded + cropped feel */
+.card--side {
+  cursor: pointer;
+  opacity: 0.28;
+  transform: scale(0.98);
+  transition:
+    opacity var(--t-fast),
+    transform var(--t-fast),
+    background var(--t-fast);
+
+  &:hover {
+    opacity: 0.45;
+    background: rgba(120, 215, 195, 0.18);
+  }
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.card--left {
+  mask-image: linear-gradient(to right, transparent 0%, #000 22%, #000 100%);
+
+  &:hover {
+    transform: translateX(4px) scale(0.99);
+  }
+}
+
+.card--right {
+  mask-image: linear-gradient(to left, transparent 0%, #000 22%, #000 100%);
+
+  &:hover {
+    transform: translateX(-4px) scale(0.99);
+  }
+}
+
+/* Navigation */
+.refs__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.navBtn {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition:
+    transform var(--t-fast),
+    background var(--t-fast),
+    border-color var(--t-fast);
+}
+
+.navBtn:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(120, 215, 195, 0.55);
+  color: var(--accent);
+}
+
+.dots {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition:
+    transform var(--t-fast),
+    background var(--t-fast);
+}
+
+.dot.is-active {
+  background: var(--accent);
+  transform: scale(1.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navBtn,
+  .dot {
+    transition: none;
+  }
+}
