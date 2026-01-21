@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-imprint',
+  selector: 'app-impressum',
   standalone: true,
   imports: [],
   templateUrl: './imprint.component.html',
-  styleUrl: './imprint.component.scss'
+  styleUrl: './imprint.component.scss',
 })
-export class ImprintComponent {
-
+export class ImpressumComponent {
+  year = new Date().getFullYear();
+  email = 'dm&#64;dimit.cc'; // Angular 17 safe
 }

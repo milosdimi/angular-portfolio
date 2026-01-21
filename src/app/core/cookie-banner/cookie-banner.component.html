@@ -1,0 +1,11 @@
+<div class="cookie" *ngIf="!accepted">
+  <p>
+    Diese Website verwendet ausschließlich technisch notwendige Cookies.
+    Weitere Informationen finden Sie in der
+    <a routerLink="/datenschutz">Datenschutzerklärung</a>.
+  </p>
+
+  <button  (click)="acceptCookies()">
+    OK
+  </button>
+</div>

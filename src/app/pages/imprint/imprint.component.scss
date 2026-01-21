@@ -1,0 +1,40 @@
+.legal {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  color: #d1d5db;
+
+  h1 {
+    color: #ffffff;
+    font-size: 34px;
+    letter-spacing: -0.5px;
+    margin: 0 0 8px;
+  }
+
+  h2 {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 28px 0 10px;
+  }
+
+  p {
+    line-height: 1.7;
+    margin: 0 0 12px;
+    color: #b3b3b3;
+  }
+
+  a {
+    color: #6dd3c6;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.legal__muted {
+  color: #9ca3af;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
