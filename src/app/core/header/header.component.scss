@@ -1,10 +1,8 @@
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset: 0 0 auto 0;
   z-index: 50;
-  padding: 18px 0;
+  padding: 14px 0;
   background: transparent;
 
   &::before {
@@ -12,14 +10,12 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-
     background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.62) 0%,
       rgba(0, 0, 0, 0.62) 20%,
       rgba(0, 0, 0, 0) 100%
     );
-
   }
 
   &::after {
@@ -28,16 +24,18 @@
     left: 0;
     right: 0;
     bottom: -1px;
+    height: 1px;
     pointer-events: none;
     background: rgba(255, 255, 255, 0.08);
   }
 }
 
 .header__inner {
-  position: relative; 
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 14px;
 }
 
 .header__left {

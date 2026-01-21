@@ -33,7 +33,8 @@
 
       <label class="field">
         <span class="field__label mono">How can I help you?</span>
-        <textarea class="field__textarea" formControlName="message" rows="4" placeholder="Hello Milos, I am interested in..."></textarea>
+        <textarea class="field__textarea" formControlName="message" rows="4"
+          placeholder="Hello Milos, I am interested in..."></textarea>
         <span class="field__error" [class.is-visible]="isInvalid('message')">
           What do you need to develop?
         </span>
@@ -42,12 +43,19 @@
       <!-- Honeypot (hidden) -->
       <input class="hp" type="text" formControlName="company" tabindex="-1" autocomplete="off" />
 
-      <label class="privacy">
-        <input type="checkbox" formControlName="privacy" />
-        <span>
-          I've read the <a routerLink="/datenschutz">privacy policy</a> and agree to the processing of my data as outlined.
+      <div class="privacy">
+        <label class="privacy__check">
+          <input type="checkbox" formControlName="privacy" />
+        </label>
+
+        <span class="privacy__text">
+          I've read the
+          <a routerLink="/datenschutz">privacy policy</a>
+          and agree to the processing of my data as outlined.
         </span>
-      </label>
+      </div>
+
+
       <span class="field__error" [class.is-visible]="isInvalid('privacy')">
         Please accept the privacy policy.
       </span>
