@@ -1,5 +1,68 @@
-<section id="contact" class="section">
-  <div class="container">
-    <h2>Contact</h2>
+<section id="contact" class="contact">
+  <div class="container contact__grid">
+
+    <!-- Left -->
+    <div class="contact__intro">
+      <p class="contact__label mono">Contact me</p>
+      <h2 class="contact__title">Let's work<br />together</h2>
+
+      <p class="contact__headline mono">Got a problem to solve?</p>
+      <p class="contact__text">
+        Need a Frontend developer? <span class="contact__accent">Let’s talk!</span>
+      </p>
+    </div>
+
+    <!-- Right: Form -->
+    <form class="contact__form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+
+      <label class="field">
+        <span class="field__label mono">What's your name?</span>
+        <input class="field__input" type="text" formControlName="name" placeholder="Your name goes here" />
+        <span class="field__error" [class.is-visible]="isInvalid('name')">
+          Oops! It seems your name is missing
+        </span>
+      </label>
+
+      <label class="field">
+        <span class="field__label mono">What's your email?</span>
+        <input class="field__input" type="email" formControlName="email" placeholder="youremail@email.com" />
+        <span class="field__error" [class.is-visible]="isInvalid('email')">
+          Hoppla! your email is required
+        </span>
+      </label>
+
+      <label class="field">
+        <span class="field__label mono">How can I help you?</span>
+        <textarea class="field__textarea" formControlName="message" rows="4" placeholder="Hello Milos, I am interested in..."></textarea>
+        <span class="field__error" [class.is-visible]="isInvalid('message')">
+          What do you need to develop?
+        </span>
+      </label>
+
+      <!-- Honeypot (hidden) -->
+      <input class="hp" type="text" formControlName="company" tabindex="-1" autocomplete="off" />
+
+      <label class="privacy">
+        <input type="checkbox" formControlName="privacy" />
+        <span>
+          I've read the <a routerLink="/datenschutz">privacy policy</a> and agree to the processing of my data as outlined.
+        </span>
+      </label>
+      <span class="field__error" [class.is-visible]="isInvalid('privacy')">
+        Please accept the privacy policy.
+      </span>
+
+      <button class="sendBtn" type="submit" [disabled]="form.invalid || isSubmitting">
+        {{ isSubmitting ? 'Sending...' : 'Say Hello ;)' }}
+      </button>
+
+      <p class="formMsg formMsg--success" *ngIf="submitState === 'success'">
+        Thanks! Your message has been sent.
+      </p>
+      <p class="formMsg formMsg--error" *ngIf="submitState === 'error'">
+        Sorry — something went wrong. Please try again later.
+      </p>
+    </form>
+
   </div>
 </section>

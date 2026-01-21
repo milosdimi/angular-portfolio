@@ -1,0 +1,146 @@
+.contact {
+  padding: 120px 0 100px;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 60px;
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.contact__label {
+  color: var(--accent);
+  margin: 0 0 14px;
+}
+
+.contact__title {
+  margin: 0 0 28px;
+  font-size: clamp(44px, 5vw, 76px);
+  line-height: 0.95;
+}
+
+.contact__headline {
+  color: var(--accent);
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.contact__text {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 46ch;
+  line-height: 1.6;
+}
+
+.contact__accent {
+  color: var(--accent);
+}
+
+.contact__form {
+  display: grid;
+  gap: 26px;
+}
+
+/* fields with bottom lines like figma */
+.field {
+  display: grid;
+  gap: 10px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(120, 215, 195, 0.55);
+}
+
+.field__label {
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.field__input,
+.field__textarea {
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  padding: 0;
+}
+
+.field__textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.field__error {
+  min-height: 18px; /* prevents layout shift */
+  font-size: 12px;
+  color: rgba(255, 120, 120, 0.95);
+  opacity: 0;
+  transition: opacity var(--t-fast);
+}
+
+.field__error.is-visible {
+  opacity: 1;
+}
+
+.privacy {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+}
+
+.sendBtn {
+  justify-self: start;
+  height: 46px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: background var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
+
+  &:hover:enabled {
+    transform: translateY(-1px);
+    border-color: #3dcfb6;
+    background: rgba(61, 207, 182, 0.12);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+/* honeypot hidden */
+.hp {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.formMsg {
+  margin: 0;
+  font-size: 13px;
+  min-height: 18px;
+}
+
+.formMsg--success {
+  color: rgba(120, 255, 170, 0.9);
+}
+
+.formMsg--error {
+  color: rgba(255, 120, 120, 0.95);
+}
