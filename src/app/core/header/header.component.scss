@@ -1,10 +1,22 @@
+/* =========================
+   HEADER (Desktop + Mobile)
+   ========================= */
+
+:host {
+  display: block;
+}
+
+/* Wrapper */
 .header {
   position: fixed;
-  inset: 0 0 auto 0;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
   padding: 14px 0;
   background: transparent;
 
+  /* top fade like figma */
   &::before {
     content: "";
     position: absolute;
@@ -18,6 +30,7 @@
     );
   }
 
+  /* subtle bottom hairline */
   &::after {
     content: "";
     position: absolute;
@@ -30,6 +43,7 @@
   }
 }
 
+/* inner layout */
 .header__inner {
   position: relative;
   display: flex;
@@ -38,13 +52,43 @@
   gap: 14px;
 }
 
+/* left area: language + nav (desktop) */
 .header__left {
   display: flex;
   align-items: center;
   gap: 18px;
 }
 
-/* ===== Language Switch ===== */
+/* =========================
+   LOGO
+   ========================= */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 54px; /* desktop */
+  width: auto;
+  display: block;
+  opacity: 0.98;
+  transition:
+    transform 120ms ease,
+    filter 120ms ease;
+}
+
+.logo:hover img {
+  transform: scale(1.02);
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.65));
+}
+
+/* =========================
+   LANGUAGE SWITCH
+   ========================= */
+
 .lang {
   display: inline-flex;
   align-items: center;
@@ -54,6 +98,8 @@
   border: 1px solid rgba(61, 207, 182, 0.55);
   background: rgba(0, 0, 0, 0.14);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12) inset;
+
+  position: relative;
 }
 
 .lang__btn {
@@ -71,9 +117,9 @@
 
   cursor: pointer;
   transition:
-    background var(--t-fast, 120ms),
-    color var(--t-fast, 120ms),
-    transform var(--t-fast, 120ms);
+    background 120ms ease,
+    color 120ms ease,
+    transform 120ms ease;
 }
 
 .lang__btn.isActive {
@@ -90,7 +136,21 @@
   outline-offset: 2px;
 }
 
-/* ===== Nav ===== */
+/* optional thumb if you use it visually */
+.lang__thumb {
+  position: absolute;
+  inset: 3px;
+  width: 46px;
+  border-radius: 999px;
+  background: rgba(61, 207, 182, 0.85);
+  opacity: 0; /* keep off unless you animate */
+  pointer-events: none;
+}
+
+/* =========================
+   NAV (Desktop)
+   ========================= */
+
 .nav {
   display: flex;
   gap: 18px;
@@ -100,7 +160,7 @@
   color: rgba(255, 255, 255, 0.82);
   text-decoration: none;
   position: relative;
-  transition: color var(--t-fast, 120ms);
+  transition: color 120ms ease;
 }
 
 .nav__link:hover {
@@ -117,47 +177,140 @@
   border-radius: 50%;
   background: rgba(61, 207, 182, 0.9);
   transform: translateX(-50%) scale(0);
-  transition: transform var(--t-fast, 120ms);
+  transition: transform 120ms ease;
 }
 
 .nav__link:hover::after {
   transform: translateX(-50%) scale(1);
 }
 
-/* ===== Logo ===== */
-.logo {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: auto;
-}
+/* =========================
+   BURGER (Mobile)
+   ========================= */
 
-.logo img {
-  height: 160px;
-  width: auto;
-  display: block;
-  opacity: 0.98;
+.burger {
+  display: none; /* visible on mobile */
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(61, 207, 182, 0.35);
+  background: rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  padding: 0;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
   transition:
-    transform var(--t-fast, 120ms),
-    filter var(--t-fast, 120ms);
+    transform 120ms ease,
+    border-color 120ms ease,
+    background 120ms ease;
 }
 
-.logo:hover img {
-  transform: scale(1.02);
+.burger:hover {
+  border-color: rgba(61, 207, 182, 0.55);
+  background: rgba(0, 0, 0, 0.24);
 }
 
-.logo:hover img {
-  filter: drop-shadow(2px 4px 6px black);
+.burger:active {
+  transform: scale(0.98);
 }
 
-/* ===== Responsive ===== */
+.burger:focus-visible {
+  outline: 2px solid rgba(61, 207, 182, 0.55);
+  outline-offset: 2px;
+}
+
+.burger span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 4px auto;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+}
+
+/* =========================
+   MOBILE MENU OVERLAY
+   ========================= */
+
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.menu.is-open {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.menu__backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.menu__panel {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: min(320px, calc(100% - 36px));
+  padding: 28px 22px;
+  border-radius: 26px;
+
+  background: rgba(8, 10, 12, 0.92);
+  border: 1px solid rgba(61, 207, 182, 0.35);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+}
+
+.menu__link {
+  display: block;
+  padding: 14px 10px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition:
+    color 120ms ease,
+    transform 120ms ease;
+}
+
+.menu__link:hover {
+  color: rgba(61, 207, 182, 1);
+  transform: translateX(2px);
+}
+
+.menu__lang {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
 @media (max-width: 900px) {
-  .nav {
-    display: none; /* später Burger Menü */
+  /* hide desktop items */
+  .nav,
+  .lang--desktop {
+    display: none;
   }
 
+  /* show burger */
+  .burger {
+    display: inline-flex;
+  }
+
+  /* smaller logo */
   .logo img {
-    height: 100px; /* etwas kleiner auf mobile */
+    height: 44px;
   }
 }

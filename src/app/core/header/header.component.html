@@ -1,22 +1,31 @@
 <header class="header">
   <div class="container header__inner">
-    <!-- Logo LEFT -->
+    <!-- LEFT: Language + Nav (Desktop) -->
+    <div class="header__left">
+      <div class="lang lang--slider lang--desktop" role="group" aria-label="Language switch">
+        <span class="lang__thumb isLeft" aria-hidden="true"></span>
+        <button class="lang__btn isActive" type="button">EN</button>
+        <button class="lang__btn" type="button">DE</button>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#about">About me</a>
+        <a class="nav__link" href="#skills">Skills</a>
+        <a class="nav__link" href="#projects">Projects</a>
+      </nav>
+    </div>
+
+    <!-- RIGHT: Logo -->
     <a class="logo" routerLink="/" aria-label="Home">
       <img src="assets/logo/logo_grau.png" alt="DIMIT Logo" />
     </a>
 
-    <!-- Desktop Nav (optional) -->
-    <nav class="nav nav--desktop" aria-label="Primary">
-      <a class="nav__link" href="#about">About me</a>
-      <a class="nav__link" href="#skills">Skills</a>
-      <a class="nav__link" href="#projects">Projects</a>
-    </nav>
-
-    <!-- Burger RIGHT (mobile) -->
+    <!-- Burger (Mobile) -->
     <button
       class="burger"
       type="button"
       aria-label="Open menu"
+      aria-controls="mobile-menu"
       [attr.aria-expanded]="menuOpen"
       (click)="toggleMenu()"
     >
@@ -24,8 +33,10 @@
     </button>
   </div>
 
-  <!-- Mobile Menu Overlay -->
-  <div class="menu" [class.is-open]="menuOpen">
+  <!-- Mobile Menu -->
+  <div class="menu" id="mobile-menu" [class.is-open]="menuOpen">
+    <button class="menu__backdrop" type="button" (click)="closeMenu()" aria-label="Close menu"></button>
+
     <div class="menu__panel">
       <a class="menu__link" href="#about" (click)="closeMenu()">About me</a>
       <a class="menu__link" href="#skills" (click)="closeMenu()">Skills</a>
@@ -33,12 +44,11 @@
 
       <div class="menu__lang">
         <div class="lang lang--slider" role="group" aria-label="Language switch">
+          <span class="lang__thumb isLeft" aria-hidden="true"></span>
           <button class="lang__btn isActive" type="button">EN</button>
           <button class="lang__btn" type="button">DE</button>
         </div>
       </div>
     </div>
-
-    <button class="menu__backdrop" type="button" (click)="closeMenu()" aria-label="Close menu"></button>
   </div>
 </header>
