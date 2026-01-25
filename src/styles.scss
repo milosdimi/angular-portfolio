@@ -30,7 +30,10 @@ h2 {
     color: rgba(61, 207, 182, 0.8);
 }
 .container {
-  width: min(var(--container), calc(100% - var(--gutter-desktop)));
+  width: 100%;
+  max-width: var(--container);
+  padding-inline: var(--gutter-desktop);
+  box-sizing: border-box;
   margin-inline: auto;
 }
 .no-scroll {
@@ -40,6 +43,6 @@ h2 {
 
 @media (max-width: 600px) {
   .container {
-    width: min(var(--container), calc(100% - var(--gutter-mobile)));
+    padding-inline: var(--gutter-mobile);
   }
 }

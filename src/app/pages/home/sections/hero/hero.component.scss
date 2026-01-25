@@ -141,7 +141,7 @@
 
   .btn__text-inner,
   .btn__text-duplicate {
-    padding: 0 28px;
+    padding: 0 24px;
     font-weight: 500;
     letter-spacing: 0.02em;
   }
@@ -180,7 +180,6 @@
   display: grid;
   gap: 14px;
   align-items: center;
-  z-index: 1;
   width: 56px;
 }
 
@@ -209,6 +208,10 @@
 .email:hover {
   color: rgba(61, 207, 182, 0.9);
   text-shadow: 0 0 8px rgba(61, 207, 182, 0.4);
+}
+
+.email--icon {
+  display: none;
 }
 
 /* Social buttons (two-svg hover swap) */
@@ -344,6 +347,7 @@
 .marquee__row--reverse {
   animation: marqueeRight 48s linear infinite;
   opacity: 0.9;
+
 }
 
 .marquee__run {
@@ -393,37 +397,107 @@
 /* Responsive */
 @media (max-width: 900px) {
   .hero__actions {
-    flex-direction: column;
     align-items: center;
-    width: 40%;
-    max-width: 320px;
+    width: 100%;
+    gap: 12px;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
 
   .hero__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .btn {
-    width: 100%;
-    padding: 0 24px;
+    padding: 0 0px;
+    height: 32px;
   }
 
-  .marquee {
-    left: -5%;
-    right: -5%;
-    transform: rotate(-3deg);
-    bottom: 60px;
+  .hero__kicker {
+    font-size: 14px;
+    letter-spacing: 0.12em;
+  }
+
+  .hero__title {
+    font-size: clamp(38px, 9vw, 64px);
+    margin: 12px 0 22px;
   }
 
   .hero__left,
   .hero__right {
+    display: grid;
+    bottom: 0px;
+    width: 44px;
+  }
+
+  .hero__left {
+    left: 18px;
+  }
+
+  .hero__right {
+    right: 18px;
+  }
+
+  .email {
     display: none;
+  }
+
+  .email--icon {
+    display: grid;
+  }
+
+  .icons {
+    gap: 14px;
+  }
+
+  .social,
+  .social__icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .scrollHint {
+    width: 44px;
+    height: 44px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .line {
+    height: 185px;
+    position: relative;
+    z-index: 0;
+  }
+
+  .hero__right .line {
+    height: 100px;
+  }
+
+  .marquee {
+    left: -8%;
+    right: -8%;
+    transform: rotate(-3deg);
+    bottom: 48px;
+    z-index: 1;
   }
 
   .marquee__row {
     font-size: 16px;
     gap: 18px;
+
+  }
+
+  .marquee__row:first-child {
+    display: none;
+  }
+
+  .icons,
+  .social,
+  .email {
+    position: relative;
+    z-index: 2;
   }
 }
