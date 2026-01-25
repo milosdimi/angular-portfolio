@@ -198,6 +198,62 @@ $t-fast: 120ms;
   }
 }
 
+@media (max-width: 900px) {
+  .projects-section {
+    padding: 100px 0 64px;
+  }
+
+  .section-header {
+    margin-bottom: 36px;
+
+    .section-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 9vw, 3rem);
+      margin: 8px 0 14px;
+    }
+
+    .section-description {
+      font-size: 0.95rem;
+      max-width: 100%;
+    }
+  }
+
+  .projects-list {
+    border-top-width: 1px;
+  }
+
+  .project-item {
+    padding: 18px 6px;
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+  }
+
+  .project-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .technologies {
+    font-size: 0.9rem;
+    opacity: 0.75;
+  }
+
+  .preview {
+    display: none;
+  }
+
+  .github-cta {
+    margin-top: 36px;
+  }
+}
+
 /* MODAL */
 .modal {
   position: fixed;
@@ -381,4 +437,63 @@ $t-fast: 120ms;
   color: $accent;
   cursor: pointer;
   font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .modal {
+    padding: 16px;
+  }
+
+
+  .modal__close {
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+
+  .modal__grid {
+    gap: 20px;
+  }
+
+  .modal__right {
+    order: -1;
+  }
+
+  .modal__img {
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  .modal__number {
+    font-size: 3rem;
+  }
+
+  .modal__title {
+    font-size: 2.1rem;
+    margin: 0 0 12px;
+  }
+
+  .modal__question {
+    font-size: 1rem;
+  }
+
+  .modal__desc {
+    font-size: 0.95rem;
+  }
+
+  .modal__actions {
+    gap: 10px;
+  }
+
+  .btn--outline {
+    height: 40px;
+    padding: 0 16px;
+    font-size: 0.9rem;
+  }
+
+  .modal__next {
+    font-size: 0.95rem;
+  }
 }
