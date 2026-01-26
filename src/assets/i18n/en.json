@@ -36,4 +36,54 @@
       "approach": "Analytical, solution-oriented and detail-focused – with emphasis on quality, performance and UX"
     }
   }
+  ,
+  "skills": {
+    "kicker": "Technologies",
+    "title": "Skill Set",
+    "p1": "I work with modern frontend technologies and focus on clean structure, performance, and user-friendly UI/UX.",
+    "p2": "I see new tools not as a hurdle but as a chance — I keep learning and adapt quickly.",
+    "cta": {
+      "title": "You need another",
+      "skill": "skill",
+      "text": "Feel free to contact me. I look forward to expanding my knowledge.",
+      "button": "Let's Talk"
+    },
+    "growth": {
+      "labelLine1": "Growth",
+      "labelLine2": "mindset",
+      "hint": "I have a special interest in learning"
+    }
+  }
+  ,
+  "projects": {
+    "kicker": "Portfolio",
+    "title": "Featured Projects",
+    "description": "Explore a selection of my work here — interact with projects to see my skills in action.",
+    "more": "Want to see more projects?",
+    "modal": {
+      "question": "What is this project about?",
+      "live": "Live Test",
+      "next": "Next project"
+    },
+    "items": {
+      "join": "Task manager inspired by the Kanban system. Create and organize tasks using drag & drop, assign users and categories.",
+      "pollo": "Jump-and-run game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa.",
+      "pokedex": "Interactive Pokédex app built with the public Pokémon API. Browse, search and explore with dynamic loading, clean UI and responsive design."
+    }
+  }
+  ,
+  "references": {
+    "title": "What my colleagues say about me",
+    "prev": "Previous reference",
+    "next": "Next reference",
+    "aria": "References",
+    "goto": "Go to reference",
+    "items": {
+      "0": "Milos has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+      "1": "I had the good fortune of working with Milos in a group project. He stayed calm, focused, and made sure our team was set up for success.",
+      "2": "Strong communication, clean implementation, and a great sense for UI/UX details. I’d happily work with him again.",
+      "3": "Very structured and reliable. Milos helped keep the project on track and supported the team whenever needed.",
+      "4": "Great technical understanding and fast execution. Milos delivers clean code and communicates clearly."
+    }
+  }
 }

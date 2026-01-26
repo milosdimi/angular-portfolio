@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
 
 type Reference = {
   text: string;
@@ -10,34 +11,34 @@ type Reference = {
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss',
 })
 export class ReferencesComponent {
   references: Reference[] = [
     {
-      text: `Milos has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.`,
+      text: 'references.items.0',
       author: 'H. Janisch',
       role: 'Team Partner',
     },
     {
-      text: `I had the good fortune of working with Milos in a group project. He stayed calm, focused, and made sure our team was set up for success.`,
+      text: 'references.items.1',
       author: 'A. Fischer',
       role: 'Team Partner',
     },
     {
-      text: `Strong communication, clean implementation, and a great sense for UI/UX details. I’d happily work with him again.`,
+      text: 'references.items.2',
       author: 'T. Schulz',
       role: 'Frontend Developer',
     },
     {
-      text: `Very structured and reliable. Milos helped keep the project on track and supported the team whenever needed.`,
+      text: 'references.items.3',
       author: 'S. Meier',
       role: 'Team Partner',
     },
     {
-      text: `Great technical understanding and fast execution. Milos delivers clean code and communicates clearly.`,
+      text: 'references.items.4',
       author: 'L. Berger',
       role: 'Team Partner',
     },

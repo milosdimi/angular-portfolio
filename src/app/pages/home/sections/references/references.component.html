@@ -1,13 +1,13 @@
 <section class="refs section" id="references">
   <div class="container">
-    <h2 class="refs__title mono">What my colleagues say about me</h2>
+    <h2 class="refs__title mono">{{ 'references.title' | t }}</h2>
 
     <div class="refs__stage-wrap">
       <div class="refs__stage">
       <!-- left preview -->
       <article class="card card--side card--left" role="button" tabindex="0" (click)="prev()" (keyup.enter)="prev()"
-        (keyup.space)="prev()" aria-label="Previous reference">
-        <p class="card__text">{{ references[leftIndex].text }}</p>
+        (keyup.space)="prev()" aria-label="{{ 'references.prev' | t }}">
+        <p class="card__text">{{ references[leftIndex].text | t }}</p>
         <div class="card__footer">
           <span class="card__line"></span>
           <span class="card__author mono">
@@ -18,9 +18,9 @@
 
       <!-- active -->
       <article class="card card--active">
-        <div class="card__quote" aria-hidden="true">“</div>
+        <div class="card__quote" aria-hidden="true">&ldquo;</div>
 
-        <p class="card__text">{{ references[activeIndex].text }}</p>
+        <p class="card__text">{{ references[activeIndex].text | t }}</p>
 
         <div class="card__footer">
           <span class="card__line"></span>
@@ -32,8 +32,8 @@
 
       <!-- right preview -->
       <article class="card card--side card--right" role="button" tabindex="0" (click)="next()" (keyup.enter)="next()"
-        (keyup.space)="next()" aria-label="Next reference">
-        <p class="card__text">{{ references[rightIndex].text }}</p>
+        (keyup.space)="next()" aria-label="{{ 'references.next' | t }}">
+        <p class="card__text">{{ references[rightIndex].text | t }}</p>
         <div class="card__footer">
           <span class="card__line"></span>
           <span class="card__author mono">
@@ -45,18 +45,18 @@
     </div>
 
     <div class="refs__nav">
-      <button class="navBtn" type="button" (click)="prev()" aria-label="Previous">
-        <span aria-hidden="true">←</span>
+      <button class="navBtn" type="button" (click)="prev()" [attr.aria-label]="'references.prev' | t">
+        <span aria-hidden="true">&larr;</span>
       </button>
 
-      <div class="dots" role="tablist" aria-label="References">
+      <div class="dots" role="tablist" aria-label="{{ 'references.aria' | t }}">
         <button *ngFor="let _ of references; let i = index" type="button" class="dot"
           [class.is-active]="i === activeIndex" (click)="goTo(i)"
-          [attr.aria-label]="'Go to reference ' + (i + 1)"></button>
+          [attr.aria-label]="('references.goto' | t) + ' ' + (i + 1)"></button>
       </div>
 
-      <button class="navBtn" type="button" (click)="next()" aria-label="Next">
-        <span aria-hidden="true">→</span>
+      <button class="navBtn" type="button" (click)="next()" [attr.aria-label]="'references.next' | t">
+        <span aria-hidden="true">&rarr;</span>
       </button>
     </div>
   </div>

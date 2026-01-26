@@ -7,6 +7,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
 
 type SkillItem = {
   name: string;
@@ -17,6 +18,7 @@ type SkillItem = {
 @Component({
   selector: 'app-skills',
   standalone: true,
+  imports: [TranslatePipe],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
@@ -27,19 +29,7 @@ export class SkillsComponent implements AfterViewInit {
   inView = false;
   showGrowthHint = false;
 
-  // Left card text (DE-first; EN später easy)
-  copy = {
-    kicker: 'Technologies',
-    title: 'Skill Set',
-    p1: 'Ich arbeite mit modernen Frontend-Technologien und lege großen Wert auf saubere Strukturen, Performance und nutzerfreundliches UI/UX.',
-    p2: 'Neue Tools sehe ich nicht als Hürde, sondern als Chance – ich lerne kontinuierlich dazu und passe mich schnell an.',
-    ctaTitle: 'You need another skill?',
-    ctaText:
-      'Feel free to contact me. I look forward to expanding on my previous knowledge.',
-    button: "Let's Talk",
-  };
-
-  // Right grid items
+    // Right grid items
   row1: SkillItem[] = [
     { name: 'HTML', icon: 'html.svg' },
     { name: 'CSS', icon: 'css.svg' },

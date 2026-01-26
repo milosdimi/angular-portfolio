@@ -4,20 +4,20 @@
     <!-- LEFT: Card -->
     <div class="skills__content" [class.is-visible]="inView">
       <div class="skills__card">
-        <span class="skills__kicker">{{ copy.kicker }}</span>
-        <h2 class="skills__title">{{ copy.title }}</h2>
+        <span class="skills__kicker">{{ 'skills.kicker' | t }}</span>
+        <h2 class="skills__title">{{ 'skills.title' | t }}</h2>
 
-        <p class="skills__text">{{ copy.p1 }}</p>
-        <p class="skills__text">{{ copy.p2 }}</p>
+        <p class="skills__text">{{ 'skills.p1' | t }}</p>
+        <p class="skills__text">{{ 'skills.p2' | t }}</p>
 
         <div class="skills__cta">
           <p class="skills__cta-title">
-            {{ copy.ctaTitle }} <span class="skills__cta-accent">skill</span>?
+            {{ 'skills.cta.title' | t }} <span class="skills__cta-accent">{{ 'skills.cta.skill' | t }}</span>?
           </p>
-          <p class="skills__cta-text">{{ copy.ctaText }}</p>
+          <p class="skills__cta-text">{{ 'skills.cta.text' | t }}</p>
         </div>
 
-        <a class="skills__btn" href="#contact">{{ copy.button }}</a>
+        <a class="skills__btn" href="#contact">{{ 'skills.cta.button' | t }}</a>
       </div>
     </div>
 
@@ -53,10 +53,13 @@
         <!-- Growth mindset (special hover) -->
         <div class="skill skill--growth" (mouseenter)="showGrowthHint = true" (mouseleave)="showGrowthHint = false">
           <img src="assets/icons/gm.svg" alt="" aria-hidden="true" />
-          <span class="skill__label">Growth<br />mindset</span>
+          <span class="skill__label">
+            {{ 'skills.growth.labelLine1' | t }}<br />
+            {{ 'skills.growth.labelLine2' | t }}
+          </span>
 
           <div class="growth-hint" [class.is-visible]="showGrowthHint">
-            <p class="growth-hint__text">I have a special interest in learning</p>
+            <p class="growth-hint__text">{{ 'skills.growth.hint' | t }}</p>
 
             <div class="growth-hint__icons">
               <div class="growth-icon">

@@ -1,10 +1,11 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
 
 export interface Project {
   id: number;
   title: string;
-  description: string;
+  descriptionKey: string;
   technologies: string[];
   liveUrl: string;
   githubUrl: string;
@@ -14,7 +15,7 @@ export interface Project {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
@@ -23,8 +24,7 @@ export class ProjectsComponent {
     {
       id: 1,
       title: 'Join',
-      description:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      descriptionKey: 'projects.items.join',
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       liveUrl: 'https://join.dimit.cc/',
       githubUrl: 'https://github.com/milosdimi/join',
@@ -33,8 +33,7 @@ export class ProjectsComponent {
     {
       id: 2,
       title: 'El Pollo Loco',
-      description:
-        'Jump, run and throw game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa.',
+      descriptionKey: 'projects.items.pollo',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       liveUrl: 'https://pollo.dimit.cc/',
       githubUrl: 'https://github.com/milosdimi/el_pollo_final',
@@ -43,8 +42,7 @@ export class ProjectsComponent {
     {
       id: 3,
       title: 'Pokedex',
-      description:
-        'Interactive Pokédex application built with the public Pokémon API. Browse, search and explore Pokémon with dynamic data loading, clean UI and responsive design.',
+      descriptionKey: 'projects.items.pokedex',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       liveUrl: 'https://dex.dimit.cc/',
       githubUrl: 'https://github.com/milosdimi/pokedex',
