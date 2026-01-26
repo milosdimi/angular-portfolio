@@ -6,7 +6,7 @@
       <div class="refs__stage">
       <!-- left preview -->
       <article class="card card--side card--left" role="button" tabindex="0" (click)="prev()" (keyup.enter)="prev()"
-        (keyup.space)="prev()" aria-label="{{ 'references.prev' | t }}">
+        (keyup.space)="prev()" [attr.aria-label]="'references.prev' | t">
         <p class="card__text">{{ references[leftIndex].text | t }}</p>
         <div class="card__footer">
           <span class="card__line"></span>
@@ -32,7 +32,7 @@
 
       <!-- right preview -->
       <article class="card card--side card--right" role="button" tabindex="0" (click)="next()" (keyup.enter)="next()"
-        (keyup.space)="next()" aria-label="{{ 'references.next' | t }}">
+        (keyup.space)="next()" [attr.aria-label]="'references.next' | t">
         <p class="card__text">{{ references[rightIndex].text | t }}</p>
         <div class="card__footer">
           <span class="card__line"></span>
@@ -49,7 +49,7 @@
         <span aria-hidden="true">&larr;</span>
       </button>
 
-      <div class="dots" role="tablist" aria-label="{{ 'references.aria' | t }}">
+      <div class="dots" role="tablist" [attr.aria-label]="'references.aria' | t">
         <button *ngFor="let _ of references; let i = index" type="button" class="dot"
           [class.is-active]="i === activeIndex" (click)="goTo(i)"
           [attr.aria-label]="('references.goto' | t) + ' ' + (i + 1)"></button>

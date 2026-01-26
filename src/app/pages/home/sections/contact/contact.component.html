@@ -3,12 +3,12 @@
 
     <!-- Left -->
     <div class="contact__intro">
-      <p class="contact__label mono">Contact me</p>
-      <h2 class="contact__title">Let's work<br />together</h2>
+      <p class="contact__label mono">{{ 'contact.label' | t }}</p>
+      <h2 class="contact__title">{{ 'contact.titleLine1' | t }}<br />{{ 'contact.titleLine2' | t }}</h2>
 
-      <p class="contact__headline mono">Got a problem to solve?</p>
+      <p class="contact__headline mono">{{ 'contact.headline' | t }}</p>
       <p class="contact__text">
-        Need a Frontend developer? <span class="contact__accent">Let’s talk!</span>
+        {{ 'contact.text' | t }} <span class="contact__accent">{{ 'contact.accent' | t }}</span>
       </p>
     </div>
 
@@ -16,27 +16,27 @@
     <form class="contact__form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
 
       <label class="field">
-        <span class="field__label mono">What's your name?</span>
-        <input class="field__input" type="text" formControlName="name" placeholder="Your name goes here" />
+        <span class="field__label mono">{{ 'contact.fields.name.label' | t }}</span>
+        <input class="field__input" type="text" formControlName="name" [attr.placeholder]="'contact.fields.name.placeholder' | t" />
         <span class="field__error" [class.is-visible]="isInvalid('name')">
-          Oops! It seems your name is missing
+          {{ 'contact.errors.name' | t }}
         </span>
       </label>
 
       <label class="field">
-        <span class="field__label mono">What's your email?</span>
-        <input class="field__input" type="email" formControlName="email" placeholder="youremail@email.com" />
+        <span class="field__label mono">{{ 'contact.fields.email.label' | t }}</span>
+        <input class="field__input" type="email" formControlName="email" [attr.placeholder]="'contact.fields.email.placeholder' | t" />
         <span class="field__error" [class.is-visible]="isInvalid('email')">
-          Hoppla! your email is required
+          {{ 'contact.errors.email' | t }}
         </span>
       </label>
 
       <label class="field">
-        <span class="field__label mono">How can I help you?</span>
+        <span class="field__label mono">{{ 'contact.fields.message.label' | t }}</span>
         <textarea class="field__textarea" formControlName="message" rows="4"
-          placeholder="Hello Milos, I am interested in..."></textarea>
+          [attr.placeholder]="'contact.fields.message.placeholder' | t"></textarea>
         <span class="field__error" [class.is-visible]="isInvalid('message')">
-          What do you need to develop?
+          {{ 'contact.errors.message' | t }}
         </span>
       </label>
 
@@ -49,26 +49,26 @@
         </label>
 
         <span class="privacy__text">
-          I've read the
-          <a routerLink="/datenschutz">privacy policy</a>
-          and agree to the processing of my data as outlined.
+          {{ 'contact.privacy.prefix' | t }} 
+          <a routerLink="/datenschutz">{{ 'contact.privacy.link' | t }}</a>
+          {{ 'contact.privacy.suffix' | t }}
         </span>
       </div>
 
 
       <span class="field__error" [class.is-visible]="isInvalid('privacy')">
-        Please accept the privacy policy.
+        {{ 'contact.errors.privacy' | t }}
       </span>
 
       <button class="sendBtn" type="submit" [disabled]="form.invalid || isSubmitting">
-        {{ isSubmitting ? 'Sending...' : 'Say Hello ;)' }}
+        {{ isSubmitting ? ('contact.button.sending' | t) : ('contact.button.default' | t) }}
       </button>
 
       <p class="formMsg formMsg--success" *ngIf="submitState === 'success'">
-        Thanks! Your message has been sent.
+        {{ 'contact.messages.success' | t }}
       </p>
       <p class="formMsg formMsg--error" *ngIf="submitState === 'error'">
-        Sorry — something went wrong. Please try again later.
+        {{ 'contact.messages.error' | t }}
       </p>
     </form>
 

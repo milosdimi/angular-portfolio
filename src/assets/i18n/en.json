@@ -86,4 +86,56 @@
       "4": "Great technical understanding and fast execution. Milos delivers clean code and communicates clearly."
     }
   }
+  ,
+  "contact": {
+    "label": "Contact me",
+    "titleLine1": "Let's work",
+    "titleLine2": "together",
+    "headline": "Got a problem to solve?",
+    "text": "Need a Frontend developer?",
+    "accent": "Let’s talk!",
+    "fields": {
+      "name": {
+        "label": "What's your name?",
+        "placeholder": "Your name goes here"
+      },
+      "email": {
+        "label": "What's your email?",
+        "placeholder": "youremail@email.com"
+      },
+      "message": {
+        "label": "How can I help you?",
+        "placeholder": "Hello Milos, I am interested in..."
+      }
+    },
+    "privacy": {
+      "prefix": "I've read the",
+      "link": "privacy policy",
+      "suffix": "and agree to the processing of my data as outlined."
+    },
+    "errors": {
+      "name": "Oops! It seems your name is missing",
+      "email": "Oops! Your email is required",
+      "message": "What do you need to develop?",
+      "privacy": "Please accept the privacy policy."
+    },
+    "button": {
+      "sending": "Sending...",
+      "default": "Say Hello ;)"
+    },
+    "messages": {
+      "success": "Thanks! Your message has been sent.",
+      "error": "Sorry — something went wrong. Please try again later."
+    }
+  }
+  ,
+  "footer": {
+    "logoAlt": "Logo",
+    "role": "Web Developer",
+    "location": "Kufstein, Austria",
+    "email": "Email",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "copyright": "Milos Dimitrijevic"
+  }
 }

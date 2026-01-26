@@ -86,4 +86,56 @@
       "4": "Großes technisches Verständnis und schnelle Umsetzung. Milos liefert sauberen Code und kommuniziert klar."
     }
   }
+  ,
+  "contact": {
+    "label": "Kontakt",
+    "titleLine1": "Lass uns",
+    "titleLine2": "zusammen arbeiten",
+    "headline": "Hast du ein Problem zu lösen?",
+    "text": "Du brauchst einen Frontend Developer?",
+    "accent": "Lass uns reden!",
+    "fields": {
+      "name": {
+        "label": "Wie ist dein Name?",
+        "placeholder": "Dein Name kommt hier hin"
+      },
+      "email": {
+        "label": "Wie ist deine E‑Mail?",
+        "placeholder": "duremail@email.com"
+      },
+      "message": {
+        "label": "Wie kann ich dir helfen?",
+        "placeholder": "Hallo Milos, ich interessiere mich für …"
+      }
+    },
+    "privacy": {
+      "prefix": "Ich habe die",
+      "link": "Datenschutzerklärung",
+      "suffix": "gelesen und stimme der Verarbeitung meiner Daten zu."
+    },
+    "errors": {
+      "name": "Hoppla! Dein Name fehlt",
+      "email": "Hoppla! Deine E‑Mail ist erforderlich",
+      "message": "Wobei kann ich dir helfen?",
+      "privacy": "Bitte akzeptiere die Datenschutzerklärung."
+    },
+    "button": {
+      "sending": "Senden...",
+      "default": "Say Hello ;)"
+    },
+    "messages": {
+      "success": "Danke! Deine Nachricht wurde gesendet.",
+      "error": "Sorry — etwas ist schiefgelaufen. Bitte versuche es später noch einmal."
+    }
+  }
+  ,
+  "footer": {
+    "logoAlt": "Logo",
+    "role": "Web Developer",
+    "location": "Kufstein, Austria",
+    "email": "Email",
+    "legal": "Legal Notice",
+    "privacy": "Datenschutz",
+    "copyright": "Milos Dimitrijevic"
+  }
 }

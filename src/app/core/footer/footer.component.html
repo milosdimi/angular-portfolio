@@ -3,12 +3,12 @@
         <!-- LEFT -->
         <div class="footer__left">
             <a class="footer__home" routerLink="/" (click)="goHome()" aria-label="Home">
-                <img src="assets/logo/logo_grau.png" alt="Logo" class="footer__logo" />
+                <img src="assets/logo/logo_grau.png" [attr.alt]="'footer.logoAlt' | t" class="footer__logo" />
             </a>
             <div class="footer__info">
                 <strong>DIMIT</strong>
-                <span>Web Developer</span>
-                <span>Kufstein , Austria</span>
+                <span>{{ 'footer.role' | t }}</span>
+                <span>{{ 'footer.location' | t }}</span>
             </div>
         </div>
         <!-- RIGHT -->
@@ -16,15 +16,15 @@
         <div class="footer__right">
             <a href="https://github.com/milosdimi" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/milos-dimitrijevic-35a552195" target="_blank">LinkedIn</a>
-            <a href="mailto:dm@dimit.cc">Email</a>
-            <a routerLink="/impressum">Legal Notice</a>
-            <a routerLink="/datenschutz">Datenschutz</a>
+            <a href="mailto:dm@dimit.cc">{{ 'footer.email' | t }}</a>
+            <a routerLink="/impressum">{{ 'footer.legal' | t }}</a>
+            <a routerLink="/datenschutz">{{ 'footer.privacy' | t }}</a>
         </div>
 
 
         <!-- CENTER -->
         <div class="footer__center">
-            © Milos Dimitrijevic {{ year }}
+            &copy; {{ 'footer.copyright' | t }} {{ year }}
         </div>
     </div>
 </footer>
