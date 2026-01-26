@@ -190,7 +190,10 @@
 }
 
 .refs__stage-wrap {
+  position: relative;
   overflow: hidden;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 @media (max-width: 900px) {
