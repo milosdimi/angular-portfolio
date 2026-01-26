@@ -4,19 +4,23 @@
     <div class="header__left">
       <div class="lang lang--slider lang--desktop" role="group" aria-label="Language switch">
         <span class="lang__thumb isLeft" aria-hidden="true"></span>
-        <button class="lang__btn isActive" type="button">EN</button>
-        <button class="lang__btn" type="button">DE</button>
+        <button class="lang__btn" [class.isActive]="currentLang === 'en'" type="button" (click)="setLang('en')">
+          EN
+        </button>
+        <button class="lang__btn" [class.isActive]="currentLang === 'de'" type="button" (click)="setLang('de')">
+          DE
+        </button>
       </div>
 
       <nav class="nav" aria-label="Primary">
-        <a class="nav__link" href="#about">About me</a>
-        <a class="nav__link" href="#skills">Skills</a>
-        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#about">{{ 'header.nav.about' | t }}</a>
+        <a class="nav__link" href="#skills">{{ 'header.nav.skills' | t }}</a>
+        <a class="nav__link" href="#projects">{{ 'header.nav.projects' | t }}</a>
       </nav>
     </div>
 
     <!-- RIGHT: Logo -->
-    <a class="logo" routerLink="/" aria-label="Home">
+    <a class="logo" routerLink="/" (click)="goHome()" aria-label="Home">
       <img src="assets/logo/logo_grau.png" alt="DIMIT Logo" />
     </a>
 
@@ -24,7 +28,7 @@
     <button
       class="burger"
       type="button"
-      aria-label="Open menu"
+      [attr.aria-label]="'header.menu.open' | t"
       aria-controls="mobile-menu"
       [attr.aria-expanded]="menuOpen"
       (click)="toggleMenu()"
@@ -35,18 +39,27 @@
 
   <!-- Mobile Menu -->
   <div class="menu" id="mobile-menu" [class.is-open]="menuOpen">
-    <button class="menu__backdrop" type="button" (click)="closeMenu()" aria-label="Close menu"></button>
+    <button
+      class="menu__backdrop"
+      type="button"
+      (click)="closeMenu()"
+      [attr.aria-label]="'header.menu.close' | t"
+    ></button>
 
     <div class="menu__panel">
-      <a class="menu__link" href="#about" (click)="closeMenu()">About me</a>
-      <a class="menu__link" href="#skills" (click)="closeMenu()">Skills</a>
-      <a class="menu__link" href="#projects" (click)="closeMenu()">Projects</a>
+      <a class="menu__link" href="#about" (click)="closeMenu()">{{ 'header.nav.about' | t }}</a>
+      <a class="menu__link" href="#skills" (click)="closeMenu()">{{ 'header.nav.skills' | t }}</a>
+      <a class="menu__link" href="#projects" (click)="closeMenu()">{{ 'header.nav.projects' | t }}</a>
 
       <div class="menu__lang">
         <div class="lang lang--slider" role="group" aria-label="Language switch">
           <span class="lang__thumb isLeft" aria-hidden="true"></span>
-          <button class="lang__btn isActive" type="button">EN</button>
-          <button class="lang__btn" type="button">DE</button>
+          <button class="lang__btn" [class.isActive]="currentLang === 'en'" type="button" (click)="setLang('en')">
+            EN
+          </button>
+          <button class="lang__btn" [class.isActive]="currentLang === 'de'" type="button" (click)="setLang('de')">
+            DE
+          </button>
         </div>
       </div>
     </div>

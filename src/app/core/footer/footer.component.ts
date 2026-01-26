@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -10,5 +10,18 @@ import { RouterLink } from '@angular/router';
 })
 export class FooterComponent {
   year = new Date().getFullYear();
+
+  constructor(private router: Router) {}
+
+  goHome() {
+    if (this.router.url !== '/') {
+      this.router.navigateByUrl('/').then(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      return;
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
 

@@ -1,9 +1,11 @@
 import { Component, HostListener } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
+  imports: [TranslatePipe],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
   animations: [

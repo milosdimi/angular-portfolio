@@ -5,33 +5,30 @@
          [@revealLeft]="inView ? 'visible' : 'hidden'">
       <div class="about__image-wrap">
         <img src="assets/img/profil1.png"
-             alt="Profilbild Milos Dimitrijevic" />
+             [alt]="'about.imageAlt' | t" />
       </div>
     </div>
 
     <div class="about__content"
          [@revealRight]="inView ? 'visible' : 'hidden'">
       <div class="about__card">
-        <span class="about__kicker">Who I Am</span>
-        <h2 class="about__title">{{ about.title }}</h2>
+        <span class="about__kicker">{{ 'about.kicker' | t }}</span>
+        <h2 class="about__title">{{ 'about.title' | t }}</h2>
 
-        <p class="about__text">
-          Ich bin ein leidenschaftlicher Frontend- und Webentwickler mit Fokus auf moderne,
-          performante und nutzerfreundliche Webanwendungen.
-        </p>
+        <p class="about__text">{{ 'about.text' | t }}</p>
 
         <ul class="about__facts">
           <li>
             <img src="assets/icons/location_on.svg" alt="" aria-hidden="true" />
-            <span>{{ about.location }}</span>
+            <span>{{ 'about.facts.location' | t }}</span>
           </li>
           <li>
             <img src="assets/icons/cognition.svg" alt="" aria-hidden="true" />
-            <span>{{ about.mindset }}</span>
+            <span>{{ 'about.facts.mindset' | t }}</span>
           </li>
           <li>
             <img src="assets/icons/new_releases.svg" alt="" aria-hidden="true" />
-            <span>{{ about.approach }}</span>
+            <span>{{ 'about.facts.approach' | t }}</span>
           </li>
         </ul>
       </div>

@@ -14,10 +14,12 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
 
 @Component({
   selector: 'app-about',
   standalone: true,
+  imports: [TranslatePipe],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
   animations: [
@@ -38,17 +40,6 @@ export class AboutComponent implements AfterViewInit {
   aboutSection!: ElementRef<HTMLElement>;
 
   inView = false;
-
-  // (optional) Text später easy für EN/DE
-  about = {
-    title: 'Über mich',
-    location: 'Kufstein, Tirol – offen für Remote-Arbeit',
-    mindset:
-      'Neugierig, offen für neue Technologien und kontinuierliche Weiterentwicklung',
-    approach:
-      'Analytisch, lösungsorientiert und detailverliebt – mit Fokus auf Qualität, Performance und UX',
-  };
-
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit(): void {

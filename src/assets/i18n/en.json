@@ -1,0 +1,39 @@
+{
+  "header": {
+    "nav": {
+      "about": "About me",
+      "skills": "Skills",
+      "projects": "Projects"
+    },
+    "menu": {
+      "open": "Open menu",
+      "close": "Close menu"
+    }
+  },
+  "hero": {
+    "kicker": "Frontend Developer",
+    "title": "Milos Dimitrijevic",
+    "cta": {
+      "work": "Check my work",
+      "contact": "Contact me"
+    },
+    "marquee": {
+      "remote": "Available for remote work",
+      "role": "Frontend Developer",
+      "based": "Based in Kufstein",
+      "open": "Open to work"
+    }
+  }
+  ,
+  "about": {
+    "kicker": "Who I Am",
+    "title": "About me",
+    "text": "I am a passionate frontend and web developer focused on modern, performant and user-friendly web applications.",
+    "imageAlt": "Profile photo of Milos Dimitrijevic",
+    "facts": {
+      "location": "Kufstein, Tyrol – open to remote work",
+      "mindset": "Curious, open to new technologies and continuous improvement",
+      "approach": "Analytical, solution-oriented and detail-focused – with emphasis on quality, performance and UX"
+    }
+  }
+}
