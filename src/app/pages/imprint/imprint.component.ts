@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,4 +11,10 @@ import { Component } from '@angular/core';
 export class ImpressumComponent {
   year = new Date().getFullYear();
   email = 'dm&#64;dimit.cc'; // Angular 17 safe
+
+  constructor(private location: Location) {}
+
+  goBack(): void {
+    this.location.back();
+  }
 }

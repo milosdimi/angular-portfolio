@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,5 +10,11 @@ import { Component } from '@angular/core';
 })
 export class PrivacyComponent {
   year = new Date().getFullYear();
-  email = 'dm&#64;dimit.cc'; 
+  email = 'dm&#64;dimit.cc';
+
+  constructor(private location: Location) {}
+
+  goBack(): void {
+    this.location.back();
+  }
 }

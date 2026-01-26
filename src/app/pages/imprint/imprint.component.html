@@ -1,52 +1,72 @@
 <section class="legal">
+  <button class="legal__back" type="button" (click)="goBack()" aria-label="Back">←</button>
   <h1>Impressum</h1>
-  <p class="legal__muted">Angaben gemäß § 5 ECG, § 14 UGB</p>
+  <p class="legal__muted">
+    Informationen und Offenlegung gemäß § 5 (1) ECG, § 25 MedienG, § 63 GewO und § 14 UGB
+  </p>
 
-  <h2>Betreiber der Website</h2>
+  <h2>Webseitenbetreiber</h2>
   <p>
     Milos Dimitrijevic<br />
-    Kufstein, Österreich
+    Feldgasse 70, 6330 Kufstein<br />
+    Österreich
   </p>
 
   <h2>Kontakt</h2>
   <p>
-    E-Mail:
-    <a [href]="'mailto:' + email" [innerHTML]="email"></a>
+    Telefon: 06642178313<br />
+    E-Mail: <a [href]="'mailto:' + email" [innerHTML]="email"></a>
   </p>
+
+  <h2>Unternehmensdaten</h2>
+  <p>
+    UID-Nr.: ATU 79325758<br />
+    Gewerbeaufsichtbehörde: Bezirkshauptmannschaft Kufstein<br />
+    Berufsbezeichnung: Web Developer
+  </p>
+
+  <h2>Registereintrag</h2>
+  <p>Kein Handelsregistereintrag.</p>
 
   <h2>Art der Website</h2>
   <p>
-    Private Portfolio-Website zur Präsentation von Projekten und Fähigkeiten
-    im Bereich Webentwicklung. Kein Online-Shop, keine entgeltlichen Leistungen
-    über diese Website.
+    Private Portfolio-Website zur Präsentation von Projekten und Fähigkeiten im Bereich Webentwicklung.
+    Kein Online-Shop, keine entgeltlichen Leistungen über diese Website.
   </p>
 
   <h2>Haftung für Inhalte</h2>
   <p>
-    Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt.
-    Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann
-    jedoch keine Gewähr übernommen werden.
+    Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit,
+    Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden.
   </p>
 
   <h2>Haftung für Links</h2>
   <p>
-    Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte
-    ich keinen Einfluss habe. Für diese fremden Inhalte wird daher keine Haftung
-    übernommen. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar.
+    Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe.
+    Für diese fremden Inhalte wird daher keine Haftung übernommen. Zum Zeitpunkt der Verlinkung waren
+    keine Rechtsverstöße erkennbar.
   </p>
 
   <h2>Urheberrecht</h2>
   <p>
-    Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Website
-    unterliegen dem österreichischen Urheberrecht. Eine Vervielfältigung,
-    Bearbeitung oder Verbreitung außerhalb der Grenzen des Urheberrechts bedarf
-    der schriftlichen Zustimmung des jeweiligen Autors.
+    Die Inhalte dieser Website unterliegen, soweit rechtlich möglich, dem Urheberrecht. Jegliche Verwendung
+    oder Verbreitung von Material, die urheberrechtlich untersagt ist, bedarf der schriftlichen Zustimmung
+    des jeweiligen Autors.
+  </p>
+
+  <h2>Online-Streitbeilegung</h2>
+  <p>
+    Verbraucher:innen können die Plattform der EU-Kommission zur Online-Streitbeilegung nutzen:
+    <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">ec.europa.eu/consumers/odr</a>
+  </p>
+
+  <h2>Anwendbare Rechtsvorschriften</h2>
+  <p>
+    <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener noreferrer">www.ris.bka.gv.at</a>
   </p>
 
   <h2>Bildnachweise</h2>
-  <p>
-    Eigene Grafiken, Projekt-Screenshots und ggf. lizenzfreie Assets.
-  </p>
+  <p>Eigene Grafiken, Projekt-Screenshots und ggf. lizenzfreie Assets.</p>
 
   <h2>Stand</h2>
   <p>{{ year }}</p>

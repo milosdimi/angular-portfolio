@@ -1,4 +1,5 @@
 <section class="legal">
+  <button class="legal__back" type="button" (click)="goBack()" aria-label="Back">←</button>
   <h1>Datenschutzerklärung</h1>
   <p class="legal__muted">Stand: {{ year }}</p>
 
@@ -6,21 +7,21 @@
   <p>
     Milos Dimitrijevic<br />
     Kufstein, Österreich<br />
-    E-Mail:
-    <a [href]="'mailto:' + email" [innerHTML]="email"></a>
+    Telefon: 06642178313<br />
+    E-Mail: <a [href]="'mailto:' + email" [innerHTML]="email"></a>
   </p>
 
   <h2>2. Allgemeine Hinweise</h2>
   <p>
-    Der Schutz Ihrer personenbezogenen Daten ist mir wichtig. Ich verarbeite Ihre Daten ausschließlich im Rahmen
-    der gesetzlichen Bestimmungen (insbesondere DSGVO).
+    Der Schutz Ihrer personenbezogenen Daten ist mir wichtig. Ich verarbeite Daten nur auf Grundlage der
+    gesetzlichen Bestimmungen (insbesondere DSGVO und TKG 2003).
   </p>
 
   <h2>3. Zugriffsdaten / Server-Logfiles</h2>
   <p>
-    Beim Besuch dieser Website werden durch den Hosting-Provider automatisch Informationen erfasst (sog.
-    Server-Logfiles). Dazu können zählen: IP-Adresse, Datum und Uhrzeit der Anfrage, aufgerufene Seite/Datei,
-    übertragene Datenmenge, Browser/Browser-Version, Betriebssystem sowie Referrer-URL.
+    Beim Besuch dieser Website werden durch den Hosting-Provider automatisch Informationen erfasst
+    (z. B. IP-Adresse, Datum und Uhrzeit, aufgerufene Seite/Datei, übertragene Datenmenge, Browser/Version,
+    Betriebssystem sowie Referrer-URL).
   </p>
   <p>
     Die Verarbeitung erfolgt zur Sicherstellung des technischen Betriebs, zur Fehleranalyse und zur Abwehr
@@ -29,30 +30,50 @@
 
   <h2>4. Kontaktaufnahme</h2>
   <p>
-    Wenn Sie mich per E-Mail kontaktieren, werden Ihre angegebenen Daten (z. B. E-Mail-Adresse und Inhalt der
-    Nachricht) zur Bearbeitung der Anfrage verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO
-    (vorvertragliche Maßnahmen/Kommunikation) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an
-    effizienter Kommunikation).
+    Wenn Sie mich per E-Mail oder über das Kontaktformular kontaktieren, werden Ihre Angaben zur Bearbeitung
+    der Anfrage verarbeitet. Eine Weitergabe erfolgt nicht ohne Ihre Einwilligung.
+  </p>
+  <p>
+    Rechtsgrundlagen: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen/Kommunikation) sowie
+    Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an effizienter Kommunikation).
+  </p>
+  <p>
+    Speicherdauer bei Anfragen: grundsätzlich bis zu 6 Monate, sofern keine gesetzlichen Pflichten entgegenstehen.
   </p>
 
-  <h2>5. Externe Links</h2>
+  <h2>5. Cookies</h2>
   <p>
-    Diese Website kann Links zu externen Websites (z. B. GitHub, LinkedIn) enthalten. Beim Anklicken eines Links
-    gelten die Datenschutzbestimmungen der jeweiligen Anbieter. Ich habe keinen Einfluss auf deren Inhalte und
-    Datenverarbeitung.
+    Diese Website kann Cookies verwenden. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert
+    werden und keine Schäden verursachen. Sie helfen, das Angebot nutzerfreundlich zu gestalten.
+  </p>
+  <p>
+    Sie können Ihren Browser so einstellen, dass er Sie über das Setzen von Cookies informiert und Sie dies nur
+    im Einzelfall erlauben. Bei Deaktivierung kann die Funktionalität der Website eingeschränkt sein.
   </p>
 
-  <h2>6. Ihre Rechte</h2>
-  <p>
-    Ihnen stehen insbesondere folgende Rechte zu: Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
-    Datenübertragbarkeit, Widerspruch sowie Widerruf erteilter Einwilligungen.
-  </p>
+  <h2>6. Zwecke der Verarbeitung</h2>
+  <ul>
+    <li>Bearbeitung Ihrer Anfragen (Kontaktformular/E-Mail)</li>
+    <li>Technischer Betrieb, Sicherheit und Stabilität der Website</li>
+    <li>Verbesserung des Online-Angebots</li>
+  </ul>
+
+  <h2>7. Ihre Rechte</h2>
+  <p>Sie haben insbesondere folgende Rechte:</p>
+  <ul>
+    <li>Auskunft</li>
+    <li>Berichtigung</li>
+    <li>Löschung</li>
+    <li>Einschränkung der Verarbeitung</li>
+    <li>Datenübertragbarkeit</li>
+    <li>Widerspruch und Widerruf erteilter Einwilligungen</li>
+  </ul>
   <p>
     Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen Datenschutzrecht verstößt, können Sie sich
-    bei der Aufsichtsbehörde beschweren.
+    bei der Datenschutzbehörde beschweren.
   </p>
 
-  <h2>7. Aufsichtsbehörde in Österreich</h2>
+  <h2>8. Aufsichtsbehörde in Österreich</h2>
   <p>
     Österreichische Datenschutzbehörde (DSB)<br />
     Barichgasse 40–42, 1030 Wien<br />
@@ -60,14 +81,19 @@
     E-Mail: dsb&#64;dsb.gv.at
   </p>
 
-  <h2>8. Speicherdauer</h2>
+  <h2>9. Externe Links</h2>
   <p>
-    Ich speichere personenbezogene Daten nur so lange, wie es für die jeweiligen Zwecke erforderlich ist bzw. wie
-    es gesetzliche Aufbewahrungspflichten vorsehen. Server-Logdaten werden in der Regel für einen begrenzten
-    Zeitraum gespeichert (abhängig vom Hosting-Provider).
+    Diese Website kann Links zu externen Websites (z. B. GitHub, LinkedIn) enthalten. Beim Anklicken gelten die
+    Datenschutzbestimmungen der jeweiligen Anbieter. Ich habe keinen Einfluss auf deren Inhalte und Verarbeitung.
   </p>
 
-  <h2>9. Änderungen dieser Datenschutzerklärung</h2>
+  <h2>10. Speicherdauer</h2>
+  <p>
+    Personenbezogene Daten werden nur so lange gespeichert, wie es für die jeweiligen Zwecke erforderlich ist
+    oder gesetzliche Aufbewahrungspflichten bestehen.
+  </p>
+
+  <h2>11. Änderungen dieser Datenschutzerklärung</h2>
   <p>
     Ich kann diese Datenschutzerklärung bei Bedarf anpassen (z. B. bei neuen Funktionen oder rechtlichen
     Änderungen). Es gilt die jeweils aktuelle Version auf dieser Seite.
