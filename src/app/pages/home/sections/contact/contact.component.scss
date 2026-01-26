@@ -144,3 +144,67 @@
 .formMsg--error {
   color: rgba(255, 120, 120, 0.95);
 }
+
+@media (max-width: 900px) {
+  .contact {
+    padding: 100px 0 80px;
+  }
+
+  .contact__grid {
+    gap: 32px;
+  }
+
+  .contact__label {
+    margin: 0 0 10px;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+  }
+
+  .contact__title {
+    font-size: clamp(32px, 10vw, 48px);
+    margin: 0 0 18px;
+  }
+
+  .contact__headline {
+    font-size: 16px;
+    margin: 0 0 8px;
+  }
+
+  .contact__text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .contact__form {
+    gap: 22px;
+  }
+
+  .field {
+    gap: 8px;
+    padding-bottom: 14px;
+  }
+
+  .field__label {
+    font-size: 16px;
+  }
+
+  .field__input,
+  .field__textarea {
+    font-size: 14px;
+  }
+
+  .field__textarea {
+    min-height: 80px;
+  }
+
+  .privacy {
+    font-size: 12px;
+    gap: 10px;
+  }
+
+  .sendBtn {
+    justify-self: center;
+    height: 40px;
+    padding: 0 18px;
+  }
+}
