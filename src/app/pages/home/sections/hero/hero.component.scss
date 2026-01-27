@@ -510,3 +510,21 @@
     z-index: 2;
   }
 }
+
+@media (max-width: 360px) {
+  .hero__actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 136px;
+    height: 40px;
+  }
+
+  .btn--marquee .btn__text-inner,
+  .btn--marquee .btn__text-duplicate {
+    padding: 0 18px;
+  }
+}

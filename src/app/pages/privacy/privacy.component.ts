@@ -1,10 +1,11 @@
 import { Location } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslatePipe } from '../../shared/i18n/translate.pipe';
 
 @Component({
   selector: 'app-privacy',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './privacy.component.html',
   styleUrl: './privacy.component.scss',
 })

@@ -68,11 +68,11 @@
           </div>
 
           <div class="modal__actions">
-            <a class="btn btn--outline" [href]="selectedProject!.githubUrl" target="_blank">
+            <a class="btn btn--outline" [href]="selectedProject!.githubUrl" target="_blank" rel="noopener noreferrer">
               GitHub <span class="btn__arrow">↗</span>
             </a>
 
-            <a class="btn btn--outline btn--accent" [href]="selectedProject!.liveUrl" target="_blank">
+            <a class="btn btn--outline btn--accent" [href]="selectedProject!.liveUrl" target="_blank" rel="noopener noreferrer">
               {{ 'projects.modal.live' | t }} <span class="btn__arrow">↗</span>
             </a>
           </div>

@@ -8,14 +8,17 @@
             <div class="footer__info">
                 <strong>DIMIT</strong>
                 <span>{{ 'footer.role' | t }}</span>
-                <span>{{ 'footer.location' | t }}</span>
+                <a class="footer__location" href="https://www.google.com/maps/search/?api=1&query=Feldgasse%2070%2C%206330%20Kufstein"
+                   target="_blank" rel="noopener noreferrer">
+                    {{ 'footer.location' | t }}
+                </a>
             </div>
         </div>
         <!-- RIGHT -->
 
         <div class="footer__right">
-            <a href="https://github.com/milosdimi" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/milos-dimitrijevic-35a552195" target="_blank">LinkedIn</a>
+            <a href="https://github.com/milosdimi" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/milos-dimitrijevic-35a552195" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="mailto:dm@dimit.cc">{{ 'footer.email' | t }}</a>
             <a routerLink="/impressum">{{ 'footer.legal' | t }}</a>
             <a routerLink="/datenschutz">{{ 'footer.privacy' | t }}</a>

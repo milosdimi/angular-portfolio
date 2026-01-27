@@ -123,6 +123,7 @@
       "sending": "Senden...",
       "default": "Say Hello ;)"
     },
+    "toTop": "Nach oben",
     "messages": {
       "success": "Danke! Deine Nachricht wurde gesendet.",
       "error": "Sorry — etwas ist schiefgelaufen. Bitte versuche es später noch einmal."
@@ -134,8 +135,94 @@
     "role": "Web Developer",
     "location": "Kufstein, Austria",
     "email": "Email",
-    "legal": "Legal Notice",
+    "legal": "Impressum",
     "privacy": "Datenschutz",
     "copyright": "Milos Dimitrijevic"
+  }
+  ,
+  "imprint": {
+    "back": "Zurück",
+    "title": "Impressum",
+    "subtitle": "Informationen und Offenlegung gemäß § 5 (1) ECG, § 25 MedienG, § 63 GewO und § 14 UGB",
+    "sections": {
+      "operator": "Webseitenbetreiber",
+      "contact": "Kontakt",
+      "company": "Unternehmensdaten",
+      "register": "Registereintrag",
+      "website": "Art der Website",
+      "liabilityContent": "Haftung für Inhalte",
+      "liabilityLinks": "Haftung für Links",
+      "copyright": "Urheberrecht",
+      "odr": "Online-Streitbeilegung",
+      "law": "Anwendbare Rechtsvorschriften",
+      "credits": "Bildnachweise",
+      "status": "Stand"
+    },
+    "operator": "Milos Dimitrijevic<br />Feldgasse 70, 6330 Kufstein<br />Österreich",
+    "phone": "Telefon: 06642178313",
+    "uid": "UID-Nr.: ATU 79325758",
+    "authority": "Gewerbeaufsichtbehörde: Bezirkshauptmannschaft Kufstein",
+    "profession": "Berufsbezeichnung: Web Developer",
+    "register": "Kein Handelsregistereintrag.",
+    "website": "Private Portfolio-Website zur Präsentation von Projekten und Fähigkeiten im Bereich Webentwicklung. Kein Online-Shop, keine entgeltlichen Leistungen über diese Website.",
+    "liabilityContent": "Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden.",
+    "liabilityLinks": "Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für diese fremden Inhalte wird daher keine Haftung übernommen. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar.",
+    "copyright": "Die Inhalte dieser Website unterliegen, soweit rechtlich möglich, dem Urheberrecht. Jegliche Verwendung oder Verbreitung von Material, die urheberrechtlich untersagt ist, bedarf der schriftlichen Zustimmung des jeweiligen Autors.",
+    "odr": "Verbraucher:innen können die Plattform der EU-Kommission zur Online-Streitbeilegung nutzen:",
+    "credits": "Eigene Grafiken, Projekt-Screenshots und ggf. lizenzfreie Assets."
+  }
+  ,
+  "privacy": {
+    "back": "Zurück",
+    "title": "Datenschutzerklärung",
+    "status": "Stand",
+    "sections": {
+      "controller": "Verantwortlicher",
+      "general": "Allgemeine Hinweise",
+      "logs": "Zugriffsdaten / Server-Logfiles",
+      "contact": "Kontaktaufnahme",
+      "cookies": "Cookies",
+      "purposes": "Zwecke der Verarbeitung",
+      "rights": "Ihre Rechte",
+      "authority": "Aufsichtsbehörde in Österreich",
+      "links": "Externe Links",
+      "retention": "Speicherdauer",
+      "changes": "Änderungen dieser Datenschutzerklärung"
+    },
+    "controller": "Milos Dimitrijevic<br />Kufstein, Österreich<br />Telefon: 06642178313",
+    "general": "Der Schutz Ihrer personenbezogenen Daten ist mir wichtig. Ich verarbeite Daten nur auf Grundlage der gesetzlichen Bestimmungen (insbesondere DSGVO und TKG 2003).",
+    "logs": "Beim Besuch dieser Website werden durch den Hosting-Provider automatisch Informationen erfasst (z. B. IP-Adresse, Datum und Uhrzeit, aufgerufene Seite/Datei, übertragene Datenmenge, Browser/Version, Betriebssystem sowie Referrer-URL).",
+    "logsLegal": "Die Verarbeitung erfolgt zur Sicherstellung des technischen Betriebs, zur Fehleranalyse und zur Abwehr von Missbrauch/Angriffen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).",
+    "contact": "Wenn Sie mich per E-Mail oder über das Kontaktformular kontaktieren, werden Ihre Angaben zur Bearbeitung der Anfrage verarbeitet. Eine Weitergabe erfolgt nicht ohne Ihre Einwilligung.",
+    "contactLegal": "Rechtsgrundlagen: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen/Kommunikation) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an effizienter Kommunikation).",
+    "contactRetention": "Speicherdauer bei Anfragen: grundsätzlich bis zu 6 Monate, sofern keine gesetzlichen Pflichten entgegenstehen.",
+    "cookies": "Diese Website kann Cookies verwenden. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden und keine Schäden verursachen. Sie helfen, das Angebot nutzerfreundlich zu gestalten.",
+    "cookiesControl": "Sie können Ihren Browser so einstellen, dass er Sie über das Setzen von Cookies informiert und Sie dies nur im Einzelfall erlauben. Bei Deaktivierung kann die Funktionalität der Website eingeschränkt sein.",
+    "purposes": {
+      "0": "Bearbeitung Ihrer Anfragen (Kontaktformular/E-Mail)",
+      "1": "Technischer Betrieb, Sicherheit und Stabilität der Website",
+      "2": "Verbesserung des Online-Angebots"
+    },
+    "rightsIntro": "Sie haben insbesondere folgende Rechte:",
+    "rights": {
+      "0": "Auskunft",
+      "1": "Berichtigung",
+      "2": "Löschung",
+      "3": "Einschränkung der Verarbeitung",
+      "4": "Datenübertragbarkeit",
+      "5": "Widerspruch und Widerruf erteilter Einwilligungen"
+    },
+    "complaint": "Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen Datenschutzrecht verstößt, können Sie sich bei der Datenschutzbehörde beschweren.",
+    "authority": "Österreichische Datenschutzbehörde (DSB)<br />Barichgasse 40–42, 1030 Wien<br />Telefon: +43 1 52 152-0<br />E-Mail: dsb@dsb.gv.at",
+    "links": "Diese Website kann Links zu externen Websites (z. B. GitHub, LinkedIn) enthalten. Beim Anklicken gelten die Datenschutzbestimmungen der jeweiligen Anbieter. Ich habe keinen Einfluss auf deren Inhalte und Verarbeitung.",
+    "retention": "Personenbezogene Daten werden nur so lange gespeichert, wie es für die jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.",
+    "changes": "Ich kann diese Datenschutzerklärung bei Bedarf anpassen (z. B. bei neuen Funktionen oder rechtlichen Änderungen). Es gilt die jeweils aktuelle Version auf dieser Seite."
+  }
+  ,
+  "cookie": {
+    "text": "Diese Website verwendet ausschließlich technisch notwendige Cookies.",
+    "more": "Weitere Informationen finden Sie in der",
+    "privacy": "Datenschutzerklärung",
+    "ok": "OK"
   }
 }

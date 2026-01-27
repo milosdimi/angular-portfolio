@@ -1,73 +1,51 @@
 <section class="legal">
-  <button class="legal__back" type="button" (click)="goBack()" aria-label="Back">←</button>
-  <h1>Impressum</h1>
+  <button class="legal__back" type="button" (click)="goBack()" [attr.aria-label]="'imprint.back' | t">&larr;</button>
+  <h1>{{ 'imprint.title' | t }}</h1>
   <p class="legal__muted">
-    Informationen und Offenlegung gemäß § 5 (1) ECG, § 25 MedienG, § 63 GewO und § 14 UGB
+    {{ 'imprint.subtitle' | t }}
   </p>
-
-  <h2>Webseitenbetreiber</h2>
+  <h2>{{ 'imprint.sections.operator' | t }}</h2>
+  <p [innerHTML]="'imprint.operator' | t"></p>
+  <h2>{{ 'imprint.sections.contact' | t }}</h2>
   <p>
-    Milos Dimitrijevic<br />
-    Feldgasse 70, 6330 Kufstein<br />
-    Österreich
-  </p>
-
-  <h2>Kontakt</h2>
-  <p>
-    Telefon: 06642178313<br />
+    {{ 'imprint.phone' | t }}<br />
     E-Mail: <a [href]="'mailto:' + email" [innerHTML]="email"></a>
   </p>
-
-  <h2>Unternehmensdaten</h2>
+  <h2>{{ 'imprint.sections.company' | t }}</h2>
   <p>
-    UID-Nr.: ATU 79325758<br />
-    Gewerbeaufsichtbehörde: Bezirkshauptmannschaft Kufstein<br />
-    Berufsbezeichnung: Web Developer
+    {{ 'imprint.uid' | t }}<br />
+    <span [innerHTML]="'imprint.authority' | t"></span><br />
+    {{ 'imprint.profession' | t }}
   </p>
-
-  <h2>Registereintrag</h2>
-  <p>Kein Handelsregistereintrag.</p>
-
-  <h2>Art der Website</h2>
+  <h2>{{ 'imprint.sections.register' | t }}</h2>
+  <p>{{ 'imprint.register' | t }}</p>
+  <h2>{{ 'imprint.sections.website' | t }}</h2>
   <p>
-    Private Portfolio-Website zur Präsentation von Projekten und Fähigkeiten im Bereich Webentwicklung.
-    Kein Online-Shop, keine entgeltlichen Leistungen über diese Website.
+    {{ 'imprint.website' | t }}
   </p>
-
-  <h2>Haftung für Inhalte</h2>
+  <h2>{{ 'imprint.sections.liabilityContent' | t }}</h2>
   <p>
-    Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit,
-    Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden.
+    {{ 'imprint.liabilityContent' | t }}
   </p>
-
-  <h2>Haftung für Links</h2>
+  <h2>{{ 'imprint.sections.liabilityLinks' | t }}</h2>
   <p>
-    Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe.
-    Für diese fremden Inhalte wird daher keine Haftung übernommen. Zum Zeitpunkt der Verlinkung waren
-    keine Rechtsverstöße erkennbar.
+    {{ 'imprint.liabilityLinks' | t }}
   </p>
-
-  <h2>Urheberrecht</h2>
+  <h2>{{ 'imprint.sections.copyright' | t }}</h2>
   <p>
-    Die Inhalte dieser Website unterliegen, soweit rechtlich möglich, dem Urheberrecht. Jegliche Verwendung
-    oder Verbreitung von Material, die urheberrechtlich untersagt ist, bedarf der schriftlichen Zustimmung
-    des jeweiligen Autors.
+    {{ 'imprint.copyright' | t }}
   </p>
-
-  <h2>Online-Streitbeilegung</h2>
+  <h2>{{ 'imprint.sections.odr' | t }}</h2>
   <p>
-    Verbraucher:innen können die Plattform der EU-Kommission zur Online-Streitbeilegung nutzen:
+    {{ 'imprint.odr' | t }}
     <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">ec.europa.eu/consumers/odr</a>
   </p>
-
-  <h2>Anwendbare Rechtsvorschriften</h2>
+  <h2>{{ 'imprint.sections.law' | t }}</h2>
   <p>
     <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener noreferrer">www.ris.bka.gv.at</a>
   </p>
-
-  <h2>Bildnachweise</h2>
-  <p>Eigene Grafiken, Projekt-Screenshots und ggf. lizenzfreie Assets.</p>
-
-  <h2>Stand</h2>
+  <h2>{{ 'imprint.sections.credits' | t }}</h2>
+  <p>{{ 'imprint.credits' | t }}</p>
+  <h2>{{ 'imprint.sections.status' | t }}</h2>
   <p>{{ year }}</p>
 </section>

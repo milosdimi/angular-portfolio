@@ -1,11 +1,11 @@
 <div class="cookie" *ngIf="!accepted">
   <p>
-    Diese Website verwendet ausschließlich technisch notwendige Cookies.
-    Weitere Informationen finden Sie in der
-    <a routerLink="/datenschutz">Datenschutzerklärung</a>.
+    {{ 'cookie.text' | t }}
+    {{ 'cookie.more' | t }}
+    <a routerLink="/datenschutz">{{ 'cookie.privacy' | t }}</a>.
   </p>
 
   <button  (click)="acceptCookies()">
-    OK
+    {{ 'cookie.ok' | t }}
   </button>
 </div>

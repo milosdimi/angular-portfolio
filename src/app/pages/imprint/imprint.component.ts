@@ -1,10 +1,11 @@
 import { Location } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslatePipe } from '../../shared/i18n/translate.pipe';
 
 @Component({
   selector: 'app-impressum',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss',
 })

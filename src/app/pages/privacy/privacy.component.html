@@ -1,101 +1,56 @@
 <section class="legal">
-  <button class="legal__back" type="button" (click)="goBack()" aria-label="Back">←</button>
-  <h1>Datenschutzerklärung</h1>
-  <p class="legal__muted">Stand: {{ year }}</p>
+  <button class="legal__back" type="button" (click)="goBack()" [attr.aria-label]="'privacy.back' | t">&larr;</button>
+  <h1>{{ 'privacy.title' | t }}</h1>
+  <p class="legal__muted">{{ 'privacy.status' | t }}: {{ year }}</p>
 
-  <h2>1. Verantwortlicher</h2>
-  <p>
-    Milos Dimitrijevic<br />
-    Kufstein, Österreich<br />
-    Telefon: 06642178313<br />
-    E-Mail: <a [href]="'mailto:' + email" [innerHTML]="email"></a>
-  </p>
+  <h2>{{ 'privacy.sections.controller' | t }}</h2>
+  <p [innerHTML]="'privacy.controller' | t"></p>
+  <p>E-Mail: <a [href]="'mailto:' + email" [innerHTML]="email"></a></p>
 
-  <h2>2. Allgemeine Hinweise</h2>
-  <p>
-    Der Schutz Ihrer personenbezogenen Daten ist mir wichtig. Ich verarbeite Daten nur auf Grundlage der
-    gesetzlichen Bestimmungen (insbesondere DSGVO und TKG 2003).
-  </p>
+  <h2>{{ 'privacy.sections.general' | t }}</h2>
+  <p>{{ 'privacy.general' | t }}</p>
 
-  <h2>3. Zugriffsdaten / Server-Logfiles</h2>
-  <p>
-    Beim Besuch dieser Website werden durch den Hosting-Provider automatisch Informationen erfasst
-    (z. B. IP-Adresse, Datum und Uhrzeit, aufgerufene Seite/Datei, übertragene Datenmenge, Browser/Version,
-    Betriebssystem sowie Referrer-URL).
-  </p>
-  <p>
-    Die Verarbeitung erfolgt zur Sicherstellung des technischen Betriebs, zur Fehleranalyse und zur Abwehr
-    von Missbrauch/Angriffen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).
-  </p>
+  <h2>{{ 'privacy.sections.logs' | t }}</h2>
+  <p>{{ 'privacy.logs' | t }}</p>
+  <p>{{ 'privacy.logsLegal' | t }}</p>
 
-  <h2>4. Kontaktaufnahme</h2>
-  <p>
-    Wenn Sie mich per E-Mail oder über das Kontaktformular kontaktieren, werden Ihre Angaben zur Bearbeitung
-    der Anfrage verarbeitet. Eine Weitergabe erfolgt nicht ohne Ihre Einwilligung.
-  </p>
-  <p>
-    Rechtsgrundlagen: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen/Kommunikation) sowie
-    Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an effizienter Kommunikation).
-  </p>
-  <p>
-    Speicherdauer bei Anfragen: grundsätzlich bis zu 6 Monate, sofern keine gesetzlichen Pflichten entgegenstehen.
-  </p>
+  <h2>{{ 'privacy.sections.contact' | t }}</h2>
+  <p>{{ 'privacy.contact' | t }}</p>
+  <p>{{ 'privacy.contactLegal' | t }}</p>
+  <p>{{ 'privacy.contactRetention' | t }}</p>
 
-  <h2>5. Cookies</h2>
-  <p>
-    Diese Website kann Cookies verwenden. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert
-    werden und keine Schäden verursachen. Sie helfen, das Angebot nutzerfreundlich zu gestalten.
-  </p>
-  <p>
-    Sie können Ihren Browser so einstellen, dass er Sie über das Setzen von Cookies informiert und Sie dies nur
-    im Einzelfall erlauben. Bei Deaktivierung kann die Funktionalität der Website eingeschränkt sein.
-  </p>
+  <h2>{{ 'privacy.sections.cookies' | t }}</h2>
+  <p>{{ 'privacy.cookies' | t }}</p>
+  <p>{{ 'privacy.cookiesControl' | t }}</p>
 
-  <h2>6. Zwecke der Verarbeitung</h2>
+  <h2>{{ 'privacy.sections.purposes' | t }}</h2>
   <ul>
-    <li>Bearbeitung Ihrer Anfragen (Kontaktformular/E-Mail)</li>
-    <li>Technischer Betrieb, Sicherheit und Stabilität der Website</li>
-    <li>Verbesserung des Online-Angebots</li>
+    <li>{{ 'privacy.purposes.0' | t }}</li>
+    <li>{{ 'privacy.purposes.1' | t }}</li>
+    <li>{{ 'privacy.purposes.2' | t }}</li>
   </ul>
 
-  <h2>7. Ihre Rechte</h2>
-  <p>Sie haben insbesondere folgende Rechte:</p>
+  <h2>{{ 'privacy.sections.rights' | t }}</h2>
+  <p>{{ 'privacy.rightsIntro' | t }}</p>
   <ul>
-    <li>Auskunft</li>
-    <li>Berichtigung</li>
-    <li>Löschung</li>
-    <li>Einschränkung der Verarbeitung</li>
-    <li>Datenübertragbarkeit</li>
-    <li>Widerspruch und Widerruf erteilter Einwilligungen</li>
+    <li>{{ 'privacy.rights.0' | t }}</li>
+    <li>{{ 'privacy.rights.1' | t }}</li>
+    <li>{{ 'privacy.rights.2' | t }}</li>
+    <li>{{ 'privacy.rights.3' | t }}</li>
+    <li>{{ 'privacy.rights.4' | t }}</li>
+    <li>{{ 'privacy.rights.5' | t }}</li>
   </ul>
-  <p>
-    Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen Datenschutzrecht verstößt, können Sie sich
-    bei der Datenschutzbehörde beschweren.
-  </p>
+  <p>{{ 'privacy.complaint' | t }}</p>
 
-  <h2>8. Aufsichtsbehörde in Österreich</h2>
-  <p>
-    Österreichische Datenschutzbehörde (DSB)<br />
-    Barichgasse 40–42, 1030 Wien<br />
-    Telefon: +43 1 52 152-0<br />
-    E-Mail: dsb&#64;dsb.gv.at
-  </p>
+  <h2>{{ 'privacy.sections.authority' | t }}</h2>
+  <p [innerHTML]="'privacy.authority' | t"></p>
 
-  <h2>9. Externe Links</h2>
-  <p>
-    Diese Website kann Links zu externen Websites (z. B. GitHub, LinkedIn) enthalten. Beim Anklicken gelten die
-    Datenschutzbestimmungen der jeweiligen Anbieter. Ich habe keinen Einfluss auf deren Inhalte und Verarbeitung.
-  </p>
+  <h2>{{ 'privacy.sections.links' | t }}</h2>
+  <p>{{ 'privacy.links' | t }}</p>
 
-  <h2>10. Speicherdauer</h2>
-  <p>
-    Personenbezogene Daten werden nur so lange gespeichert, wie es für die jeweiligen Zwecke erforderlich ist
-    oder gesetzliche Aufbewahrungspflichten bestehen.
-  </p>
+  <h2>{{ 'privacy.sections.retention' | t }}</h2>
+  <p>{{ 'privacy.retention' | t }}</p>
 
-  <h2>11. Änderungen dieser Datenschutzerklärung</h2>
-  <p>
-    Ich kann diese Datenschutzerklärung bei Bedarf anpassen (z. B. bei neuen Funktionen oder rechtlichen
-    Änderungen). Es gilt die jeweils aktuelle Version auf dieser Seite.
-  </p>
+  <h2>{{ 'privacy.sections.changes' | t }}</h2>
+  <p>{{ 'privacy.changes' | t }}</p>
 </section>

@@ -46,6 +46,17 @@
   }
 }
 
+.footer__location {
+  color: #9ca3af;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__location:hover {
+  color: #6dd3c6;
+}
+
 /* CENTER */
 .footer__center {
   text-align: center;

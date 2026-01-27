@@ -123,6 +123,7 @@
       "sending": "Sending...",
       "default": "Say Hello ;)"
     },
+    "toTop": "Back to top",
     "messages": {
       "success": "Thanks! Your message has been sent.",
       "error": "Sorry — something went wrong. Please try again later."
@@ -137,5 +138,91 @@
     "legal": "Legal Notice",
     "privacy": "Privacy Policy",
     "copyright": "Milos Dimitrijevic"
+  }
+  ,
+  "imprint": {
+    "back": "Back",
+    "title": "Legal Notice",
+    "subtitle": "Information and disclosure according to § 5 (1) ECG, § 25 MedienG, § 63 GewO and § 14 UGB",
+    "sections": {
+      "operator": "Website operator",
+      "contact": "Contact",
+      "company": "Company details",
+      "register": "Register entry",
+      "website": "Type of website",
+      "liabilityContent": "Liability for content",
+      "liabilityLinks": "Liability for links",
+      "copyright": "Copyright",
+      "odr": "Online dispute resolution",
+      "law": "Applicable laws",
+      "credits": "Image credits",
+      "status": "Status"
+    },
+    "operator": "Milos Dimitrijevic<br />Feldgasse 70, 6330 Kufstein<br />Austria",
+    "phone": "Phone: 06642178313",
+    "uid": "VAT ID: ATU 79325758",
+    "authority": "Trade authority: Bezirkshauptmannschaft Kufstein",
+    "profession": "Profession: Web Developer",
+    "register": "No commercial register entry.",
+    "website": "Private portfolio website showcasing projects and skills in web development. No online shop, no paid services via this website.",
+    "liabilityContent": "The contents of this website were created with the greatest possible care. However, no guarantee is given for the correctness, completeness or timeliness of the content.",
+    "liabilityLinks": "This website contains links to external third‑party websites over whose content I have no control. Therefore, I assume no liability for these external contents. At the time of linking, no violations were apparent.",
+    "copyright": "The contents of this website are subject to copyright to the extent legally possible. Any use or distribution of material prohibited by copyright requires the author’s written consent.",
+    "odr": "Consumers can use the EU Commission's platform for online dispute resolution:",
+    "credits": "Own graphics, project screenshots and, if applicable, royalty‑free assets."
+  }
+  ,
+  "privacy": {
+    "back": "Back",
+    "title": "Privacy Policy",
+    "status": "Last updated",
+    "sections": {
+      "controller": "Controller",
+      "general": "General information",
+      "logs": "Access data / server log files",
+      "contact": "Contact",
+      "cookies": "Cookies",
+      "purposes": "Purposes of processing",
+      "rights": "Your rights",
+      "authority": "Supervisory authority in Austria",
+      "links": "External links",
+      "retention": "Retention period",
+      "changes": "Changes to this privacy policy"
+    },
+    "controller": "Milos Dimitrijevic<br />Kufstein, Austria<br />Phone: 06642178313",
+    "general": "Protecting your personal data is important to me. I process data only on the basis of legal provisions (in particular GDPR and TKG 2003).",
+    "logs": "When visiting this website, the hosting provider automatically collects information (e.g. IP address, date and time, accessed page/file, data transfer amount, browser/version, operating system and referrer URL).",
+    "logsLegal": "Processing is carried out to ensure technical operation, error analysis and protection against misuse/attacks. Legal basis is Art. 6(1)(f) GDPR (legitimate interest).",
+    "contact": "If you contact me by email or via the contact form, your details are processed to handle the request. Data is not shared without your consent.",
+    "contactLegal": "Legal bases: Art. 6(1)(b) GDPR (pre-contractual measures/communication) and Art. 6(1)(f) GDPR (legitimate interest in efficient communication).",
+    "contactRetention": "Retention for inquiries: generally up to 6 months, unless statutory obligations require otherwise.",
+    "cookies": "This website may use cookies. Cookies are small text files stored on your device that do not cause any harm. They help make the site more user-friendly.",
+    "cookiesControl": "You can configure your browser to inform you about the setting of cookies and allow this only on a case-by-case basis. Disabling cookies may restrict functionality.",
+    "purposes": {
+      "0": "Handling your inquiries (contact form/email)",
+      "1": "Technical operation, security and stability of the website",
+      "2": "Improvement of the online offering"
+    },
+    "rightsIntro": "You have the following rights in particular:",
+    "rights": {
+      "0": "Access",
+      "1": "Rectification",
+      "2": "Erasure",
+      "3": "Restriction of processing",
+      "4": "Data portability",
+      "5": "Objection and withdrawal of consent"
+    },
+    "complaint": "If you believe that the processing of your data violates data protection law, you can lodge a complaint with the supervisory authority.",
+    "authority": "Austrian Data Protection Authority (DSB)<br />Barichgasse 40–42, 1030 Vienna<br />Phone: +43 1 52 152-0<br />Email: dsb@dsb.gv.at",
+    "links": "This website may contain links to external websites (e.g. GitHub, LinkedIn). When clicking a link, the privacy policies of the respective providers apply. I have no influence on their content or processing.",
+    "retention": "Personal data is stored only as long as necessary for the respective purposes or as required by statutory retention obligations.",
+    "changes": "I may update this privacy policy when needed (e.g. due to new features or legal changes). The current version on this page applies."
+  }
+  ,
+  "cookie": {
+    "text": "This website uses only technically necessary cookies.",
+    "more": "More information can be found in the",
+    "privacy": "privacy policy",
+    "ok": "OK"
   }
 }
