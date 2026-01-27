@@ -334,6 +334,13 @@
   z-index: 1;
 }
 
+.marquee--top {
+  display: none;
+  top: 120px;
+  bottom: auto;
+}
+
+
 .marquee__track {
   display: grid;
   gap: 10px;
@@ -489,6 +496,12 @@
     z-index: 1;
   }
 
+  .marquee--top {
+    display: block;
+    top: 120px;
+    bottom: auto;
+  }
+
   .marquee__row {
     font-size: 16px;
     gap: 18px;
@@ -499,7 +512,7 @@
     min-width: 100%;
   }
 
-  .marquee__row:first-child {
+  .marquee:not(.marquee--top) .marquee__row--reverse {
     display: none;
   }
 
