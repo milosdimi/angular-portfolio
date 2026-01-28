@@ -274,6 +274,8 @@
   transition:
     transform 0.25s ease,
     filter 0.25s ease;
+  position: relative;
+  z-index: 3;
 }
 
 .scrollHintLink:hover {
@@ -351,14 +353,8 @@
   overflow: hidden;
   overflow-x: clip;
   z-index: 1;
+  pointer-events: none;
 }
-
-.marquee--top {
-  display: none;
-  top: 120px;
-  bottom: auto;
-}
-
 
 .marquee__track {
   display: grid;
@@ -367,17 +363,43 @@
 }
 
 .marquee__row {
-  display: flex;
+  position: relative;
+  overflow: hidden;
   width: 100%;
   max-width: 100%;
-  will-change: transform;
-  animation: marqueeLeft 40s linear infinite;
+  pointer-events: none;
+}
+
+.marquee__row::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 20, 24, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 10px 24px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
 }
 
 .marquee__row--reverse {
-  animation: marqueeRight 48s linear infinite;
   opacity: 0.9;
 
+}
+
+.marquee__row-track {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  will-change: transform;
+  animation: marqueeLeft 10s linear infinite;
+  pointer-events: none;
+}
+
+.marquee__row--reverse .marquee__row-track {
+  animation: marqueeRight 10s linear infinite;
 }
 
 .marquee__run {
@@ -419,7 +441,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .marquee__row {
+  .marquee__row-track {
     animation: none;
   }
 }
@@ -507,18 +529,16 @@
   }
 
   .marquee {
-    left: 0;
-    right: 0;
-    width: 100%;
-    transform: rotate(-3deg);
+    left: 50%;
+    right: auto;
+    width: 120vw;
+    transform: translateX(-50%) rotate(-3deg);
+    top: 120px;
     bottom: 48px;
     z-index: 1;
-  }
-
-  .marquee--top {
-    display: block;
-    top: 120px;
-    bottom: auto;
+    background: transparent;
+    border: 0;
+    padding: 0;
   }
 
   .marquee__row {
@@ -529,17 +549,33 @@
 
   .marquee__run {
     min-width: 100%;
+    justify-content: flex-start;
+    padding-left: 24px;
   }
 
-  .marquee:not(.marquee--top) .marquee__row--reverse {
-    display: none;
+  .marquee__row {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .marquee__row:first-child {
+    top: 0;
+  }
+
+  .marquee__row--reverse {
+    bottom: 0;
   }
 
   .icons,
   .social,
-  .email {
+  .email,
+  .email--icon {
     position: relative;
-    z-index: 2;
+    z-index: 3;
   }
 }
 
