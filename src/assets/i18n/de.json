@@ -22,9 +22,9 @@
       "role": "Frontend Entwickler",
       "based": "Ansässig in Kufstein",
       "open": "Offen für Jobs"
-    }
-  }
-  ,
+    },
+    "scrollDown": "Nach unten scrollen"
+  },
   "about": {
     "kicker": "Wer ich bin",
     "title": "Über mich",
@@ -35,8 +35,7 @@
       "mindset": "Neugierig, offen für neue Technologien und kontinuierliche Weiterentwicklung",
       "approach": "Analytisch, lösungsorientiert und detailverliebt – mit Fokus auf Qualität, Performance und UX"
     }
-  }
-  ,
+  },
   "skills": {
     "kicker": "Technologies",
     "title": "Skill Set",
@@ -53,8 +52,7 @@
       "labelLine2": "mindset",
       "hint": "Ich habe ein besonderes Interesse am Lernen"
     }
-  }
-  ,
+  },
   "projects": {
     "kicker": "Portfolio",
     "title": "Featured Projects",
@@ -70,8 +68,7 @@
       "pollo": "Jump‑and‑Run‑Game mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco zu finden.",
       "pokedex": "Interaktive Pokédex‑App mit der öffentlichen Pokémon‑API. Durchsuchen, entdecken und filtern mit dynamischem Laden, cleanem UI und responsive Design."
     }
-  }
-  ,
+  },
   "references": {
     "title": "Was meine Kolleg:innen über mich sagen",
     "prev": "Vorherige Referenz",
@@ -85,8 +82,7 @@
       "3": "Sehr strukturiert und zuverlässig. Milos hielt das Projekt auf Kurs und unterstützte das Team, wann immer es nötig war.",
       "4": "Großes technisches Verständnis und schnelle Umsetzung. Milos liefert sauberen Code und kommuniziert klar."
     }
-  }
-  ,
+  },
   "contact": {
     "label": "Kontakt",
     "titleLine1": "Lass uns",
@@ -128,8 +124,7 @@
       "success": "Danke! Deine Nachricht wurde gesendet.",
       "error": "Sorry — etwas ist schiefgelaufen. Bitte versuche es später noch einmal."
     }
-  }
-  ,
+  },
   "footer": {
     "logoAlt": "Logo",
     "role": "Web Developer",
@@ -138,8 +133,7 @@
     "legal": "Impressum",
     "privacy": "Datenschutz",
     "copyright": "Milos Dimitrijevic"
-  }
-  ,
+  },
   "imprint": {
     "back": "Zurück",
     "title": "Impressum",
@@ -170,8 +164,7 @@
     "copyright": "Die Inhalte dieser Website unterliegen, soweit rechtlich möglich, dem Urheberrecht. Jegliche Verwendung oder Verbreitung von Material, die urheberrechtlich untersagt ist, bedarf der schriftlichen Zustimmung des jeweiligen Autors.",
     "odr": "Verbraucher:innen können die Plattform der EU-Kommission zur Online-Streitbeilegung nutzen:",
     "credits": "Eigene Grafiken, Projekt-Screenshots und ggf. lizenzfreie Assets."
-  }
-  ,
+  },
   "privacy": {
     "back": "Zurück",
     "title": "Datenschutzerklärung",
@@ -217,8 +210,7 @@
     "links": "Diese Website kann Links zu externen Websites (z. B. GitHub, LinkedIn) enthalten. Beim Anklicken gelten die Datenschutzbestimmungen der jeweiligen Anbieter. Ich habe keinen Einfluss auf deren Inhalte und Verarbeitung.",
     "retention": "Personenbezogene Daten werden nur so lange gespeichert, wie es für die jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.",
     "changes": "Ich kann diese Datenschutzerklärung bei Bedarf anpassen (z. B. bei neuen Funktionen oder rechtlichen Änderungen). Es gilt die jeweils aktuelle Version auf dieser Seite."
-  }
-  ,
+  },
   "cookie": {
     "text": "Diese Website verwendet ausschließlich technisch notwendige Cookies.",
     "more": "Weitere Informationen finden Sie in der",

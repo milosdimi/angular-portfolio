@@ -45,11 +45,13 @@
   </div>
 
   <!-- Left: Scroll hint -->
-  <div class="hero__left" aria-hidden="true">
-    <div class="scrollHint" [class.is-hidden]="!showScrollHint" aria-hidden="true">
-      <img src="assets/icons/pfeil.svg" alt="" />
-      <img src="assets/icons/pfeil_down.svg" alt="" />
-    </div>
+  <div class="hero__left">
+    <a class="scrollHintLink" href="#about" [attr.aria-label]="'hero.scrollDown' | t">
+      <div class="scrollHint">
+        <img src="assets/icons/pfeil.svg" alt="" aria-hidden="true" />
+        <img src="assets/icons/pfeil_down.svg" alt="" aria-hidden="true" />
+      </div>
+    </a>
 
     <div class="line"></div>
   </div>

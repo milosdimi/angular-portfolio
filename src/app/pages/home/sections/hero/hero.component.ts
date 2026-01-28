@@ -27,8 +27,6 @@ import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
   ],
 })
 export class HeroComponent {
-  showScrollHint = true;
-
   @HostListener('window:mousemove', ['$event'])
   onWindowMove(e: MouseEvent) {
     const hero = document.querySelector('.hero') as HTMLElement;
@@ -42,10 +40,4 @@ export class HeroComponent {
     hero.style.setProperty('--my', `${y}px`);
   }
 
-  @HostListener('window:scroll')
-  onScroll() {
-    if (window.scrollY > 20) {
-      this.showScrollHint = false;
-    }
-  }
 }

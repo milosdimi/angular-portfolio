@@ -53,6 +53,7 @@
   color: var(--muted);
   line-height: 1.7;
   margin-bottom: 16px;
+  font-size: 16px;
 }
 
 .skills__cta {
@@ -74,6 +75,7 @@
   margin: 0;
   color: var(--muted);
   line-height: 1.6;
+  font-size: 16px;
 }
 
 .skills__btn {
@@ -132,6 +134,7 @@
   color: rgba(255, 255, 255, 0.88);
   white-space: pre-line; /* für Material\nDesign */
   transition: color 0.25s ease;
+  font-size: 16px;
 }
 
 .skill:hover {
@@ -178,7 +181,7 @@
 
 .growth-hint__text {
   margin: 0 0 10px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -199,7 +202,7 @@
   gap: 4px;
 
   span {
-    font-size: 12px;
+    font-size: 16px;
     opacity: 0.75;
   }
 }
@@ -235,7 +238,7 @@
   }
 
   .skills__kicker {
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 0.1em;
   }
 
@@ -245,7 +248,7 @@
   }
 
   .skills__cta-title {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .skills__btn {
@@ -273,7 +276,7 @@
   }
 
   .skill__label {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .growth-hint {

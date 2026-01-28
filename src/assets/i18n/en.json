@@ -22,9 +22,9 @@
       "role": "Frontend Developer",
       "based": "Based in Kufstein",
       "open": "Open to work"
-    }
-  }
-  ,
+    },
+    "scrollDown": "Scroll down"
+  },
   "about": {
     "kicker": "Who I Am",
     "title": "About me",
@@ -35,8 +35,7 @@
       "mindset": "Curious, open to new technologies and continuous improvement",
       "approach": "Analytical, solution-oriented and detail-focused – with emphasis on quality, performance and UX"
     }
-  }
-  ,
+  },
   "skills": {
     "kicker": "Technologies",
     "title": "Skill Set",
@@ -53,8 +52,7 @@
       "labelLine2": "mindset",
       "hint": "I have a special interest in learning"
     }
-  }
-  ,
+  },
   "projects": {
     "kicker": "Portfolio",
     "title": "Featured Projects",
@@ -70,8 +68,7 @@
       "pollo": "Jump-and-run game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa.",
       "pokedex": "Interactive Pokédex app built with the public Pokémon API. Browse, search and explore with dynamic loading, clean UI and responsive design."
     }
-  }
-  ,
+  },
   "references": {
     "title": "What my colleagues say about me",
     "prev": "Previous reference",
@@ -85,8 +82,7 @@
       "3": "Very structured and reliable. Milos helped keep the project on track and supported the team whenever needed.",
       "4": "Great technical understanding and fast execution. Milos delivers clean code and communicates clearly."
     }
-  }
-  ,
+  },
   "contact": {
     "label": "Contact me",
     "titleLine1": "Let's work",
@@ -128,8 +124,7 @@
       "success": "Thanks! Your message has been sent.",
       "error": "Sorry — something went wrong. Please try again later."
     }
-  }
-  ,
+  },
   "footer": {
     "logoAlt": "Logo",
     "role": "Web Developer",
@@ -138,8 +133,7 @@
     "legal": "Legal Notice",
     "privacy": "Privacy Policy",
     "copyright": "Milos Dimitrijevic"
-  }
-  ,
+  },
   "imprint": {
     "back": "Back",
     "title": "Legal Notice",
@@ -170,8 +164,7 @@
     "copyright": "The contents of this website are subject to copyright to the extent legally possible. Any use or distribution of material prohibited by copyright requires the author’s written consent.",
     "odr": "Consumers can use the EU Commission's platform for online dispute resolution:",
     "credits": "Own graphics, project screenshots and, if applicable, royalty‑free assets."
-  }
-  ,
+  },
   "privacy": {
     "back": "Back",
     "title": "Privacy Policy",
@@ -217,8 +210,7 @@
     "links": "This website may contain links to external websites (e.g. GitHub, LinkedIn). When clicking a link, the privacy policies of the respective providers apply. I have no influence on their content or processing.",
     "retention": "Personal data is stored only as long as necessary for the respective purposes or as required by statutory retention obligations.",
     "changes": "I may update this privacy policy when needed (e.g. due to new features or legal changes). The current version on this page applies."
-  }
-  ,
+  },
   "cookie": {
     "text": "This website uses only technically necessary cookies.",
     "more": "More information can be found in the",

@@ -265,6 +265,22 @@
   height: 56px;
 }
 
+.scrollHintLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 999px;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.scrollHintLink:hover {
+  transform: translateY(-1px);
+  filter: drop-shadow(0 0 10px rgba(61, 207, 182, 0.35));
+}
+
 .scrollHint img {
   position: absolute;
   inset: 0;

@@ -15,7 +15,7 @@ $t-fast: 120ms;
   .section-label {
     display: block;
     color: $accent;
-    font-size: 0.875rem;
+    font-size: 1rem;
     letter-spacing: 0.08em;
     margin-bottom: 12px;
   }
@@ -30,6 +30,7 @@ $t-fast: 120ms;
     max-width: 520px;
     line-height: 1.6;
     margin: 0;
+    font-size: 1rem;
   }
 }
 
@@ -80,6 +81,7 @@ $t-fast: 120ms;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap;
 
   @media (max-width: 700px) {
     flex-direction: column;
@@ -94,6 +96,7 @@ $t-fast: 120ms;
   display: inline-flex;
   gap: 10px;
   align-items: center;
+  line-height: 1.2;
 
   .project-arrow {
     color: $accent;
@@ -115,7 +118,7 @@ $t-fast: 120ms;
 .technologies {
   color: $text;
   opacity: 0.85;
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-align: right;
 
   @media (max-width: 700px) {
@@ -207,7 +210,7 @@ $t-fast: 120ms;
     margin-bottom: 36px;
 
     .section-label {
-      font-size: 0.8rem;
+      font-size: 1rem;
       letter-spacing: 0.1em;
     }
 
@@ -217,7 +220,7 @@ $t-fast: 120ms;
     }
 
     .section-description {
-      font-size: 0.95rem;
+      font-size: 1rem;
       max-width: 100%;
     }
   }
@@ -241,7 +244,7 @@ $t-fast: 120ms;
   }
 
   .technologies {
-    font-size: 0.9rem;
+    font-size: 1rem;
     opacity: 0.75;
   }
 
@@ -324,13 +327,14 @@ $t-fast: 120ms;
   font-size: 1.1rem;
 }
 
-.modal__desc {
-  color: $text;
-  opacity: 0.9;
-  line-height: 1.6;
-  margin: 0 0 18px;
-  max-width: 520px;
-}
+  .modal__desc {
+    color: $text;
+    opacity: 0.9;
+    line-height: 1.6;
+    margin: 0 0 18px;
+    max-width: 520px;
+    font-size: 1rem;
+  }
 
 .modal__tech {
   display: flex;
@@ -354,7 +358,7 @@ $t-fast: 120ms;
 
     span {
       color: rgba(255, 255, 255, 0.85);
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
   }
 }
@@ -394,7 +398,7 @@ $t-fast: 120ms;
 
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1rem;
 
   transition:
     border-color 0.25s ease,
@@ -503,7 +507,7 @@ $t-fast: 120ms;
   }
 
   .modal__desc {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .modal__tech {
@@ -519,7 +523,7 @@ $t-fast: 120ms;
       }
 
       span {
-        font-size: 0.85rem;
+        font-size: 1rem;
       }
     }
   }
@@ -532,7 +536,7 @@ $t-fast: 120ms;
   .btn--outline {
     height: 40px;
     padding: 0 18px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     width: 140px;
     justify-content: center;
   }
