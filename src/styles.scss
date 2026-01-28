@@ -21,6 +21,8 @@ code,
 
 html {
   overflow-x: clip;
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -46,6 +48,10 @@ h2 {
 
 
 @media (max-width: 600px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+
   .container {
     padding-inline: var(--gutter-mobile);
   }

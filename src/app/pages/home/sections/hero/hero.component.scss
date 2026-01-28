@@ -227,13 +227,14 @@
   height: 42px;
   display: grid;
   place-items: center;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
 }
 
 .social:hover {
   transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(61, 207, 182, 0.6);
-  box-shadow: 0 0 12px rgba(61, 207, 182, 0.2);
 }
 
 .social__icon {
@@ -241,6 +242,7 @@
   width: 48px;
   height: 48px;
   transition: opacity var(--t-fast);
+  pointer-events: none;
 }
 
 .social__icon--hover {
@@ -249,6 +251,7 @@
 
 .social:hover .social__icon--hover {
   opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.35));
 }
 
 .social:hover .social__icon--base {

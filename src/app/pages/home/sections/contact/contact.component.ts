@@ -15,10 +15,11 @@ import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
 export class ContactComponent {
   isSubmitting = false;
   submitState: 'idle' | 'success' | 'error' = 'idle';
+  private readonly emailTldPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
   form = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(2)]],
-    email: ['', [Validators.required, Validators.email]],
+    email: ['', [Validators.required, Validators.email, Validators.pattern(this.emailTldPattern)]],
     message: ['', [Validators.required, Validators.minLength(10)]],
     privacy: [false, [Validators.requiredTrue]],
 

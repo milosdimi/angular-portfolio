@@ -80,7 +80,9 @@
         </div>
 
         <div class="modal__right">
-          <img class="modal__img" [src]="selectedProject!.imageUrl" [alt]="selectedProject!.title" />
+          <div class="modal__media">
+            <img class="modal__img" [src]="selectedProject!.imageUrl" [alt]="selectedProject!.title" />
+          </div>
           <button class="modal__next mono" type="button" (click)="nextProject()">
             {{ 'projects.modal.next' | t }} <span aria-hidden="true">→</span>
           </button>

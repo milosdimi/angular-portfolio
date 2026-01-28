@@ -1,5 +1,6 @@
 import { Location } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslatePipe } from '../../shared/i18n/translate.pipe';
 
 @Component({
@@ -9,13 +10,25 @@ import { TranslatePipe } from '../../shared/i18n/translate.pipe';
   templateUrl: './privacy.component.html',
   styleUrl: './privacy.component.scss',
 })
-export class PrivacyComponent {
+export class PrivacyComponent implements OnInit {
   year = new Date().getFullYear();
   email = 'dm&#64;dimit.cc';
 
-  constructor(private location: Location) {}
+  constructor(
+    private location: Location,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {
+    // Ensure we start at top, also on direct loads in Firefox.
+    window.scrollTo({ top: 0, left: 0 });
+  }
 
   goBack(): void {
-    this.location.back();
+    if (window.history.length > 1) {
+      this.location.back();
+      return;
+    }
+    this.router.navigateByUrl('/');
   }
 }
