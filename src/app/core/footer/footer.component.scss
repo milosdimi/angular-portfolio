@@ -1,7 +1,7 @@
 .footer {
   color: #b3b3b3;
   padding: 24px 24px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .footer__container {
@@ -37,7 +37,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  font-size: 14px;
+  font-size: 16px;
 
   strong {
     color: #ffffff;
@@ -48,13 +48,13 @@
 
   span {
     color: #9ca3af;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 .footer__location {
   color: #9ca3af;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -67,7 +67,7 @@
 .footer__center {
   text-align: center;
   color: #6dd3c6; // accent mint
-  font-size: 13px;
+  font-size: 16px;
   grid-column: 1 / -1;
   margin-top: 8px;
 }
@@ -85,7 +85,7 @@
   a {
     color: #b3b3b3;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 16px;
     transition: color 0.2s ease;
 
     &:hover {
@@ -118,7 +118,7 @@
   .footer__center {
     grid-column: 1 / -1;
     text-align: center;
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .footer__logo {
@@ -126,14 +126,14 @@
   }
 
   .footer__info {
-    font-size: 13px;
+    font-size: 16px;
 
     strong {
-      font-size: 15px;
+      font-size: 16px;
     }
 
     span {
-      font-size: 13px;
+      font-size: 16px;
     }
   }
 
