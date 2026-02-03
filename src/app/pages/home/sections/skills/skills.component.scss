@@ -221,6 +221,37 @@
   }
 }
 
+@media (min-width: 900px) and (max-width: 1100px) {
+  .skills {
+    padding-top: 0px;
+  }
+
+  .skills__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px 32px;
+  }
+
+  .skills__row {
+    display: contents;
+  }
+
+  .skill {
+    justify-self: center;
+  }
+
+  .skill img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1350px) and (max-height: 700px) {
+  .skills {
+    padding-top: 0px;
+  }
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .skills {

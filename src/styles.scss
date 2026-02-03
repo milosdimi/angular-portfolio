@@ -17,12 +17,13 @@ code,
   --container: 1440px;
   --gutter-desktop: 48px;
   --gutter-mobile: 24px;
+  --scroll-offset: 8px;
 }
 
 html {
   overflow-x: clip;
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-padding-top: var(--scroll-offset);
 }
 
 body {
@@ -42,6 +43,7 @@ h2 {
   box-sizing: border-box;
   margin-inline: auto;
 }
+
 .no-scroll {
   overflow: hidden;
 }
