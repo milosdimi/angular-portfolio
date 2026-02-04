@@ -8,6 +8,7 @@
   background: linear-gradient(38deg, var(--bg-0) 42%, var(--bg-1) 100%);
   --mx: 50%;
   --my: 35%;
+  isolation: isolate;
 }
 
 /* Mouse glow layer */
@@ -16,6 +17,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
+  z-index: 0;
 
   background: radial-gradient(
     280px 220px at var(--mx) var(--my),
@@ -41,7 +43,7 @@
 
 .hero__inner {
   position: relative;
-  z-index: 1;
+  z-index: 5;
   text-align: center;
 }
 
@@ -184,7 +186,7 @@
   gap: clamp(10px, 2vh, 14px);
   align-items: center;
   width: 56px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .hero__left {
@@ -364,7 +366,7 @@
   padding: 0;
   overflow: hidden;
   overflow-x: clip;
-  z-index: 1;
+  z-index: 0;
   pointer-events: none;
 }
 
