@@ -36,6 +36,12 @@ export class ContactComponent {
   }
 
   async submit() {
+    this.form.patchValue({
+      name: this.form.value.name?.trim() ?? '',
+      email: this.form.value.email?.trim() ?? '',
+      message: this.form.value.message?.trim() ?? '',
+    });
+
     if (this.form.invalid) {
       this.form.markAllAsTouched();
       return;
