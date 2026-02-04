@@ -74,6 +74,7 @@ export class ProjectsComponent {
 
   openProject(project: Project) {
     this.selectedProject = project;
+    this.hoveredProjectId = null;
     document.body.classList.add('no-scroll');
   }
 
@@ -90,6 +91,7 @@ export class ProjectsComponent {
     );
     const next = this.projects[(idx + 1) % this.projects.length];
     this.selectedProject = next;
+    this.hoveredProjectId = null;
   }
 
   getProjectNumber(id: number): string {

@@ -21,7 +21,10 @@
       "remote": "Verfügbar für Remote-Arbeit",
       "role": "Frontend Entwickler",
       "based": "Ansässig in Kufstein",
-      "open": "Offen für Jobs"
+      "open": "Offen für Jobs",
+      "clean": "Clean Code",
+      "freelance": "Freelance verfuegbar",
+      "webdev": "Webentwicklung"
     },
     "scrollDown": "Nach unten scrollen"
   },

@@ -21,7 +21,10 @@
       "remote": "Available for remote work",
       "role": "Frontend Developer",
       "based": "Based in Kufstein",
-      "open": "Open to work"
+      "open": "Open to work",
+      "clean": "Clean Code",
+      "freelance": "Freelance available",
+      "webdev": "Web Development"
     },
     "scrollDown": "Scroll down"
   },
