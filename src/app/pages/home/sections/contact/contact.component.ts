@@ -22,9 +22,6 @@ export class ContactComponent {
     email: ['', [Validators.required, Validators.email, Validators.pattern(this.emailTldPattern)]],
     message: ['', [Validators.required, Validators.minLength(10)]],
     privacy: [false, [Validators.requiredTrue]],
-
-    // honeypot (muss leer bleiben)
-    company: [''],
   });
 
   constructor(private fb: FormBuilder, private http: HttpClient) {}
@@ -54,7 +51,6 @@ export class ContactComponent {
       name: this.form.value.name,
       email: this.form.value.email,
       message: this.form.value.message,
-      company: this.form.value.company, // honeypot
     };
 
     this.http.post<{ ok: boolean }>('https://dimit.cc/api/sendMail.php', payload)
@@ -62,7 +58,7 @@ export class ContactComponent {
         next: (res) => {
           if (res?.ok) {
             this.submitState = 'success';
-            this.form.reset({ privacy: false, company: '' });
+            this.form.reset({ privacy: false });
           } else {
             this.submitState = 'error';
           }

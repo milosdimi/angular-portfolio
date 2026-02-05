@@ -27,7 +27,7 @@ export class ProjectsComponent {
       descriptionKey: 'projects.items.join',
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       liveUrl: 'https://join.dimit.cc/',
-      githubUrl: 'https://github.com/milosdimi/join',
+      githubUrl: 'https://github.com/Asim-taskin/Join.git',
       imageUrl: 'assets/projects/join-kanban.png',
     },
     {
