@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './core/header/header.component';
-import { FooterComponent } from './core/footer/footer.component';
-import { CookieBannerComponent } from './core/cookie-banner/cookie-banner.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { CookieBannerComponent } from './shared/cookie-banner/cookie-banner.component';
 
 @Component({
   selector: 'app-root',
