@@ -26,7 +26,6 @@ export class ContactComponent {
 
   constructor(private fb: FormBuilder, private http: HttpClient) {}
 
-  // helper: show error only after blur/touch
   isInvalid(field: 'name' | 'email' | 'message' | 'privacy') {
     const ctrl = this.form.get(field);
     return !!ctrl && ctrl.invalid && (ctrl.touched || ctrl.dirty);

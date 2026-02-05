@@ -2,17 +2,14 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
-  Inject,
-  PLATFORM_ID,
   ViewChild,
 } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
 import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
 
 type SkillItem = {
   name: string;
   icon: string;
-  accent?: boolean; // für optionales Highlight (z.B. Growth)
+  accent?: boolean;
 };
 
 @Component({
@@ -29,7 +26,6 @@ export class SkillsComponent implements AfterViewInit {
   inView = false;
   showGrowthHint = false;
 
-    // Right grid items
   row1: SkillItem[] = [
     { name: 'HTML', icon: 'html.svg' },
     { name: 'CSS', icon: 'css.svg' },
@@ -49,14 +45,7 @@ export class SkillsComponent implements AfterViewInit {
     { name: 'Scrum', icon: 'scrum.svg' },
   ];
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
-
   ngAfterViewInit(): void {
-    if (!isPlatformBrowser(this.platformId)) {
-      this.inView = true;
-      return;
-    }
-
     const prefersReduced =
       window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
 
@@ -74,7 +63,7 @@ export class SkillsComponent implements AfterViewInit {
       },
       {
         threshold: 0.25,
-        rootMargin: '0px 0px -25% 0px', // Viewport
+        rootMargin: '0px 0px -25% 0px',
       },
     );
 

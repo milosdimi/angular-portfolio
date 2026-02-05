@@ -3,10 +3,7 @@ import {
   ElementRef,
   ViewChild,
   AfterViewInit,
-  Inject,
-  PLATFORM_ID,
 } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
 import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
 
 @Component({
@@ -21,11 +18,7 @@ export class AboutComponent implements AfterViewInit {
   aboutSection!: ElementRef<HTMLElement>;
 
   inView = false;
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
-
   ngAfterViewInit(): void {
-    if (!isPlatformBrowser(this.platformId)) return;
-
     const prefersReduced =
       window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
 
@@ -38,10 +31,10 @@ export class AboutComponent implements AfterViewInit {
       ([entry]) => {
         if (entry.isIntersecting) {
           this.inView = true;
-          observer.disconnect(); // nur 1x animieren (recommended)
+          observer.disconnect();
         }
       },
-      { threshold: 0.25 }, // 25% sichtbar -> animieren
+      { threshold: 0.25 },
     );
 
     observer.observe(this.aboutSection.nativeElement);

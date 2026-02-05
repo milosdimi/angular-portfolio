@@ -309,11 +309,11 @@
 }
 
 .scrollHint img:nth-child(1) {
-  opacity: 1; // Start sichtbar
+  opacity: 1;
 }
 
 .scrollHint img:nth-child(2) {
-  animation-delay: 0.7s; // halb versetzt
+  animation-delay: 0.7s;
 }
 
 .scrollHint.is-hidden {
