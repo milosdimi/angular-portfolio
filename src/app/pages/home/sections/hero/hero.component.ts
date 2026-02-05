@@ -1,5 +1,4 @@
 import { Component, HostListener } from '@angular/core';
-import { trigger, transition, style, animate } from '@angular/animations';
 import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
 
 @Component({
@@ -8,23 +7,6 @@ import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
   imports: [TranslatePipe],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
-  animations: [
-    trigger('scrollHintAnim', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(8px)' }),
-        animate(
-          '400ms ease-out',
-          style({ opacity: 1, transform: 'translateY(0)' }),
-        ),
-      ]),
-      transition(':leave', [
-        animate(
-          '300ms ease-in',
-          style({ opacity: 0, transform: 'translateY(12px)' }),
-        ),
-      ]),
-    ]),
-  ],
 })
 export class HeroComponent {
   @HostListener('window:mousemove', ['$event'])

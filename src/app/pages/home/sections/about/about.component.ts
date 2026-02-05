@@ -7,13 +7,6 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-} from '@angular/animations';
 import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
 
 @Component({
@@ -22,18 +15,6 @@ import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
   imports: [TranslatePipe],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
-  animations: [
-    trigger('revealLeft', [
-      state('hidden', style({ opacity: 0, transform: 'translateX(-60px)' })),
-      state('visible', style({ opacity: 1, transform: 'translateX(0)' })),
-      transition('hidden => visible', animate('650ms ease-out')),
-    ]),
-    trigger('revealRight', [
-      state('hidden', style({ opacity: 0, transform: 'translateX(60px)' })),
-      state('visible', style({ opacity: 1, transform: 'translateX(0)' })),
-      transition('hidden => visible', animate('650ms ease-out')),
-    ]),
-  ],
 })
 export class AboutComponent implements AfterViewInit {
   @ViewChild('aboutSection', { static: true })
