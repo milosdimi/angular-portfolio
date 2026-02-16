@@ -67,14 +67,6 @@ if (!is_array($data)) {
   exit;
 }
 
-// Honeypot (keep empty in frontend)
-$hp = trim($data['company'] ?? '');
-if ($hp !== '') {
-  // Bot detected → pretend success
-  echo json_encode(['ok' => true]);
-  exit;
-}
-
 $name = trim($data['name'] ?? '');
 $email = trim($data['email'] ?? '');
 $message = trim($data['message'] ?? '');
