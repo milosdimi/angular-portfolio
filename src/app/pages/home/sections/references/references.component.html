@@ -50,9 +50,11 @@
       </button>
 
       <div class="dots" role="tablist" [attr.aria-label]="'references.aria' | t">
-        <button *ngFor="let _ of references; let i = index" type="button" class="dot"
+        @for (_ of references; track _.author; let i = $index) {
+        <button type="button" class="dot"
           [class.is-active]="i === activeIndex" (click)="goTo(i)"
           [attr.aria-label]="('references.goto' | t) + ' ' + (i + 1)"></button>
+        }
       </div>
 
       <button class="navBtn" type="button" (click)="next()" [attr.aria-label]="'references.next' | t">

@@ -61,12 +61,16 @@
         {{ isSubmitting ? ('contact.button.sending' | t) : ('contact.button.default' | t) }}
       </button>
 
-      <p class="formMsg formMsg--success" *ngIf="submitState === 'success'">
+      @if (submitState === 'success') {
+      <p class="formMsg formMsg--success">
         {{ 'contact.messages.success' | t }}
       </p>
-      <p class="formMsg formMsg--error" *ngIf="submitState === 'error'">
+      }
+      @if (submitState === 'error') {
+      <p class="formMsg formMsg--error">
         {{ 'contact.messages.error' | t }}
       </p>
+      }
     </form>
 
     <a class="contact__to-top" href="#top" [attr.aria-label]="'contact.toTop' | t">

@@ -1,4 +1,5 @@
-<div class="cookie" *ngIf="!accepted">
+@if (!accepted) {
+<div class="cookie">
   <p>
     {{ 'cookie.text' | t }}
     {{ 'cookie.more' | t }}
@@ -9,3 +10,4 @@
     {{ 'cookie.ok' | t }}
   </button>
 </div>
+}

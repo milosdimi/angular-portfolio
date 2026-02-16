@@ -12,7 +12,8 @@
     <div class="projects-layout">
       <!-- Left: list -->
       <div class="projects-list" role="list">
-        <button *ngFor="let project of projects; trackBy: trackById" class="project-item" type="button" role="listitem"
+        @for (project of projects; track trackById($index, project)) {
+        <button class="project-item" type="button" role="listitem"
           (mouseenter)="setHover(project.id)" (mouseleave)="setHover(null)" (focus)="setHover(project.id)"
           (blur)="setHover(null)" (click)="openProject(project)" [class.active]="selectedProject?.id === project.id">
           <div class="project-main">
@@ -22,19 +23,24 @@
             </h3>
 
             <div class="technologies mono">
-              <span *ngFor="let tech of project.technologies; let last = last">
+              @for (tech of project.technologies; track tech; let last = $last) {
+              <span>
                 {{ tech }}{{ !last ? ' | ' : '' }}
               </span>
+              }
             </div>
           </div>
         </button>
+        }
       </div>
 
       <!-- Right: hover preview -->
       <div class="preview" aria-hidden="true">
         <div class="preview__frame" [class.is-visible]="previewProject">
-          <img *ngIf="previewProject" class="preview__img" [src]="previewProject.imageUrl"
+          @if (previewProject) {
+          <img class="preview__img" [src]="previewProject.imageUrl"
             [alt]="previewProject.title" />
+          }
           <div class="preview__hatch"></div>
         </div>
       </div>
@@ -48,7 +54,8 @@
   </div>
 
   <!-- Modal -->
-  <div class="modal" *ngIf="selectedProject" (click)="closeProject()">
+  @if (selectedProject) {
+  <div class="modal" (click)="closeProject()">
     <div class="modal__card" (click)="$event.stopPropagation()" role="dialog" aria-modal="true">
       <button class="modal__close" type="button" (click)="closeProject()" aria-label="Close">×</button>
 
@@ -61,10 +68,14 @@
           <p class="modal__desc">{{ selectedProject!.descriptionKey | t }}</p>
 
           <div class="modal__tech">
-            <div class="tech" *ngFor="let tech of selectedProject!.technologies">
-              <img *ngIf="getTechIcon(tech) as icon" [src]="icon" [alt]="tech" />
+            @for (tech of selectedProject!.technologies; track tech) {
+            <div class="tech">
+              @if (getTechIcon(tech); as icon) {
+              <img [src]="icon" [alt]="tech" />
+              }
               <span class="mono">{{ tech }}</span>
             </div>
+            }
           </div>
 
           <div class="modal__actions">
@@ -90,4 +101,5 @@
       </div>
     </div>
   </div>
+  }
 </section>
