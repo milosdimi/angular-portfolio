@@ -15,12 +15,12 @@ export class HeaderComponent {
 
   constructor(private router: Router, private i18n: TranslationService) {}
 
-  toggleMenu() {
+  toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
     document.body.style.overflow = this.menuOpen ? 'hidden' : '';
   }
 
-  goHome() {
+  goHome(): void {
     this.closeMenu();
 
     if (this.router.url !== '/') {
@@ -33,7 +33,7 @@ export class HeaderComponent {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  setLang(lang: 'de' | 'en') {
+  setLang(lang: 'de' | 'en'): void {
     this.i18n.setLang(lang);
   }
 
@@ -41,13 +41,13 @@ export class HeaderComponent {
     return this.i18n.currentLang;
   }
 
-  closeMenu() {
+  closeMenu(): void {
     this.menuOpen = false;
     document.body.style.overflow = '';
   }
 
   @HostListener('document:keydown.escape')
-  onEsc() {
+  onEsc(): void {
     this.closeMenu();
   }
 }

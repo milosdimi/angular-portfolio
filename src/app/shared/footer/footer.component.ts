@@ -14,7 +14,7 @@ export class FooterComponent {
 
   constructor(private router: Router) {}
 
-  goHome() {
+  goHome(): void {
     if (this.router.url !== '/') {
       this.router.navigateByUrl('/').then(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });

@@ -26,12 +26,12 @@ export class ContactComponent {
 
   constructor(private fb: FormBuilder, private http: HttpClient) {}
 
-  isInvalid(field: 'name' | 'email' | 'message' | 'privacy') {
+  isInvalid(field: 'name' | 'email' | 'message' | 'privacy'): boolean {
     const ctrl = this.form.get(field);
     return !!ctrl && ctrl.invalid && (ctrl.touched || ctrl.dirty);
   }
 
-  async submit() {
+  submit(): void {
     this.form.patchValue({
       name: this.form.value.name?.trim() ?? '',
       email: this.form.value.email?.trim() ?? '',

@@ -64,26 +64,26 @@ export class ProjectsComponent {
     Scrum: 'scrum.svg',
   };
 
-  trackById(_: number, p: Project) {
+  trackById(_: number, p: Project): number {
     return p.id;
   }
 
-  setHover(projectId: number | null) {
+  setHover(projectId: number | null): void {
     this.hoveredProjectId = projectId;
   }
 
-  openProject(project: Project) {
+  openProject(project: Project): void {
     this.selectedProject = project;
     this.hoveredProjectId = null;
     document.body.classList.add('no-scroll');
   }
 
-  closeProject() {
+  closeProject(): void {
     this.selectedProject = null;
     document.body.classList.remove('no-scroll');
   }
 
-  nextProject() {
+  nextProject(): void {
     if (!this.selectedProject) return;
 
     const idx = this.projects.findIndex(
@@ -110,7 +110,7 @@ export class ProjectsComponent {
   }
 
   @HostListener('window:keydown.escape')
-  onEsc() {
+  onEsc(): void {
     if (this.selectedProject) {
       this.closeProject();
     }

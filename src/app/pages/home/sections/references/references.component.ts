@@ -46,16 +46,16 @@ export class ReferencesComponent {
 
   activeIndex = 0;
 
-  prev() {
+  prev(): void {
     this.activeIndex =
       (this.activeIndex - 1 + this.references.length) % this.references.length;
   }
 
-  next() {
+  next(): void {
     this.activeIndex = (this.activeIndex + 1) % this.references.length;
   }
 
-  goTo(i: number) {
+  goTo(i: number): void {
     this.activeIndex = i;
   }
 

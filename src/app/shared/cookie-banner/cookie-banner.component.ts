@@ -13,7 +13,7 @@ import { TranslatePipe } from '../../shared/i18n/translate.pipe';
 export class CookieBannerComponent {
   accepted = localStorage.getItem('cookiesAccepted') === 'true';
 
-  acceptCookies() {
+  acceptCookies(): void {
     localStorage.setItem('cookiesAccepted', 'true');
     this.accepted = true;
   }

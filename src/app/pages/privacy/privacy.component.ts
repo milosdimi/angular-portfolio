@@ -20,7 +20,6 @@ export class PrivacyComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Ensure we start at top, also on direct loads in Firefox.
     window.scrollTo({ top: 0, left: 0 });
   }
 

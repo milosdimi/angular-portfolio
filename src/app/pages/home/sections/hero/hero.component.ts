@@ -10,7 +10,7 @@ import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
 })
 export class HeroComponent {
   @HostListener('window:mousemove', ['$event'])
-  onWindowMove(e: MouseEvent) {
+  onWindowMove(e: MouseEvent): void {
     const hero = document.querySelector('.hero') as HTMLElement;
     if (!hero) return;
 

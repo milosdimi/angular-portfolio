@@ -12,7 +12,7 @@ import { TranslatePipe } from '../../shared/i18n/translate.pipe';
 })
 export class ImpressumComponent implements OnInit {
   year = new Date().getFullYear();
-  email = 'dm&#64;dimit.cc'; // Angular 17 safe
+  email = 'dm&#64;dimit.cc';
 
   constructor(
     private location: Location,
@@ -20,7 +20,6 @@ export class ImpressumComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Ensure we start at top, also on direct loads in Firefox.
     window.scrollTo({ top: 0, left: 0 });
   }
 
