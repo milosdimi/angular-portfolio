@@ -1,18 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideRouter } from '@angular/router';
 
-import { ImprintComponent } from './imprint.component';
+import { ImpressumComponent } from './imprint.component';
 
-describe('ImprintComponent', () => {
-  let component: ImprintComponent;
-  let fixture: ComponentFixture<ImprintComponent>;
+describe('ImpressumComponent', () => {
+  let component: ImpressumComponent;
+  let fixture: ComponentFixture<ImpressumComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ImprintComponent]
+      imports: [ImpressumComponent],
+      providers: [provideHttpClient(), provideHttpClientTesting(), provideRouter([])]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ImprintComponent);
+    fixture = TestBed.createComponent(ImpressumComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
