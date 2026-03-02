@@ -1,7 +1,7 @@
 <section class="hero">
   <div class="container hero__inner">
     <p class="hero__kicker" appAnimateOnScroll animationClass="fade-up">{{ 'hero.kicker' | t }}</p>
-    <h1 class="hero__title" appAnimateOnScroll animationClass="fade-up">{{ 'hero.title' | t }}</h1>
+    <h1 class="hero__title" [attr.data-text]="'hero.title' | t" appAnimateOnScroll animationClass="fade-up">{{ 'hero.title' | t }}</h1>
 
     <!-- Center: CTA Buttons -->
     <div class="hero__actions" appAnimateOnScroll animationClass="fade-up">
