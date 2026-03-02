@@ -1,10 +1,8 @@
 import {
-  AfterViewInit,
   Component,
-  ElementRef,
-  ViewChild,
 } from '@angular/core';
 import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
+import { AnimateOnScrollDirective } from '../../../../shared/directives/animate-on-scroll.directive';
 
 type SkillItem = {
   name: string;
@@ -15,15 +13,11 @@ type SkillItem = {
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, AnimateOnScrollDirective],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
-export class SkillsComponent implements AfterViewInit {
-  @ViewChild('skillsSection', { static: true })
-  skillsSection!: ElementRef<HTMLElement>;
-
-  inView = false;
+export class SkillsComponent {
   showGrowthHint = false;
 
   row1: SkillItem[] = [
@@ -44,29 +38,4 @@ export class SkillsComponent implements AfterViewInit {
     { name: 'REST-API', icon: 'api.svg' },
     { name: 'Scrum', icon: 'scrum.svg' },
   ];
-
-  ngAfterViewInit(): void {
-    const prefersReduced =
-      window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
-
-    if (prefersReduced) {
-      this.inView = true;
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          this.inView = true;
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.25,
-        rootMargin: '0px 0px -25% 0px',
-      },
-    );
-
-    observer.observe(this.skillsSection.nativeElement);
-  }
 }

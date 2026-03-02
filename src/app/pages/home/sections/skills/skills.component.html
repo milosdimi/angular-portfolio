@@ -2,7 +2,7 @@
   <div class="container skills__inner">
 
     <!-- LEFT: Card -->
-    <div class="skills__content" appAnimateOnScroll animationClass="slide-in-left">
+    <div class="skills__content" appAnimateOnScroll animationClass="is-visible">
       <div class="skills__card">
         <span class="skills__kicker">{{ 'skills.kicker' | t }}</span>
         <h2 class="skills__title">{{ 'skills.title' | t }}</h2>
@@ -22,7 +22,7 @@
     </div>
 
     <!-- RIGHT: Icon grid -->
-    <div class="skills__grid" appAnimateOnScroll animationClass="slide-in-right">
+    <div class="skills__grid" appAnimateOnScroll animationClass="is-visible">
 
       <div class="skills__row">
         @for (skill of row1; track skill.name) {
