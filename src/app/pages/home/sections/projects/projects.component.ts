@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
+import { AnimateOnScrollDirective } from '../../../../shared/directives/animate-on-scroll.directive';
 
 export interface Project {
   id: number;
@@ -15,7 +16,7 @@ export interface Project {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule, TranslatePipe, AnimateOnScrollDirective],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
@@ -75,12 +76,14 @@ export class ProjectsComponent {
   openProject(project: Project): void {
     this.selectedProject = project;
     this.hoveredProjectId = null;
-    document.body.classList.add('no-scroll');
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
   }
 
   closeProject(): void {
     this.selectedProject = null;
-    document.body.classList.remove('no-scroll');
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
   }
 
   nextProject(): void {
