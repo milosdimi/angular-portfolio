@@ -352,3 +352,29 @@
     font-size: 16px;
   }
 }
+
+/* --- ANIMATIONEN --- */
+
+/* Startzustand: Unsichtbar & leicht nach oben verschoben */
+.lang--desktop,
+.nav__link,
+.logo,
+.burger {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Endzustand: Sichtbar & an Originalposition (wird durch Directive hinzugefügt) */
+.fade-down {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Der "Bäm Bäm Bäm" Wellen-Effekt (Verzögerungen) */
+.lang--desktop { transition-delay: 0.1s; } /* 1. Sprache */
+.nav__link:nth-child(1) { transition-delay: 0.2s; } /* 2. Link 1 */
+.nav__link:nth-child(2) { transition-delay: 0.3s; } /* 3. Link 2 */
+.nav__link:nth-child(3) { transition-delay: 0.4s; } /* 4. Link 3 */
+.logo { transition-delay: 0.5s; } /* 5. Logo */
+.burger { transition-delay: 0.2s; } /* Mobile Burger */

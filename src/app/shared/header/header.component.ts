@@ -2,11 +2,12 @@ import { Component, HostListener } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { TranslatePipe } from '../../shared/i18n/translate.pipe';
 import { TranslationService } from '../../shared/i18n/translation.service';
+import { AnimateOnScrollDirective } from '../directives/animate-on-scroll.directive';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, TranslatePipe],
+  imports: [RouterLink, TranslatePipe, AnimateOnScrollDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
