@@ -1,9 +1,9 @@
 <section class="refs section" id="references">
   <div class="container">
-    <h2 class="refs__title mono">{{ 'references.title' | t }}</h2>
+    <h2 class="refs__title mono" appAnimateOnScroll animationClass="fade-up">{{ 'references.title' | t }}</h2>
 
     <div class="refs__stage-wrap">
-      <div class="refs__stage">
+      <div class="refs__stage" appAnimateOnScroll animationClass="zoom-in">
       <!-- left preview -->
       <article class="card card--side card--left" role="button" tabindex="0" (click)="prev()" (keyup.enter)="prev()"
         (keyup.space)="prev()" [attr.aria-label]="'references.prev' | t">
