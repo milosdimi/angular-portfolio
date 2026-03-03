@@ -12,10 +12,9 @@
     animation: revealText 0.5s ease-out forwards;
   }
 
-  /* Staggered Delay Loop (Der Matrix/Typewriter Effekt) */
-  @for $i from 1 through 50 {
+    @for $i from 1 through 50 {
     > *:nth-child(#{$i}) {
-      animation-delay: #{$i * 0.05}s; /* 50ms Verzögerung pro Element */
+      animation-delay: #{$i * 0.05}s; 
     }
   }
 
@@ -27,7 +26,7 @@
   }
 
   h2 {
-    color: #3dcfb6; /* Neon Accent */
+    color: #3dcfb6; 
     font-size: 20px;
     margin: 40px 0 16px;
     border-bottom: 1px solid rgba(61, 207, 182, 0.2);
