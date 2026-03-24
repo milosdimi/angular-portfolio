@@ -21,8 +21,9 @@
       <!-- Name -->
       <label class="field">
         <span class="field__label mono">{{ 'contact.fields.name.label' | t }}</span>
-        <input class="field__input" type="text" formControlName="name" 
-               [placeholder]="'contact.fields.name.placeholder' | t">
+        <input class="field__input" type="text" formControlName="name"
+               [placeholder]="'contact.fields.name.placeholder' | t"
+               (blur)="form.get('name')?.markAsTouched()">
         <span class="field__line"></span>
         <span class="field__error" [class.is-visible]="isInvalid('name')">
           {{ 'contact.errors.name' | t }}
@@ -32,8 +33,9 @@
       <!-- Email -->
       <label class="field">
         <span class="field__label mono">{{ 'contact.fields.email.label' | t }}</span>
-        <input class="field__input" type="email" formControlName="email" 
-               [placeholder]="'contact.fields.email.placeholder' | t">
+        <input class="field__input" type="email" formControlName="email"
+               [placeholder]="'contact.fields.email.placeholder' | t"
+               (blur)="form.get('email')?.markAsTouched()">
         <span class="field__line"></span>
         <span class="field__error" [class.is-visible]="isInvalid('email')">
           {{ 'contact.errors.email' | t }}
@@ -43,8 +45,9 @@
       <!-- Message -->
       <label class="field">
         <span class="field__label mono">{{ 'contact.fields.message.label' | t }}</span>
-        <textarea class="field__textarea" formControlName="message" rows="4" 
-                  [placeholder]="'contact.fields.message.placeholder' | t"></textarea>
+        <textarea class="field__textarea" formControlName="message" rows="4"
+                  [placeholder]="'contact.fields.message.placeholder' | t"
+                  (blur)="form.get('message')?.markAsTouched()"></textarea>
         <span class="field__line"></span>
         <span class="field__error" [class.is-visible]="isInvalid('message')">
           {{ 'contact.errors.message' | t }}
