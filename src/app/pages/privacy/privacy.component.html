@@ -1,5 +1,5 @@
 <section class="legal">
-  <button class="legal__back" type="button" (click)="goBack()" [attr.aria-label]="'privacy.back' | t">&larr;</button>
+  <button class="legal__back" type="button" (click)="goBack()">&larr; {{ 'privacy.back' | t }}</button>
   <h1>{{ 'privacy.title' | t }}</h1>
   <p class="legal__muted">{{ 'privacy.status' | t }}: {{ year }}</p>
 

@@ -58,22 +58,20 @@
 .legal__back {
   position: fixed;
   top: 100px;
-  left: max(20px, calc(50% - 520px));
-  
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+  left: max(20px, calc(46% - 520px));
+
+  padding: 10px 20px;
+  border-radius: 22px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
-  color: #fff;
-  font-size: 24px;
-  line-height: 1;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
+  gap: 6px;
+  transition: all 0.25s ease;
   z-index: 100;
 
   &:hover {
@@ -85,10 +83,9 @@
 }
 
 .legal__muted {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 14px;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 13px;
   margin-bottom: 32px;
-  font-family: monospace;
 }
 
 @keyframes revealText {
@@ -101,13 +98,13 @@
 @media (max-width: 900px) {
   .legal__back {
     position: absolute;
-    top: 40px;
-    left: 24px;
+    top: 104px;
+    left: 20px;
   }
-  
+
   .legal {
     margin: 0;
-    padding: 90px 20px 40px;
+    padding: 168px 20px 40px;
   }
 
   .legal h1 {
