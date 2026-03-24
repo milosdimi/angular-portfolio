@@ -1,27 +1,58 @@
-# Portfolio
+<h1 align="center">Milos Dimitrijevic — Portfolio</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+<p align="center">
+  <a href="https://dimit.cc" target="_blank"><img src="https://img.shields.io/badge/Live-dimit.cc-3dcfb6?style=for-the-badge&logo=vercel&logoColor=white" alt="Live"/></a>
+  <img src="https://img.shields.io/badge/Angular-17-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular 17"/>
+  <img src="https://img.shields.io/badge/TypeScript-5.4-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/SCSS-CSS3-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="SCSS"/>
+</p>
 
-## Development server
+<p align="center">
+  Personal developer portfolio built with Angular 17 — featuring smooth animations, bilingual content (DE/EN), and a responsive layout across all devices.
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Bilingual** — full German / English translation (i18n) with language toggle
+- **Responsive** — mobile-first design, tested from 360px to ultrawide
+- **Animations** — scroll-triggered fade/slide animations via Intersection Observer
+- **Contact Form** — validation onBlur, privacy checkbox, success/error feedback
+- **Dark Theme** — consistent design system with CSS custom properties
+- **Legal Pages** — Impressum & Datenschutz included
 
-## Build
+## Tech Stack
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+| Technology | Version |
+|---|---|
+| Angular | 17.3 |
+| TypeScript | 5.4 |
+| SCSS | - |
+| RxJS | 7.8 |
 
-## Running unit tests
+## Projects Showcased
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+| Project | Live | Repository |
+|---|---|---|
+| Join — Kanban Board | [join.dimit.cc](https://join.dimit.cc) | [GitHub](https://github.com/milosdimi/join-kanban) |
+| El Pollo Loco — Jump & Run | [pollo.dimit.cc](https://pollo.dimit.cc) | [GitHub](https://github.com/milosdimi/el_pollo_final) |
+| Pokedex | [dex.dimit.cc](https://dex.dimit.cc) | [GitHub](https://github.com/milosdimi/pokedex) |
 
-## Running end-to-end tests
+## Getting Started
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+# Install dependencies
+npm install
 
-## Further help
+# Start dev server → http://localhost:4200
+ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Production build → /dist/portfolio/browser
+ng build
+```
+
+## Contact
+
+**Milos Dimitrijevic**
+[dimit.cc](https://dimit.cc) · [LinkedIn](https://www.linkedin.com/in/milos-dimitrijevic-35a552195) · [GitHub](https://github.com/milosdimi) · dm@dimit.cc
