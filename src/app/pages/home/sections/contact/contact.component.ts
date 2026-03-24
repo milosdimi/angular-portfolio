@@ -4,11 +4,12 @@ import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
+import { AnimateOnScrollDirective } from '../../../../shared/directives/animate-on-scroll.directive';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterLink, TranslatePipe],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink, TranslatePipe, AnimateOnScrollDirective],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -28,7 +29,7 @@ export class ContactComponent {
 
   isInvalid(field: 'name' | 'email' | 'message' | 'privacy'): boolean {
     const ctrl = this.form.get(field);
-    return !!ctrl && ctrl.invalid && (ctrl.touched || ctrl.dirty);
+    return !!ctrl && ctrl.invalid && ctrl.touched;
   }
 
   submit(): void {

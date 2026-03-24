@@ -1,79 +1,91 @@
 <section id="contact" class="contact">
   <div class="container contact__grid">
 
-    <!-- Left -->
-    <div class="contact__intro">
+    <!-- LEFT: Intro Text (3D Left) -->
+    <div class="contact__intro" appAnimateOnScroll animationClass="is-visible">
       <p class="contact__label mono">{{ 'contact.label' | t }}</p>
-      <h2 class="contact__title">{{ 'contact.titleLine1' | t }}<br />{{ 'contact.titleLine2' | t }}</h2>
-
+      <h2 class="contact__title">
+        {{ 'contact.titleLine1' | t }}<br>
+        {{ 'contact.titleLine2' | t }}
+      </h2>
       <p class="contact__headline mono">{{ 'contact.headline' | t }}</p>
       <p class="contact__text">
         {{ 'contact.text' | t }} <span class="contact__accent">{{ 'contact.accent' | t }}</span>
       </p>
     </div>
 
-    <!-- Right: Form -->
-    <form class="contact__form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
-
+    <!-- RIGHT: Form (3D Right) -->
+    <form class="contact__form" [formGroup]="form" (ngSubmit)="submit()" novalidate
+          appAnimateOnScroll animationClass="is-visible">
+      
+      <!-- Name -->
       <label class="field">
         <span class="field__label mono">{{ 'contact.fields.name.label' | t }}</span>
-        <input class="field__input" type="text" formControlName="name" [attr.placeholder]="'contact.fields.name.placeholder' | t" />
+        <input class="field__input" type="text" formControlName="name"
+               [placeholder]="'contact.fields.name.placeholder' | t"
+               (blur)="form.get('name')?.markAsTouched()">
+        <span class="field__line"></span>
         <span class="field__error" [class.is-visible]="isInvalid('name')">
           {{ 'contact.errors.name' | t }}
         </span>
       </label>
 
+      <!-- Email -->
       <label class="field">
         <span class="field__label mono">{{ 'contact.fields.email.label' | t }}</span>
-        <input class="field__input" type="email" formControlName="email" [attr.placeholder]="'contact.fields.email.placeholder' | t" />
+        <input class="field__input" type="email" formControlName="email"
+               [placeholder]="'contact.fields.email.placeholder' | t"
+               (blur)="form.get('email')?.markAsTouched()">
+        <span class="field__line"></span>
         <span class="field__error" [class.is-visible]="isInvalid('email')">
           {{ 'contact.errors.email' | t }}
         </span>
       </label>
 
+      <!-- Message -->
       <label class="field">
         <span class="field__label mono">{{ 'contact.fields.message.label' | t }}</span>
         <textarea class="field__textarea" formControlName="message" rows="4"
-          [attr.placeholder]="'contact.fields.message.placeholder' | t"></textarea>
+                  [placeholder]="'contact.fields.message.placeholder' | t"
+                  (blur)="form.get('message')?.markAsTouched()"></textarea>
+        <span class="field__line"></span>
         <span class="field__error" [class.is-visible]="isInvalid('message')">
           {{ 'contact.errors.message' | t }}
         </span>
       </label>
 
+      <!-- Privacy -->
       <div class="privacy">
         <label class="privacy__check">
-          <input type="checkbox" formControlName="privacy" />
+          <input type="checkbox" formControlName="privacy">
+          <span class="checkmark"></span>
         </label>
-
         <span class="privacy__text">
-          {{ 'contact.privacy.prefix' | t }} 
+          {{ 'contact.privacy.prefix' | t }}
           <a routerLink="/datenschutz">{{ 'contact.privacy.link' | t }}</a>
           {{ 'contact.privacy.suffix' | t }}
         </span>
       </div>
-
-
       <span class="field__error" [class.is-visible]="isInvalid('privacy')">
         {{ 'contact.errors.privacy' | t }}
       </span>
 
-      <button class="sendBtn" type="submit" [disabled]="form.invalid || isSubmitting">
+      <!-- Submit Button -->
+      <button type="submit" class="sendBtn" [disabled]="form.invalid || isSubmitting">
         {{ isSubmitting ? ('contact.button.sending' | t) : ('contact.button.default' | t) }}
       </button>
 
+      <!-- Feedback Messages -->
       @if (submitState === 'success') {
-      <p class="formMsg formMsg--success">
-        {{ 'contact.messages.success' | t }}
-      </p>
+        <p class="formMsg formMsg--success">{{ 'contact.messages.success' | t }}</p>
       }
       @if (submitState === 'error') {
-      <p class="formMsg formMsg--error">
-        {{ 'contact.messages.error' | t }}
-      </p>
+        <p class="formMsg formMsg--error">{{ 'contact.messages.error' | t }}</p>
       }
     </form>
 
-    <a class="contact__to-top" href="#top" [attr.aria-label]="'contact.toTop' | t">
+    <!-- To Top (Outside Form) -->
+    <a href="#top" class="contact__to-top" [attr.aria-label]="'contact.toTop' | t">
       <span class="contact__to-top-text">{{ 'contact.toTop' | t }}</span>
       <span class="contact__to-top-arrow" aria-hidden="true">↑</span>
     </a>

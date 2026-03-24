@@ -1,10 +1,11 @@
 import { Component, HostListener } from '@angular/core';
 import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
+import { AnimateOnScrollDirective } from '../../../../shared/directives/animate-on-scroll.directive';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, AnimateOnScrollDirective],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })

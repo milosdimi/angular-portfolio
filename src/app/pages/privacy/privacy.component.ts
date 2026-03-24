@@ -12,7 +12,7 @@ import { TranslatePipe } from '../../shared/i18n/translate.pipe';
 })
 export class PrivacyComponent implements OnInit {
   year = new Date().getFullYear();
-  email = 'dm&#64;dimit.cc';
+  email = 'dm@dimit.cc';
 
   constructor(
     private location: Location,

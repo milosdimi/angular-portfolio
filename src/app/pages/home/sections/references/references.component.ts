@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '../../../../shared/i18n/translate.pipe';
+import { AnimateOnScrollDirective } from '../../../../shared/directives/animate-on-scroll.directive';
 
 type Reference = {
   text: string;
@@ -11,7 +12,7 @@ type Reference = {
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule, TranslatePipe, AnimateOnScrollDirective],
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss',
 })

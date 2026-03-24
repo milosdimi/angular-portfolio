@@ -1,7 +1,7 @@
 <section id="projects" class="projects-section">
   <div class="container">
 
-    <div class="section-header">
+    <div class="section-header" appAnimateOnScroll animationClass="fade-up">
       <span class="section-label mono">{{ 'projects.kicker' | t }}</span>
       <h2 class="section-title">{{ 'projects.title' | t }}</h2>
       <p class="section-description">
@@ -15,7 +15,8 @@
         @for (project of projects; track trackById($index, project)) {
         <button class="project-item" type="button" role="listitem"
           (mouseenter)="setHover(project.id)" (mouseleave)="setHover(null)" (focus)="setHover(project.id)"
-          (blur)="setHover(null)" (click)="openProject(project)" [class.active]="selectedProject?.id === project.id">
+          (blur)="setHover(null)" (click)="openProject(project)" [class.active]="selectedProject?.id === project.id"
+          appAnimateOnScroll animationClass="fade-up">
           <div class="project-main">
             <h3 class="project-title">
               {{ project.title }}

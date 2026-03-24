@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { TranslatePipe } from '../../shared/i18n/translate.pipe';
+import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterLink, TranslatePipe],
+  imports: [RouterLink, TranslatePipe, AnimateOnScrollDirective],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
@@ -25,4 +26,3 @@ export class FooterComponent {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
-

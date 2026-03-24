@@ -2,7 +2,7 @@
   <div class="container header__inner">
     <!-- LEFT: Language + Nav (Desktop) -->
     <div class="header__left">
-      <div class="lang lang--slider lang--desktop" role="group" aria-label="Language switch">
+      <div class="lang lang--slider lang--desktop" role="group" aria-label="Language switch" appAnimateOnScroll animationClass="fade-down">
         <span class="lang__thumb isLeft" aria-hidden="true"></span>
         <button class="lang__btn" [class.isActive]="currentLang === 'en'" type="button" (click)="setLang('en')">
           EN
@@ -13,14 +13,14 @@
       </div>
 
       <nav class="nav" aria-label="Primary">
-        <a class="nav__link" href="#about">{{ 'header.nav.about' | t }}</a>
-        <a class="nav__link" href="#skills">{{ 'header.nav.skills' | t }}</a>
-        <a class="nav__link" href="#projects">{{ 'header.nav.projects' | t }}</a>
+        <a class="nav__link" href="#about" appAnimateOnScroll animationClass="fade-down">{{ 'header.nav.about' | t }}</a>
+        <a class="nav__link" href="#skills" appAnimateOnScroll animationClass="fade-down">{{ 'header.nav.skills' | t }}</a>
+        <a class="nav__link" href="#projects" appAnimateOnScroll animationClass="fade-down">{{ 'header.nav.projects' | t }}</a>
       </nav>
     </div>
 
     <!-- RIGHT: Logo -->
-    <a class="logo" routerLink="/" (click)="goHome()" aria-label="Home">
+    <a class="logo" routerLink="/" (click)="goHome()" aria-label="Home" appAnimateOnScroll animationClass="fade-down">
       <img src="assets/logo/logo_grau.png" alt="DIMIT Logo" />
     </a>
 
@@ -32,6 +32,7 @@
       aria-controls="mobile-menu"
       [attr.aria-expanded]="menuOpen"
       (click)="toggleMenu()"
+      appAnimateOnScroll animationClass="fade-down"
     >
       <span></span><span></span><span></span>
     </button>

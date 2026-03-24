@@ -23,7 +23,7 @@
       "based": "Ansässig in Kufstein",
       "open": "Offen für Jobs",
       "clean": "Clean Code",
-      "freelance": "Freelance verfuegbar",
+      "freelance": "Freelance verfügbar",
       "webdev": "Webentwicklung"
     },
     "scrollDown": "Nach unten scrollen"
@@ -40,7 +40,7 @@
     }
   },
   "skills": {
-    "kicker": "Technologies",
+    "kicker": "Technologien",
     "title": "Skill Set",
     "p1": "Ich arbeite mit modernen Frontend-Technologien und lege großen Wert auf saubere Strukturen, Performance und nutzerfreundliches UI/UX.",
     "p2": "Neue Tools sehe ich nicht als Hürde, sondern als Chance – ich lerne kontinuierlich dazu und passe mich schnell an.",
@@ -100,7 +100,7 @@
       },
       "email": {
         "label": "Wie ist deine E‑Mail?",
-        "placeholder": "duremail@email.com"
+        "placeholder": "deinemail@email.com"
       },
       "message": {
         "label": "Wie kann ich dir helfen?",
