@@ -35,6 +35,14 @@
   perspective: 1000px;
 }
 
+.about__content {
+  scroll-margin-top: 90px;
+
+  @media (max-width: 900px) {
+    scroll-margin-top: 40px;
+  }
+}
+
 .about__image {
   opacity: 0;
   transform: translateX(-80px) rotateY(25deg);
