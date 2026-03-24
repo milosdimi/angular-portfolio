@@ -118,6 +118,14 @@
   min-height: 90px;
 }
 
+.field__input:-webkit-autofill,
+.field__input:-webkit-autofill:hover,
+.field__input:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-box-shadow: 0 0 0 1000px #1c1c1c inset !important;
+  caret-color: rgba(255, 255, 255, 0.9);
+}
+
 /* Animated Line */
 .field__line {
   position: absolute;
