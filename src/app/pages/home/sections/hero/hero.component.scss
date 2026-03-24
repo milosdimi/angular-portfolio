@@ -264,12 +264,12 @@
 }
 
 .hero__left {
-  left: 64px;
+  left: max(24px, calc(50% - 740px));
   justify-items: center;
 }
 
 .hero__right {
-  right: 64px;
+  right: max(24px, calc(50% - 740px));
   justify-items: center;
 }
 
@@ -453,6 +453,12 @@
 @media (min-width: 900px) and (max-width: 1400px) {
   .marquee {
     bottom: clamp(60px, 12vh, 140px);
+  }
+}
+
+@media (min-width: 2000px) {
+  .marquee {
+    bottom: clamp(140px, 14vh, 220px);
   }
 }
 
