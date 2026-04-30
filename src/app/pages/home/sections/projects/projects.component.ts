@@ -42,12 +42,12 @@ export class ProjectsComponent {
     },
     {
       id: 3,
-      title: 'Pokedex',
-      descriptionKey: 'projects.items.pokedex',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      liveUrl: 'https://dex.dimit.cc/',
-      githubUrl: 'https://github.com/milosdimi/pokedex',
-      imageUrl: 'assets/projects/pokedex.png',
+      title: 'PollApp',
+      descriptionKey: 'projects.items.pollapp',
+      technologies: ['Angular', 'TypeScript', 'Supabase'],
+      liveUrl: 'https://pollapp.dimit.cc/',
+      githubUrl: 'https://github.com/milosdimi/angular-pollapp.git',
+      imageUrl: 'assets/projects/pollapp.png',
     },
   ];
 
@@ -60,6 +60,7 @@ export class ProjectsComponent {
     TypeScript: 'ts.svg',
     Angular: 'angular.svg',
     Firebase: 'fb.svg',
+    Supabase: 'supabase-logo-icon.svg',
     Git: 'git.svg',
     'REST-API': 'api.svg',
     Scrum: 'scrum.svg',

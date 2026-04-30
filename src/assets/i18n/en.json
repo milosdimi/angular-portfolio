@@ -69,7 +69,7 @@
     "items": {
       "join": "Task manager inspired by the Kanban system. Create and organize tasks using drag & drop, assign users and categories.",
       "pollo": "Jump-and-run game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa.",
-      "pokedex": "Interactive Pokédex app built with the public Pokémon API. Browse, search and explore with dynamic loading, clean UI and responsive design."
+      "pollapp": "Angular app for creating, sharing and evaluating surveys in real time – powered by Supabase for authentication and data management."
     }
   },
   "references": {

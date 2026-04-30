@@ -8,6 +8,7 @@ type SkillItem = {
   name: string;
   icon: string;
   accent?: boolean;
+  white?: boolean;
 };
 
 @Component({
@@ -24,18 +25,19 @@ export class SkillsComponent {
     { name: 'HTML', icon: 'html.svg' },
     { name: 'CSS', icon: 'css.svg' },
     { name: 'JavaScript', icon: 'js.svg' },
-    { name: 'Material\nDesign', icon: 'md.svg' },
+    { name: 'TypeScript', icon: 'ts.svg' },
   ];
 
   row2: SkillItem[] = [
-    { name: 'TypeScript', icon: 'ts.svg' },
     { name: 'Angular', icon: 'angular.svg' },
+    { name: 'Material\nDesign', icon: 'md.svg' },
     { name: 'Firebase', icon: 'fb.svg' },
-    { name: 'Git', icon: 'git.svg' },
+    { name: 'Supabase', icon: 'supabase-logo-icon.svg', white: true },
   ];
 
   row3: SkillItem[] = [
     { name: 'REST-API', icon: 'api.svg' },
+    { name: 'Git', icon: 'git.svg' },
     { name: 'Scrum', icon: 'scrum.svg' },
   ];
 }
